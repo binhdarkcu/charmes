@@ -1,0 +1,53 @@
+.footer {
+	clear: both;
+	width: 100%;
+	.inner {
+		width: 100%;
+		margin: 0px auto;
+		min-height: 42px;
+		padding-bottom: 60px;
+		background: url(../images/bg_footer.png) no-repeat right top;
+		ul.list_menufooter{
+			padding: 0;
+			margin:0;
+			float: left;
+			padding: 45px 0px 0px 82px;
+			li {
+				float: left;
+				padding: 0px 64px;
+				a {
+					@include Adamina (15px);
+					&:hover {
+						color: $grey;	
+					}	
+				}	
+			}	
+		}
+		.social {
+			float: right;
+			padding-right: 191px;
+  			padding-top: 35px;
+			
+			a {
+				display: block;
+				float: left;
+				padding-left: 10px;
+				&.face-icon {
+					width: 34px;
+					height: 31px;
+					background: url(../images/face-icon.png) no-repeat;	
+				}
+				&.twitter-icon {
+					width: 35px;
+					height: 32px;
+					background: url(../images/twiiter-icon.png) no-repeat;	
+				}
+				&.NO-icon {
+					width: 35px;
+					height: 35px;
+					background: url(../images/3-icon.png) no-repeat;	
+				}	
+			}	
+		}	
+	}	
+}

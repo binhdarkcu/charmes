@@ -1,0 +1,51 @@
+.left_menu {
+	position: fixed;
+	right: -62px;
+	top: 50%;
+	height: 161px;
+	width: 62px;
+	margin-top: -51px;
+	background: url(../images/box.png) no-repeat;
+	z-index: 1000;
+	.inner {
+		clear: both;
+		span.line {
+			background: url(../images/lin-h.png) no-repeat;
+			width: 59px;
+			height: 5px;
+		  	display: block;
+		  	text-align: center;
+		  	margin-top: 16px;
+		  	margin-left: 4px;
+		}
+		a {
+			display: block;
+			margin: 18px 0px 0px 15px;
+			&.face-icon {
+				width: 34px;
+				height: 31px;
+				background: url(../images/face-icon.png) no-repeat;	
+			}
+			&.twitter-icon {
+				width: 35px;
+				height: 32px;
+				background: url(../images/twiiter-icon.png) no-repeat;	
+			}
+			&.NO-icon {
+				width: 35px;
+				height: 35px;
+				background: url(../images/3-icon.png) no-repeat;	
+			}
+			&.connect-icon {
+				width: 43px;
+				height: 46px;
+				background: url(../images/4-icon.png) no-repeat;	
+			}	
+			&.chat-icon {
+				width: 43px;
+				height: 35px;
+				background: url(../images/5-icon.png) no-repeat;	
+			}		
+		}	
+	}	
+}

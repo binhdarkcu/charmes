@@ -1,0 +1,82 @@
+/* CSS Document */
+.page {
+	width: 100%;
+	height: auto;
+	position: relative;
+	&.home {
+		height: 100%;
+		background: #cbbacf;
+			
+	}
+	.inner {
+		width: 100%;
+		height: 100%;
+		display: table;
+		position: relative;	
+	}
+	.logo {
+		display: table-cell;
+	  	position: relative;
+	  	vertical-align: middle;
+		text-align: center;
+		p.text_home {
+			@include PlayfairNormal (32px);	
+			clear: both;
+			padding-top: 10px;
+		}	
+	}
+	.mouse-event {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-top: 81px;
+  		margin-left: -69px;
+		text-align: center;
+		p.text {
+			@include Adamina (14px);
+			font-style: italic;
+			color : $grey;	
+		}
+		img {
+			padding-top: 18px;	
+		}	
+	}
+	.inner_fix {
+		background: #cbbacf;
+		width: 100%;
+		height: 60px;
+		position: absolute;
+		left: 0px;
+		bottom: 0px;
+		z-index: 1000;
+		&.fixed {
+			position: fixed;
+			top: 0;
+			bottom: inherit;  
+		}	
+	}
+	nav {
+		
+		  margin-top: 20px;
+		ul.list_menu {
+			padding: 0;
+			margin: 0 auto;
+			display: table;
+      text-align: center;
+			li {
+				float: none;
+				padding: 0px 22px;
+				  display: inline-block;
+				a {
+					color : $black;
+					@include Adamina (18px);
+					&:hover {
+						text-decoration: underline;
+						color: $grey;	
+					}	
+				}	
+			}	
+		}	
+	}	
+}
+

@@ -1,0 +1,72 @@
+/* CSS Document */
+.page {
+	width: 100%;
+	height: auto;
+	position: relative;
+	&.collection {
+	  
+		.inner_content {
+			width: 875px;
+			margin: 0 auto;
+			background: url(../images/line.png) no-repeat left bottom;
+			overflow: hidden;
+			padding-bottom: 150px;
+			ul.list_collec {
+				padding: 0;
+				 margin: 0;
+				 padding-top: 90px;
+				 li {
+					clear: both;
+					@include PlayfairNormal	 (46px);
+					padding-top: 60px;
+					text-transform: lowercase;
+					&.line {
+						
+					}
+					.col1 {
+						float: left;
+						width: 416px;
+						text-align: right;
+						display: table;
+						min-height: 315px;
+						p {
+							display: table-cell;
+							vertical-align: middle;	
+							text-align: right;
+						}
+						img {
+							float: right;	
+						}
+						&.w1 {
+							width: 458px;	
+						}
+						&.w2 {
+							width: 535px;	
+						}
+					}
+					.col2 {
+						float: left;
+						text-align: left;
+						display: table;
+						min-height: 315px;
+						img, p {
+							display: table-cell;
+							vertical-align: middle;	
+						}
+						p.sp01 {
+							float: left;
+							padding-top: 67px;
+						}
+					}
+				}	
+			}
+			/**/
+				
+		}
+			
+	}
+	
+	
+	
+}
+

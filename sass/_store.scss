@@ -1,0 +1,173 @@
+/* CSS Document */
+.page {
+	.inner_slider {
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		height: 414px;
+		a.next {
+			position: absolute;
+			right: 55px;
+			top: 50%;
+			margin-top: -22px;
+			width: 38px;
+			height: 78px;
+			background: url(../images/arrrow_left.png) no-repeat;
+			z-index: 100;	
+		}
+		a.pre {
+			position: absolute;
+			left: 55px;
+			top: 50%;
+			width: 38px;
+			height: 78px;
+			margin-top: -22px;
+			background: url(../images/arrow_right.png) no-repeat;
+			z-index: 100;		
+		}
+		.list_slider {
+			padding: 0;
+			margin: 0;
+			li {
+				clear: both;
+				  min-height: 414px;
+				img {
+					position: absolute;
+					left: 50%;
+					top: 0;
+					margin-left: -693px;
+					z-index: 1;	
+				}
+				p.text {
+					position: absolute;
+					right: 358px;
+  					top: 248px;
+					z-index: 2;	
+					@include PlayfairBold (30px);
+					font-weight: bold;	
+					span {
+						@include HelveticaLight (30px);
+							
+					}
+				}
+				a.btn {
+					background: url(../images/btn.png) no-repeat;
+					width: 154px;
+					height: 38px;
+					position: absolute;
+					right: 507px;
+  					top: 330px;
+					text-align: center;
+					color: $white;
+					@include Adamina (18px,1.8);
+					z-index: 3;	
+				}	
+			}	
+		}	
+	}
+	h3.title {
+		clear: both;
+		@include Adamina (60px)	;
+		padding: 90px 0px;
+		text-align: center;
+	}
+	.content_product {
+		clear: both;
+		width: 1120px;
+		margin: 36px auto;
+		.top_menu {
+			clear: both;
+			padding: 0px 45px;
+			.select_menu {
+				float: left;
+				.icon {
+					float: left;
+					background: url(../images/menu.png) no-repeat;
+					width: 69px;
+					height: 57px;
+					display: block;	
+				}
+				p.text {
+					float: left;
+					@include CabinSketchNormal (22px,2.4);
+					padding-left: 28px;	
+					span {
+						font-size: 26px;	
+					}
+				}
+			}
+			.option_menu {
+				float: right;
+				ul.list_item {
+					padding: 0;
+					margin: 0;
+					li {
+						float: left;
+						margin: 4px 8px 0px;
+						a {
+							display: block;
+							&.search {
+								width: 42px;
+								height: 50px;
+								background: url(../images/search.png) no-repeat;	
+							}
+							&.cart {
+								width: 38px;
+								height: 46px;
+								background: url(../images/cart.png) no-repeat;	
+							}
+							&.note {
+								width: 40px;
+								height: 42px;
+								background: url(../images/note.png) no-repeat;	
+							}	
+						}
+						&.line {
+							background: url(../images/line_v.png) no-repeat;
+							width: 5px;
+							height: 56px;
+							margin-top: 0px;	
+						}
+					}	
+				}	
+			}	
+		}
+		.list_products {
+			padding: 0;
+			margin: 0;
+			clear: both;
+			li {
+				float: left;
+				margin: 47px 45px;
+				position: relative;
+				.col {
+					float: left;
+					&.center {
+						margin: 0px 20px;	
+					}	
+				}
+				.view_detail {
+					position: absolute;
+					left: 50%;
+					margin-left: -115px;
+  					bottom: -51px;
+					width: 100%;
+					text-align: center;
+					p.text {
+						clear: both;
+						background: url(../images/line_detail.png) no-repeat left bottom;
+						width: 258px;
+						padding-bottom: 15px;
+						@include Adamina (24px);	
+					}
+					a.view {
+						clear: both;
+						padding-top: 12px;
+  						display: block;
+						@include CabinSketchNormal (21px);
+					}	
+				}	
+			}			
+		}	
+	}	
+}
