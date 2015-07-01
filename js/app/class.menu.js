@@ -58,8 +58,7 @@ var menuOjb = (function() {
 	}
 	//FUNCTION
 	function checkHeader(){
-		console.log($(this).scrollTop(), $(".header_content").height() - $('.page .inner_fix').height());
-        if($(this).scrollTop() > $(".header_content").height() - $('.page .inner_fix').height()){
+        if($(this).scrollTop() > $(".header_content").height()){
             if(fixed == false){
                 //$(".page .inner_fix").addClass("fixed");
                 fixed = true;
