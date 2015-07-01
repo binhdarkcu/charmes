@@ -4,6 +4,7 @@
 	$array = array(	
 		"js/lib/jquery-1.11.1.min.js",
 		"js/lib/TweenMax.min.js",
+		"js/lib/SmoothScroll.js",
 
 		"js/app/class.menu.js",
 		"js/app/class.initPage.js",

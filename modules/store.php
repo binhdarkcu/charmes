@@ -3,7 +3,7 @@
     <div class="inner_slider">
     	<a class="pre"></a>
         <a class="next"></a>
-        <ul class="list_slider notViewed animBlock" data-offset="-250" data-position="opacity">
+        <ul class="list_slider notViewed animBlock" data-offset="100" data-position="opacity">
             <li style="background: url('images/img_slider.png') no-repeat top center;background-size: cover;">
                 <p class="text">Wedding Jewelries<br><span>Customization</span></p>
                 <a class="btn">Discover</a>
@@ -44,4 +44,5 @@
             <li class="notViewed animBlock scale" data-position="scale"><a><img src="images/img09.png"></a></li>
         </ul>
     </div>
+    <div class="loading"></div>
 </section>

@@ -58,7 +58,7 @@ var initPage = (function() {
     		var animElemsLeft = $('.animBlock.notViewed').length;
     		if(animElemsLeft == 0){
       			// with no animated elements left debind the scroll event
-      			$(window).off('scroll');
+      			//$(window).off('scroll');
     		}
   		}
 	}
