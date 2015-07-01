@@ -51,8 +51,7 @@
 		z-index: 1000;
 		&.fixed {
 			position: fixed;
-			top: 0;
-			bottom: inherit;  
+			bottom: 0;  
 		}	
 	}
 	nav {

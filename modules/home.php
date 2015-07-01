@@ -9,7 +9,7 @@
             <p class="text">Click to discover</p>
             <img src="images/mouse-icon.png">
         </div>
-        <div class="inner_fix">
+        <div class="inner_fix fixed">
         	<nav>
                 <ul class="list_menu">
                     <li><a>Engagement</a></li>
