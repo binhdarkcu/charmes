@@ -11,12 +11,15 @@ var initPage = (function() {
 	}
 	function loadPage(){
 		$('.mouse-event').on('click',function(){
+			var pos=$('.page.home').height();
+			
 			$.ajax({
 	            url:'modules/content.php' 
 	        })
 	        .done(function( html ) {
 	        	$('.loadPages').append(html);
 	        	$('.page.home .header_content, .page .inner_fix.fixed nav').removeAttr('style');
+				setPos(pos);
 	        	events();
 	        });
 		});
