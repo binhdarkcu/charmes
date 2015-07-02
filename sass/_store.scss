@@ -150,7 +150,7 @@
 					position: absolute;
 					left: 50%;
 					margin-left: -115px;
-  					bottom: -51px;
+  					bottom: -65px;
 					width: 100%;
 					text-align: center;
 					p.text {
@@ -159,9 +159,11 @@
 						width: 258px;
 						padding-bottom: 15px;
 						@include Adamina (24px);	
+						color: #000;
 					}
-					a.view {
+					.view {
 						clear: both;
+						color: #000;
 						padding-top: 12px;
   						display: block;
 						@include CabinSketchNormal (21px);

@@ -1,5 +1,5 @@
 <section class="page home">
-	<div class="inner header_content">
+	<div class="inner header_content" style="right: 8.5px;">
     	<a class="logo">
         	<img src="images/logo.png">
             <p class="text_home">Art & Craftsmanship</p>
@@ -9,8 +9,8 @@
             <p class="text">Click to discover</p>
             <img src="images/mouse-icon.png">
         </div>
-        <div class="inner_fix">
-        	<nav>
+        <div class="inner_fix fixed">
+        	<nav style="right: 8.5px;">
                 <ul class="list_menu">
                     <li><a>Engagement</a></li>
                     <li><a>Wedding</a></li>

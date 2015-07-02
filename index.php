@@ -30,11 +30,10 @@
         <div class="wrapper">
         	<?php 
 				include("modules/home.php");
-				include("modules/collection.php");
-				include("modules/store.php");
-				include("modules/footer.php");
-				include("modules/menu_left.php");
 			?>
+			<div class="loadPages">
+				
+			</div>
         </div>
     </div>
 </body>

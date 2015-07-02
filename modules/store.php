@@ -32,11 +32,18 @@
             <li class="notViewed animBlock scale" data-position="scale"><a><img src="images/img02.png"></a></li>
             <li class="notViewed animBlock scale" data-position="scale"><a><img src="images/img03.png"></a></li>
             <li class="notViewed animBlock scale" data-position="scale"><a><img src="images/img04.png"></a></li>
-            <li class="notViewed animBlock scale" data-position="scale"><a><img src="images/img05.png"></a>
-            	<div class="view_detail">
-                	<p class="text">Engagement Rings</p>
-                    <a class="view">View Details</a>
-                </div>
+            <li class="notViewed animBlock scale" data-position="scale">
+            	<a href="#">
+            		
+            	</a>
+            	<a href="#" class="active">
+            		<img src="images/img10.png">
+            		<div class="view_detail">
+	                	<p class="text">Engagement Rings</p>
+	                    <span class="view">View Details</span>
+	                </div>
+            	</a>
+            	
             </li>
             <li class="notViewed animBlock scale" data-position="scale"><a><img src="images/img06.png"></a></li>
             <li class="notViewed animBlock scale" data-position="scale"><a><img src="images/img07.png"></a></li>

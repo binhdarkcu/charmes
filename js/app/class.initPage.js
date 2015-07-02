@@ -7,7 +7,19 @@ var initPage = (function() {
 	var flag=true;
 	
 	function init(){
-		events();
+		loadPage();
+	}
+	function loadPage(){
+		$('.mouse-event').on('click',function(){
+			$.ajax({
+	            url:'modules/content.php' 
+	        })
+	        .done(function( html ) {
+	        	$('.loadPages').append(html);
+	        	$('.page.home .header_content, .page .inner_fix.fixed nav').removeAttr('style');
+	        	events();
+	        });
+		});
 	}
 	function events()
 	{

@@ -32,6 +32,8 @@
 		margin-top: 81px;
   		margin-left: -69px;
 		text-align: center;
+		  z-index: 100;
+  cursor: pointer;
 		p.text {
 			@include Adamina (14px);
 			font-style: italic;
@@ -51,8 +53,10 @@
 		z-index: 1000;
 		&.fixed {
 			position: fixed;
-			top: 0;
-			bottom: inherit;  
+			bottom: 0;  
+			nav{
+			  position: relative;
+			}
 		}	
 	}
 	nav {
