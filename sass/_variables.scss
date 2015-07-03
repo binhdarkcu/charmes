@@ -32,6 +32,11 @@ $mainHeight : 960px;
 	border-left: 16px solid transparent;
 	border-right: 16px solid transparent;
 }
+@mixin animation () { 
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s
+}
 /*======COLOR========*/
 $black:#000;
 $blue: #000080;

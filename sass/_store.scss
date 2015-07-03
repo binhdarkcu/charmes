@@ -140,6 +140,13 @@
 				float: left;
 				margin: 47px 45px;
 				position: relative;
+				
+				&:hover {
+					.view_detail {
+						
+						opacity: 1;
+					}	
+				}
 				.col {
 					float: left;
 					&.center {
@@ -153,6 +160,8 @@
   					bottom: -65px;
 					width: 100%;
 					text-align: center;
+					opacity: 0;
+					@include animation();
 					p.text {
 						clear: both;
 						background: url(../images/line_detail.png) no-repeat left bottom;
