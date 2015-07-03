@@ -1,6 +1,8 @@
 .footer {
 	clear: both;
 	width: 100%;
+	position: relative;
+  z-index: 101;
 	.social {
 		clear: both;
 		display: inline-block;

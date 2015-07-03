@@ -1,11 +1,11 @@
 .left_menu {
 	position: fixed;
-	right: -62px;
+	right: -55px;
 	top: 50%;
-	height: 161px;
-	width: 62px;
-	margin-top: -113px;
-	background: url(../images/box.png) no-repeat;
+	  height: 137px;
+  width: 53px;
+  margin-top: -85px;
+  background: url(../images/box-2.png) no-repeat;
 	z-index: 1000;
 	.inner {
 		clear: both;
@@ -20,7 +20,7 @@
 		}
 		a {
 			display: block;
-			margin: 18px 0px 0px 15px;
+			margin: 13px 0px 0px 10px;
 			@include animation ();
 			@include setOpacity (0.5);
 			&:hover {
@@ -29,7 +29,7 @@
 			&.face-icon {
 				width: 34px;
 				height: 31px;
-				background: url(../images/face-icon.png) no-repeat;	
+				background: url(../images/face-icon-2.png) no-repeat;	
 			}
 			&.twitter-icon {
 				width: 35px;
@@ -42,14 +42,16 @@
 				background: url(../images/3-icon.png) no-repeat;	
 			}
 			&.connect-icon {
-				width: 43px;
-				height: 46px;
-				background: url(../images/4-icon.png) no-repeat;	
+				width: 39px;
+				height: 41px;
+				background: url(../images/4-icon-2.png) no-repeat;	
 			}	
 			&.chat-icon {
-				width: 43px;
-				height: 35px;
-				background: url(../images/5-icon.png) no-repeat;	
+				width: 31px;
+				height: 31px;
+				background: url(../images/5-icon-2.png) no-repeat;	
+				  margin-top: 37px;
+  margin-left: 12px;
 			}		
 		}	
 	}	
