@@ -68,14 +68,19 @@ if((elemBottom<=docViewBottom)&&(elemTop>=docViewTop)){$(elem).removeClass('notV
 return{init:init,setPos:setPos}})();var pageOjb=(function(){setObj={item_menu:'.page nav ul.list_menu li a'}
 var tl=null,flag=true;function init(){events();}
 function events()
-{$('.page nav ul.list_menu li a').click(function(){var value=$(this).attr('value');if(flag==true)
+{$('.page nav ul.list_menu li a').click(function(){var value=$(this).attr('value');console.log(flag);if(value!='not')
+{if(flag==true)
 {animatePopup(value);flag=false;}
-else{FadeinContent(value);}});}
+else{FadeinContent(value);}}
+else{flag=true;closeAll();alert(111);}});}
 function animatePopup(value)
 {tl=new TimelineMax();tl.set($('.page.'+value),{css:{'display':'block'}}).to($('.page .bg_overlay'),0.4,{css:{opacity:0.8}}).to($('.page .content_view'),0.4,{css:{height:64+'%'}},'-=0.4')}
 function FadeinContent(value)
 {$('.page.detailPage').css('display','none')
 $('.page.'+value).css('display','block')
 $('.page.'+value+' .desc, .page.'+value+' .img_block').addClass('fadeIn');}
+function closeAll()
+{$('.page.detailPage').css('display','none')
+$('.page.detailPage'+' .desc, .page.detailPage .img_block').removeClass('fadeIn');$('.page .bg_overlay').css({opacity:0});$('.page .content_view').css({height:0+'%'});}
 return{init:init}})();var SiteMain=(function(){function init(){initPage.init();}
 return{init:init}})();$(document).ready(function(e){SiteMain.init();});

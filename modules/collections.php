@@ -1,4 +1,4 @@
-<section class="page detailPage engagement">
+<section class="page detailPage collections">
     <div class="inner_contentDetial">
     	<div class="bg_overlay"></div>
         <div class="content_view">

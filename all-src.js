@@ -710,13 +710,23 @@ var pageOjb = (function() {
 	{
 		$('.page nav ul.list_menu li a').click(function(){
 			var value=$(this).attr('value');
-			if(flag==true)
+			console.log(flag);
+			if(value!='not')
 			{
-				animatePopup(value);
-				flag=false;
+				if(flag==true)
+				{
+					animatePopup(value);
+					flag=false;
+				}
+				else {
+					FadeinContent(value);
+				}
 			}
 			else {
-				FadeinContent(value);
+				flag=true;
+				closeAll();
+				
+				alert(111);
 			}
 			
 		});
@@ -735,6 +745,13 @@ var pageOjb = (function() {
 		$('.page.'+value).css('display','block')
 		$('.page.'+value+' .desc, .page.'+value+' .img_block').addClass('fadeIn');
 		
+	}
+	function closeAll()
+	{
+		$('.page.detailPage').css('display','none')
+		$('.page.detailPage'+' .desc, .page.detailPage .img_block').removeClass('fadeIn');
+		$('.page .bg_overlay').css({opacity:0 });
+		$('.page .content_view').css({height:0+'%' });	
 	}
 
 	return {

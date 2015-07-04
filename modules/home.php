@@ -15,10 +15,10 @@
                 <ul class="list_menu">
                     <li><a value='engagement'>Engagement</a></li>
                     <li><a value='wedding'>Wedding</a></li>
-                    <li><a pos="collection">Collections</a></li>
-                    <li><a pos="store">Jewelries</a></li>
-                    <li><a>Services</a></li>
-                    <li><a>Membership</a></li>
+                    <li><a pos="collections" value='not'>Collections</a></li>
+                    <li><a pos="store" value='not'>Jewelries</a></li>
+                    <li><a value='not'>Services</a></li>
+                    <li><a value='not'>Membership</a></li>
                 </ul>
             </nav>
             <div class="contact">Contact</div>
