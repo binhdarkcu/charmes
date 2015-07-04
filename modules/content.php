@@ -1,8 +1,9 @@
 <?php
-	include("collection.php");
+	include("intropage.php");
 	include("store.php");
 	include("engagement.php");
 	include("wedding.php");
+	include("collections.php");
 	include("footer.php");
 	include("menu_left.php");
 ?>

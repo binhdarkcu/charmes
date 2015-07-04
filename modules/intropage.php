@@ -1,8 +1,8 @@
-<section class="page collection">
+<section class="page introPage">
 	<div class="inner_content">
     	<ul class="list_collec">
         	<li>
-            	<div class="col1 notViewed animBlock" data-position="left" ><p>Gemstone <br>Knowledges</p></div>
+            	<div class="col1 notViewed animBlock " data-position="left" ><p>Gemstone <br>Knowledges</p></div>
         		<div class="col2 notViewed animBlock" data-position="right"><img src="images/gemstone.png"></div>
             </li>
             <li>

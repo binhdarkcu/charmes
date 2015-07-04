@@ -629,6 +629,8 @@ var initPage = (function() {
 	        	$('.page.home .header_content, .page .inner_fix.fixed nav').removeAttr('style');
 				setPos(pos);
 	        	events();
+				menuOjb.init();
+				pageOjb.init();
 	        });
 		});
 	}
@@ -746,8 +748,7 @@ var SiteMain = (function() {
 	
 	function init(){
 		initPage.init();
-		menuOjb.init();
-		pageOjb.init();
+		
 	}
 	
 	//RETURN

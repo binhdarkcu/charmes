@@ -10,23 +10,24 @@
             </li>
         </ul>
     </div>
-    <div class="content_product">
-    	<div class="top_menu">
-        	<div class="select_menu">
-            	<a class="icon"></a>
-            	<p class="text">Collections <span>/</span> Le Jardin<span>/</span> Flora ring</p>
-            </div>
-        	<div class="option_menu">
-            	<ul class="list_item">
-                	<li><a class="search"></a></li>
-                    <li class="line"></li>
-                    <li><a class="cart"></a></li>
-                    <li class="line"></li>
-                    <li><a class="note"></a></li>
-                </ul>
-            </div>
-            <div class="clear"></div>
+    <div class="top_menu">
+        <div class="select_menu">
+            <a class="icon"></a>
+            <p class="text">Collections <span>/</span> Le Jardin<span>/</span> Flora ring</p>
         </div>
+        <div class="option_menu">
+            <ul class="list_item">
+                <li><a class="search"></a></li>
+                <li class="line"></li>
+                <li><a class="cart"></a></li>
+                <li class="line"></li>
+                <li><a class="note"></a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="content_product">
+    	
         <ul class="list_products">
             <li class="notViewed animBlock scale"  data-position="scale"><a><img src="images/img01.png"></a></li>
             <li class="notViewed animBlock scale" data-position="scale"><a><img src="images/img02.png"></a></li>

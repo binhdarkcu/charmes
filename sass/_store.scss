@@ -71,67 +71,70 @@
 		padding: 90px 0px;
 		text-align: center;
 	}
+	/*top*/
+	.top_menu {
+		clear: both;
+		padding: 10px 20px;
+		.select_menu {
+			float: left;
+			.icon {
+				float: left;
+				background: url(../images/menu.png) no-repeat;
+				width: 69px;
+				height: 57px;
+				display: block;	
+			}
+			p.text {
+				float: left;
+				@include CabinSketchNormal (22px,2.4);
+				padding-left: 28px;	
+				span {
+					font-size: 26px;	
+				}
+			}
+		}
+		.option_menu {
+			float: right;
+			ul.list_item {
+				padding: 0;
+				margin: 0;
+				li {
+					float: left;
+					margin: 4px 8px 0px;
+					a {
+						display: block;
+						&.search {
+							width: 42px;
+							height: 50px;
+							background: url(../images/search.png) no-repeat;	
+						}
+						&.cart {
+							width: 38px;
+							height: 46px;
+							background: url(../images/cart.png) no-repeat;	
+						}
+						&.note {
+							width: 40px;
+							height: 42px;
+							background: url(../images/note.png) no-repeat;	
+						}	
+					}
+					&.line {
+						background: url(../images/line_v.png) no-repeat;
+						width: 5px;
+						height: 56px;
+						margin-top: 0px;	
+					}
+				}	
+			}	
+		}	
+	}
+	/*end top*/
 	.content_product {
 		clear: both;
 		width: 1120px;
 		margin: 36px auto;
-		.top_menu {
-			clear: both;
-			padding: 0px 45px;
-			.select_menu {
-				float: left;
-				.icon {
-					float: left;
-					background: url(../images/menu.png) no-repeat;
-					width: 69px;
-					height: 57px;
-					display: block;	
-				}
-				p.text {
-					float: left;
-					@include CabinSketchNormal (22px,2.4);
-					padding-left: 28px;	
-					span {
-						font-size: 26px;	
-					}
-				}
-			}
-			.option_menu {
-				float: right;
-				ul.list_item {
-					padding: 0;
-					margin: 0;
-					li {
-						float: left;
-						margin: 4px 8px 0px;
-						a {
-							display: block;
-							&.search {
-								width: 42px;
-								height: 50px;
-								background: url(../images/search.png) no-repeat;	
-							}
-							&.cart {
-								width: 38px;
-								height: 46px;
-								background: url(../images/cart.png) no-repeat;	
-							}
-							&.note {
-								width: 40px;
-								height: 42px;
-								background: url(../images/note.png) no-repeat;	
-							}	
-						}
-						&.line {
-							background: url(../images/line_v.png) no-repeat;
-							width: 5px;
-							height: 56px;
-							margin-top: 0px;	
-						}
-					}	
-				}	
-			}	
-		}
+		
 		.list_products {
 			padding: 0;
 			margin: 0;

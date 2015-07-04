@@ -92,6 +92,7 @@
 					height: 60px;
 					display: block;
 					padding: 0px 22px;
+					@include noselect();
 					&:hover {
 						text-decoration: underline;
 						color: $grey;	
