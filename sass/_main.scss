@@ -32,8 +32,8 @@
 		margin-top: 81px;
   		margin-left: -69px;
 		text-align: center;
-		  z-index: 100;
-  cursor: pointer;
+		z-index: 100;
+  		cursor: pointer;
 		p.text {
 			@include Adamina (14px);
 			font-style: italic;
@@ -45,11 +45,12 @@
 	}
 	.inner_fix {
 		background: #cbbacf;
-		width: 100%;
+		width: 96%;
 		height: 60px;
 		position: absolute;
 		left: 0px;
 		bottom: 0px;
+		padding: 0px 32px;
 		z-index: 1000;
 		&.fixed {
 			position: fixed;
@@ -59,14 +60,29 @@
 			}
 		}	
 	}
+	.left_title {
+		@include RECHTMAN (38px);
+		padding-top: 12px;
+		position: absolute;
+		left: 32px;
+		top: 0px;	
+	}
+	.contact {
+		position: absolute;
+		right: 32px;
+		top: 20px;
+		@include Adamina (18px);	
+	}
 	nav {
 		
-		  margin-top: 20px;
-		ul.list_menu {
+		  	margin-top: 20px;
+			position: relative;
+			
+			ul.list_menu {
 			padding: 0;
 			margin: 0 auto;
 			display: table;
-      text-align: center;
+      		text-align: center;
 			li {
 				float: none;
 				padding: 0px 22px;

@@ -82,3 +82,9 @@ $grey: #8e8190;
 	line-height:$line;
 	font-weight:normal;
 }
+@mixin RECHTMAN ( $value, $line:1.1 ) {
+	font-family: 'RECHTMAN', cursive;
+	font-size:$value;
+	line-height:$line;
+	font-weight:normal;
+}

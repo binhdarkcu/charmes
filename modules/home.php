@@ -10,7 +10,8 @@
             <img src="images/mouse-icon.png">
         </div>
         <div class="inner_fix fixed">
-        	<nav style="right: 8.5px;">
+            <div class="left_title">Albert Lavenda</div>
+            <nav>
                 <ul class="list_menu">
                     <li><a>Engagement</a></li>
                     <li><a>Wedding</a></li>
@@ -20,6 +21,7 @@
                     <li><a>Membership</a></li>
                 </ul>
             </nav>
+            <div class="contact">Contact</div>
         </div>
     </div>
     
