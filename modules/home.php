@@ -21,7 +21,7 @@
                     <li><a value='not'>Membership</a></li>
                 </ul>
             </nav>
-            <div class="contact">Contact</div>
+            <div class="contact"><a href="#">Contact</a></div>
         </div>
     </div>
     

@@ -23,7 +23,23 @@ var initPage = (function() {
 	        	events();
 				menuOjb.init();
 				pageOjb.init();
+				createRadio();	
 	        });
+		});
+	}
+	function createRadio(){
+		$('.iCheck input').iCheck();
+	}
+	function activeMenuStore(){
+		$('.page .top_menu .select_menu .icon.hasbr').on('click',function(){
+			$(this).removeClass('hasbr');
+			$('.shadow').show();
+			$('.store-filter').show().animate({'opacity':1},300);
+		});
+		$('.store-filter .storeicon').on('click',function(){
+			$('.shadow').hide();
+			$('.page .top_menu .select_menu .icon').addClass('hasbr');
+			$('.store-filter').hide();
 		});
 	}
 	function events()
@@ -38,6 +54,7 @@ var initPage = (function() {
 		  		isScrolledIntoView($(this));
 			});
 	 	});
+	 	activeMenuStore();
 	}
 	function setPos(value)
 	{

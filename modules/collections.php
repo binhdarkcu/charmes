@@ -15,5 +15,4 @@
             <div class="img_block animated"><img src="images/engagement/img_view.png"></div>
         </div>
     </div>
-    
 </section>

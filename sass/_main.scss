@@ -46,7 +46,7 @@
 	.inner_fix {
 		background: #cbbacf;
 		width: 96%;
-		height: 60px;
+		height: 57px;
 		position: absolute;
 		left: 0px;
 		bottom: 0px;
@@ -70,8 +70,12 @@
 	.contact {
 		position: absolute;
 		right: 32px;
-		top: 20px;
-		@include Adamina (18px);	
+		top: 25px;
+		@include Adamina (14px);	
+		a{
+		  color: #000;
+		  text-transform: uppercase;
+		}
 	}
 	nav {
 		
@@ -88,14 +92,19 @@
 				  display: inline-block;
 				a {
 					color : $black;
-					@include Adamina (18px,60px);
-					height: 60px;
+					@include Adamina (14px,63px);
+					height: 57px;
 					display: block;
-					padding: 0px 22px;
+					padding: 0px 12px;
 					@include noselect();
+					text-transform: uppercase;
+					  -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
 					&:hover {
-						text-decoration: underline;
-						color: $grey;	
+						text-decoration: none;
+						background: #fff;
 					}
 					&.active {
 						background: $white;	
