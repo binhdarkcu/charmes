@@ -35,22 +35,31 @@ var pageOjb = (function() {
 	{
 		tl = new TimelineMax();
 		tl.set ($('.page.'+value),{css:{'display':'block'}})
-		  .to( $('.page .bg_overlay'), 0.4, { css:{opacity:0.8 }} )
-		  .to( $('.page .content_view'), 0.4, { css:{height:64+'%' }},'-=0.4' )
+		  .to( $('.page.'+value+' .bg_overlay'), 0.4, { css:{opacity:0.8 }} )
+		  .to( $('.page.'+value+' .content_view'), 0.4, { css:{height:64+'%' }},'-=0.4' )
 	}
 	function FadeinContent(value)
 	{
 		$('.page.detailPage').css('display','none')
-		$('.page.'+value).css('display','block')
+		$('.page.'+value).css('display','block');
+		$('.page .bg_overlay').css({opacity:0.8 });
+		$('.page .content_view').css({height:64+'%'});
 		$('.page.'+value+' .desc, .page.'+value+' .img_block').addClass('fadeIn');
 		
 	}
 	function closeAll()
 	{
-		$('.page.detailPage').css('display','none')
-		$('.page.detailPage'+' .desc, .page.detailPage .img_block').removeClass('fadeIn');
-		$('.page .bg_overlay').css({opacity:0 });
-		$('.page .content_view').css({height:0+'%' });	
+		tl
+		  .to( $('.page .bg_overlay'), 0.4, { css:{opacity:0 }} )
+		  .to( $('.page .content_view'), 0.4, { css:{height:0+'%' }},'-=0.4' )
+		  .set ($('.page.detailPage'),{css:{'display':'block'}})
+		  $('.page.detailPage'+' .desc, .page.detailPage .img_block').removeClass('fadeIn');
+		  
+		  
+		//$('.page.detailPage').css('display','none')
+		//$('.page.detailPage'+' .desc, .page.detailPage .img_block').removeClass('fadeIn');
+		//$('.page .bg_overlay').css({opacity:0 });
+		//$('.page .content_view').css({height:0+'%' });	
 	}
 
 	return {
