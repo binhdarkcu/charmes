@@ -711,23 +711,19 @@ var pageOjb = (function() {
 		$('.page nav ul.list_menu li a').click(function(){
 			var value=$(this).attr('value');
 			console.log(flag);
-			if(value!='not')
-			{
-				if(flag==true)
+				if(flag==true&&value!='not')
 				{
 					animatePopup(value);
 					flag=false;
 				}
-				else {
+				else if(value!='not'&&flag==false)
+				{
 					FadeinContent(value);
 				}
-			}
-			else {
-				flag=true;
-				closeAll();
-				
-				alert(111);
-			}
+				else if(value=='not'){
+					closeAll();
+					flag=true;
+				}
 			
 		});
 		

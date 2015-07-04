@@ -68,11 +68,11 @@ if((elemBottom<=docViewBottom)&&(elemTop>=docViewTop)){$(elem).removeClass('notV
 return{init:init,setPos:setPos}})();var pageOjb=(function(){setObj={item_menu:'.page nav ul.list_menu li a'}
 var tl=null,flag=true;function init(){events();}
 function events()
-{$('.page nav ul.list_menu li a').click(function(){var value=$(this).attr('value');console.log(flag);if(value!='not')
-{if(flag==true)
+{$('.page nav ul.list_menu li a').click(function(){var value=$(this).attr('value');console.log(flag);if(flag==true&&value!='not')
 {animatePopup(value);flag=false;}
-else{FadeinContent(value);}}
-else{flag=true;closeAll();alert(111);}});}
+else if(value!='not'&&flag==false)
+{FadeinContent(value);}
+else if(value=='not'){closeAll();flag=true;}});}
 function animatePopup(value)
 {tl=new TimelineMax();tl.set($('.page.'+value),{css:{'display':'block'}}).to($('.page .bg_overlay'),0.4,{css:{opacity:0.8}}).to($('.page .content_view'),0.4,{css:{height:64+'%'}},'-=0.4')}
 function FadeinContent(value)
