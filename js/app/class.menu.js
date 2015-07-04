@@ -18,6 +18,7 @@ var menuOjb = (function() {
 		
 		$('.page nav ul.list_menu li a').click(function(){
 			var pos=$(this).attr('pos');
+			activeMenu(this);
 			if(pos==undefined)
 			{
 				return;		
@@ -32,29 +33,15 @@ var menuOjb = (function() {
 			}
 			initPage.setPos(value);
 		});
-		/*
-		$(window).scroll(function(e) {
-            var pos=$('.page.'+'home').height();
-			var top=$(window).scrollTop();
-			console.log(pos+'_'+top);
-			if (top>=pos-110)
-			{
-				fixmenu();
-			}
-			else {
-				unfixmenu();
-			}
-        });*/
 	}
-	function fixmenu()
+	function activeMenu(value)
 	{
-		$('.page .inner_fix').addClass('fixed');
-		$('.left_menu').animate({'right':0+'px'},300);	
-	}
-	function unfixmenu()
-	{
-		$('.page .inner_fix').removeClass('fixed');
-		$('.left_menu').animate({'right':-62+'px'},300);
+		$('.page nav ul.list_menu li a').removeClass('active');
+		if(!$(value).hasClass('active'))
+		{
+			$(value).addClass('active');	
+		}
+			
 	}
 	//FUNCTION
 	function checkHeader(){

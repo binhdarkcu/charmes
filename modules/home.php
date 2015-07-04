@@ -13,8 +13,8 @@
             <div class="left_title">Albert Lavenda</div>
             <nav>
                 <ul class="list_menu">
-                    <li><a>Engagement</a></li>
-                    <li><a>Wedding</a></li>
+                    <li><a value='engagement'>Engagement</a></li>
+                    <li><a value='wedding'>Wedding</a></li>
                     <li><a pos="collection">Collections</a></li>
                     <li><a pos="store">Jewelries</a></li>
                     <li><a>Services</a></li>

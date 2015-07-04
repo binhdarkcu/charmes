@@ -37,6 +37,12 @@ $mainHeight : 960px;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s
 }
+@mixin shadow () { 
+	-moz-box-shadow: 0 0 5px #000;
+	-webkit-box-shadow: 0 0 5px #000;
+	box-shadow: 0 0 5px #000;
+}
+
 /*======COLOR========*/
 $black:#000;
 $blue: #000080;

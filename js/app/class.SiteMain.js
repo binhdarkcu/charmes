@@ -5,6 +5,7 @@ var SiteMain = (function() {
 	function init(){
 		initPage.init();
 		menuOjb.init();
+		pageOjb.init();
 	}
 	
 	//RETURN

@@ -14,7 +14,7 @@
     	<div class="top_menu">
         	<div class="select_menu">
             	<a class="icon"></a>
-            	<p class="text">Collections <span>/</span> Aladdin</p>
+            	<p class="text">Collections <span>/</span> Le Jardin<span>/</span> Flora ring</p>
             </div>
         	<div class="option_menu">
             	<ul class="list_item">

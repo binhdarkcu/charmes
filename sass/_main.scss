@@ -75,7 +75,6 @@
 	}
 	nav {
 		
-		  	margin-top: 20px;
 			position: relative;
 			
 			ul.list_menu {
@@ -85,14 +84,20 @@
       		text-align: center;
 			li {
 				float: none;
-				padding: 0px 22px;
+				
 				  display: inline-block;
 				a {
 					color : $black;
-					@include Adamina (18px);
+					@include Adamina (18px,60px);
+					height: 60px;
+					display: block;
+					padding: 0px 22px;
 					&:hover {
 						text-decoration: underline;
 						color: $grey;	
+					}
+					&.active {
+						background: $white;	
 					}	
 				}	
 			}	

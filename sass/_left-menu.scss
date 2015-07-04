@@ -4,7 +4,7 @@
 	top: 50%;
 	height: 161px;
 	width: 62px;
-	margin-top: -51px;
+	margin-top: -113px;
 	background: url(../images/box.png) no-repeat;
 	z-index: 1000;
 	.inner {
@@ -21,6 +21,11 @@
 		a {
 			display: block;
 			margin: 18px 0px 0px 15px;
+			@include animation ();
+			@include setOpacity (0.5);
+			&:hover {
+				@include setOpacity (1);	
+			}
 			&.face-icon {
 				width: 34px;
 				height: 31px;

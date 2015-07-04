@@ -1,53 +1,72 @@
 .footer {
 	clear: both;
 	width: 100%;
+	.social {
+		clear: both;
+		display: inline-block;
+		padding-left: 141px;
+		margin-bottom: -8px;
+		a {
+			display: block;
+			float: left;
+			padding-left: 10px;
+			@include setOpacity (0.5);
+			@include animation ();
+			&:hover {
+				@include setOpacity (1);	
+			}
+			&.face-icon {
+				width: 34px;
+				height: 31px;
+				background: url(../images/face-icon.png) no-repeat;	
+			}
+			&.twitter-icon {
+				width: 35px;
+				height: 32px;
+				background: url(../images/twiiter-icon.png) no-repeat;	
+			}
+			&.NO-icon {
+				width: 35px;
+				height: 35px;
+				background: url(../images/3-icon.png) no-repeat;	
+			}	
+		}	
+	}
+	/*=======================*/
 	.inner {
 		width: 100%;
 		margin: 0px auto;
 		min-height: 42px;
-		padding-bottom: 135px;
+		padding-bottom: 95px;
 		background: url(../images/bg_footer.png) no-repeat right top;
 		ul.list_menufooter{
 			padding: 0;
 			margin:0;
 			float: left;
-			padding: 45px 0px 0px 82px;
+			padding: 28px 0px 0px 82px;
 			li {
 				float: left;
 				padding: 0px 64px;
 				a {
 					@include Adamina (15px);
+					@include animation ();
+					@include setOpacity (0.5);
 					&:hover {
-						color: $grey;	
+						@include setOpacity (1);	
 					}	
 				}	
 			}	
 		}
-		.social {
+		a.contact {
 			float: right;
-			padding-right: 191px;
+			padding-right: 204px;
   			padding-top: 35px;
+			@include setOpacity (0.5);
+			@include animation ();
+			&:hover {
+				@include setOpacity (1);	
+			}
+		}
 			
-			a {
-				display: block;
-				float: left;
-				padding-left: 10px;
-				&.face-icon {
-					width: 34px;
-					height: 31px;
-					background: url(../images/face-icon.png) no-repeat;	
-				}
-				&.twitter-icon {
-					width: 35px;
-					height: 32px;
-					background: url(../images/twiiter-icon.png) no-repeat;	
-				}
-				&.NO-icon {
-					width: 35px;
-					height: 35px;
-					background: url(../images/3-icon.png) no-repeat;	
-				}	
-			}	
-		}	
 	}	
 }
