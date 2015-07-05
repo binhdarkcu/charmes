@@ -222,7 +222,7 @@
   background: #fff;
   z-index: 106;
   display: none;
-  
+  opacity: 0;
   .pad{
     padding-top: 13px;
   }
@@ -327,6 +327,10 @@
         position: absolute;
         background: #fff;
         z-index: 2;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
         &.top{
           width: 100%;
           top: 0;
@@ -366,3 +370,117 @@
     }
   }
 }
+.content_product{
+  position: relative;
+}
+.product-detail{
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 100;
+    background: #fff;
+    display: none;
+    opacity: 0;
+
+  .product-box{
+    width: auto;
+    display: table;
+    margin: 20px auto;
+    ul{
+      li{
+          height: 358px;
+        display: table-cell;
+        vertical-align: middle;
+        margin-left: 5px;
+        margin-right: 5px;
+        img{
+        }
+      }
+    }
+  }
+  .product-type{
+      width: 989px;
+      display: table;
+      margin: 0 auto;
+    .br-top{
+      background: url(../images/border.png) no-repeat center;
+      height: 3px;
+      width: 100%;
+    }
+    ul{
+        display: inline-block;
+  margin: 8px 0 8px 123px;
+      li{
+        @include Adamina (16px);
+          display: inline-block;
+          background: url(../images/br-detail.png) no-repeat right center;
+          padding-left: 10px;
+          padding-right: 19px;
+          &:last-child{
+            background: transparent;
+          }
+      }
+    }
+    span{
+        float: right;
+        margin-right: 190px;
+        margin-top: 8px;
+    }
+  }
+  .product-feed{
+    p{
+      @include Adamina (14px);
+        padding-top: 22px;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+    ul{
+      display: table;
+  margin: 45px auto;
+      li{
+        display: inline-block;
+        a{
+          color: #000;
+          padding-top: 45px;
+          i{
+            
+          }
+          span{
+             -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+            @include CabinSketchNormal (16px);
+            width: 192px;
+            height: 28px;
+             text-align: center;
+  display: inline-block;
+  line-height: 28px;
+          }
+          &.cart{
+            background: url(../images/cart-2.png) no-repeat top center;
+          }
+          &.wishlist{
+            background: url(../images/wishlist.png) no-repeat top center;
+          }
+          &.share{
+            background: url(../images/share.png) no-repeat top center;
+          }
+          &:hover{
+            span{
+              background: url(../images/link-hover.png) no-repeat center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+

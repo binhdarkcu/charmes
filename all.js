@@ -87,7 +87,7 @@ return{init:init}})();var initPage=(function(){setObj={}
 var flag=true;function init(){loadPage();}
 function loadPage(){$('.mouse-event').on('click',function(){var pos=$('.page.home').height();$.ajax({url:'modules/content.php'}).done(function(html){$('.loadPages').append(html);$('.page.home .header_content, .page .inner_fix.fixed nav').removeAttr('style');setPos(pos);events();menuOjb.init();pageOjb.init();createRadio();});});}
 function createRadio(){$('.iCheck input').iCheck();}
-function activeMenuStore(){$('.page .top_menu .select_menu .icon.hasbr').on('click',function(){$(this).removeClass('hasbr');$('.shadow').show();$('.store-filter').show().animate({'opacity':1},300);});$('.store-filter .storeicon').on('click',function(){$('.shadow').hide();$('.page .top_menu .select_menu .icon').addClass('hasbr');$('.store-filter').hide();});}
+function activeMenuStore(){$('.page .top_menu .select_menu .icon.hasbr').on('click',function(){$(this).removeClass('hasbr');$('.shadow').show();$('.store-filter').show().animate({'opacity':1},500);});$('.store-filter .storeicon').on('click',function(){$('.shadow').hide();$('.page .top_menu .select_menu .icon').addClass('hasbr');$('.store-filter').hide().animate({'opacity':0},500);});}
 function events()
 {var $blocks=$('.animBlock.notViewed');var $window=$(window);$window.on('scroll',function(e){$blocks.each(function(i,elem){if($(this).hasClass('viewed'))
 return;isScrolledIntoView($(this));});});activeMenuStore();}

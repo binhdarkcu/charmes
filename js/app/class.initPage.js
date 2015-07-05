@@ -34,12 +34,12 @@ var initPage = (function() {
 		$('.page .top_menu .select_menu .icon.hasbr').on('click',function(){
 			$(this).removeClass('hasbr');
 			$('.shadow').show();
-			$('.store-filter').show().animate({'opacity':1},300);
+			$('.store-filter').show().animate({'opacity':1},500);
 		});
 		$('.store-filter .storeicon').on('click',function(){
 			$('.shadow').hide();
 			$('.page .top_menu .select_menu .icon').addClass('hasbr');
-			$('.store-filter').hide();
+			$('.store-filter').hide().animate({'opacity':0},500);
 		});
 	}
 	function events()
