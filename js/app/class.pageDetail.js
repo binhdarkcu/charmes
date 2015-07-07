@@ -54,6 +54,7 @@ var pageOjb = (function() {
 	}
 	function closeAll()
 	{
+		tl = new TimelineMax();
 		tl
 		  .to( $('.page .bg_overlay'), 0.4, { css:{opacity:0 }} )
 		  .to( $('.page .content_view'), 0.4, { css:{height:0+'%' }},'-=0.4' )

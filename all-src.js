@@ -1153,6 +1153,7 @@ var initPage = (function() {
 			$(this).removeClass('hasbr');
 			$('.shadow').show();
 			$('.store-filter').show().animate({'opacity':1},500);
+			
 		});
 		$('.store-filter .storeicon').on('click',function(){
 			$('.shadow').hide();
@@ -1278,6 +1279,7 @@ var pageOjb = (function() {
 	}
 	function closeAll()
 	{
+		tl = new TimelineMax();
 		tl
 		  .to( $('.page .bg_overlay'), 0.4, { css:{opacity:0 }} )
 		  .to( $('.page .content_view'), 0.4, { css:{height:0+'%' }},'-=0.4' )
@@ -1286,6 +1288,36 @@ var pageOjb = (function() {
 		  $('.page.detailPage'+' .desc, .page.detailPage .img_block').removeClass('fadeIn');
 	}
 
+	return {
+		init:init
+	}
+})();		
+
+// JavaScript Document
+var ProductOjb = (function() {
+	//PARAMATER
+	setObj=		{
+			item_menu	:	'.page nav ul.list_menu li a'
+	}
+	var tl=null,
+		flag=true;
+	function init(){
+		events();
+	}
+	function events()
+	{
+		
+		
+	}
+	function showProducts()
+	{
+		tl = new TimelineMax();
+		
+	}
+	function closeProduct()
+	{
+		
+	}
 	return {
 		init:init
 	}

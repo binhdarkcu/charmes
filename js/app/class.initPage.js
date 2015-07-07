@@ -36,6 +36,7 @@ var initPage = (function() {
 			$(this).removeClass('hasbr');
 			$('.shadow').show();
 			$('.store-filter').show().animate({'opacity':1},500);
+			
 		});
 		$('.store-filter .storeicon').on('click',function(){
 			$('.shadow').hide();

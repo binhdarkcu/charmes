@@ -418,16 +418,18 @@ Flora ring represents natural essences of beauty, purity and serenity.
     		</div>
     	</div>
         <ul class="list_products">
-            <li class="notViewed animBlock scale"  data-position="scale"><a><img src="images/img01.png"></a></li>
-            <li class="notViewed animBlock scale" data-position="scale"><a><img src="images/img02.png"></a></li>
-            <li class="notViewed animBlock scale" data-position="scale"><a><img src="images/img03.png"></a></li>
-            <li class="notViewed animBlock scale" data-position="scale"><a><img src="images/img04.png"></a></li>
+            <li class="notViewed animBlock scale"  data-position="scale"><a><div class="group_img"><img src="images/img01.png"></div></a></li>
+            <li class="notViewed animBlock scale" data-position="scale"><a><div class="group_img"><img src="images/img02.png"></div></a></li>
+            <li class="notViewed animBlock scale" data-position="scale"><a><div class="group_img"><img src="images/img03.png"></div></a></li>
+            <li class="notViewed animBlock scale" data-position="scale"><a><div class="group_img"><img src="images/img04.png"></div></a></li>
             <li class="notViewed animBlock scale" data-position="scale">
-            	<a href="#">
-            		
-            	</a>
             	<a href="#" class="active">
-            		<img src="images/img10.png">
+                	<div class="group_img">
+                    	<img src="images/small_left.png" class="small_left">
+                        <img src="images/img10.png" class="large_view">
+                        <img src="images/small_right.png" class="small_right">
+                    </div>
+            		
             		<div class="view_detail">
 	                	<p class="text">Engagement Rings</p>
 	                    <span class="view">View Details</span>
@@ -435,10 +437,10 @@ Flora ring represents natural essences of beauty, purity and serenity.
             	</a>
             	
             </li>
-            <li class="notViewed animBlock scale" data-position="scale"><a><img src="images/img06.png"></a></li>
-            <li class="notViewed animBlock scale" data-position="scale"><a><img src="images/img07.png"></a></li>
-            <li class="notViewed animBlock scale" data-position="scale"><a><img src="images/img08.png"></a></li>
-            <li class="notViewed animBlock scale" data-position="scale"><a><img src="images/img09.png"></a></li>
+            <li class="notViewed animBlock scale" data-position="scale"><a><div class="group_img"><img src="images/img06.png"></div></a></li>
+            <li class="notViewed animBlock scale" data-position="scale"><a><div class="group_img"><img src="images/img07.png"></div></a></li>
+            <li class="notViewed animBlock scale" data-position="scale"><a><div class="group_img"><img src="images/img08.png"></div></a></li>
+            <li class="notViewed animBlock scale" data-position="scale"><a><div class="group_img"><img src="images/img09.png"></div></a></li>
         </ul>
     </div>
     <div class="loading"></div>

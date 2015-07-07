@@ -145,7 +145,7 @@
 	/*end top*/
 	.content_product {
 		clear: both;
-		width: 1120px;
+		width: 1230px;
 		margin: 36px auto;
 		
 		.list_products {
@@ -154,13 +154,36 @@
 			clear: both;
 			li {
 				float: left;
-				margin: 47px 45px;
+				margin: 47px 0px;
 				position: relative;
-				
 				&:hover {
 					.view_detail {
-						
 						opacity: 1;
+					}
+					.group_img {
+						.large_view {
+							-ms-transform: scale(1.2,1.2); /* IE 9 */
+    						-webkit-transform: scale(1.2,1.2); /* Safari */
+    				 		transform: scale(1.2,1.2);
+						}
+						.small_left {
+							opacity: 0.3;
+							-ms-transform: scale(1,1); /* IE 9 */
+    						-webkit-transform: scale(1,1); /* Safari */
+    				 		transform: scale(1,1);
+							&:hover {
+								opacity: 1;
+							}	
+						}
+						.small_right {
+							opacity: 0.3;
+							-ms-transform: scale(1,1); /* IE 9 */
+    						-webkit-transform: scale(1,1); /* Safari */
+    				 		transform: scale(1,1);
+							&:hover {
+								opacity: 1;
+							}	
+						}	
 					}	
 				}
 				.col {
@@ -169,10 +192,48 @@
 						margin: 0px 20px;	
 					}	
 				}
+				.group_img {
+					clear: both;
+					position: relative;
+					width: 400px;
+  					
+  					text-align: center;
+					.large_view {
+						@include animation ();
+						-ms-transform: scale(1,1); /* IE 9 */
+    					-webkit-transform: scale(1,1); /* Safari */
+    				 	transform: scale(1,1);
+						z-index: 1;
+					}
+					.small_left {
+						position: absolute;
+						left: 5px;
+						top: 50%;
+  						margin-top: -30px;
+						@include animation ();
+						opacity: 0;
+						-ms-transform: scale(0.5,0.5); /* IE 9 */
+    					-webkit-transform: scale(0.5,0.5); /* Safari */
+    				 	transform: scale(0.5,0.5);
+						z-index: 2;
+					}
+					.small_right {
+						position: absolute;
+						right: 0;
+						top: 50%;
+  						margin-top: -30px;
+						opacity: 0;
+						@include animation ();
+						-ms-transform: scale(0.5,0.5); /* IE 9 */
+    					-webkit-transform: scale(0.5,0.5); /* Safari */
+    				 	transform: scale(0.5,0.5);
+						z-index: 2;	
+					}	
+				}
 				.view_detail {
 					position: absolute;
 					left: 50%;
-					margin-left: -115px;
+					margin-left: -199px;
   					bottom: -65px;
 					width: 100%;
 					text-align: center;
@@ -181,7 +242,7 @@
 					p.text {
 						clear: both;
 						background: url(../images/line_detail.png) no-repeat left bottom;
-						width: 258px;
+						
 						padding-bottom: 15px;
 						@include Adamina (24px);	
 						color: #000;
