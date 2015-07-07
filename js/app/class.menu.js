@@ -6,6 +6,7 @@ var menuOjb = (function() {
 	}
 	var flag=true;
 	var fixed = false;
+	var click = false;
 	var element = $(".page .inner_fix");
 	var header = $(".header_content");
 	function init(){
@@ -15,23 +16,26 @@ var menuOjb = (function() {
 	}
 	function events()
 	{
-		
-		$('.page nav ul.list_menu li a').click(function(){
+		$('.page nav ul.list_menu li a.goto').click(function(){
 			var pos=$(this).attr('pos');
 			activeMenu(this);
-			if(pos==undefined)
-			{
-				return;		
+			pageOjb.closeAll();
+			if(click == false){
+				$.ajax({
+		            url:'modules/content.php' 
+		        })
+		        .done(function( html ) {
+		        	$('.loadPages').append(html);
+		        	$('.page.home .header_content, .inner_fix.fixed .list_menu').removeAttr('style');
+					initPage.initFunctions();
+					var value=$('[data-page='+pos+']').offset().top;
+					initPage.setPos(value);
+					click = true;
+		        });
+			}else{
+				var value=$('[data-page='+pos+']').offset().top;
+				initPage.setPos(value);
 			}
-			else {
-				var value=$('.page.'+pos).position().top;
-				
-			}
-			if(pos>=650)
-			{
-				return false;
-			}
-			initPage.setPos(value);
 		});
 	}
 	function activeMenu(value)
@@ -61,7 +65,8 @@ var menuOjb = (function() {
     }
     
 	return {
-		init:init
-	}
+		init:init,
+		activeMenu:activeMenu
+	};
 })();		
 

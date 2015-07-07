@@ -13,22 +13,14 @@ var initPage = (function() {
 	}
 	function loadPage(){
 		$('.mouse-event').on('click',function(){
-			var pos=$('.page.home').height();
 			
-			$.ajax({
-	            url:'modules/content.php' 
-	        })
-	        .done(function( html ) {
-	        	$('.loadPages').append(html);
-	        	$('.page.home .header_content, .page .inner_fix.fixed nav').removeAttr('style');
-				setPos(pos);
-	        	events();
-				
-				pageOjb.init();
-				ProductOjb.init();
-				createRadio();	
-	        });
 		});
+	}
+	function initFunctions(){
+		events();
+		pageOjb.init();
+		ProductOjb.init();
+		createRadio();	
 	}
 	function createRadio(){
 		$('.iCheck input').iCheck();
@@ -67,6 +59,7 @@ var initPage = (function() {
 	}
 	function setPos(value)
 	{
+		console.log(value);
 		$('html, body').animate({
         	scrollTop: value,
 			easing: 'linear'
@@ -109,7 +102,8 @@ var initPage = (function() {
 	
 	return {
 		init:init,
-		setPos:setPos
+		setPos:setPos,
+		initFunctions:initFunctions
 	}
 })();		
 

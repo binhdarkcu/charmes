@@ -1,4 +1,4 @@
-<section class="page store">
+<section class="page store" data-page="store">
 	<h3 class="title notViewed animBlock" data-offset="-200" data-position="opacity">Jewelries</h3>
     <div class="inner_slider">
     	<a class="pre"></a>
@@ -10,7 +10,7 @@
             </li>
         </ul>
     </div>
-    <div class="top_menu">
+    <div class="top_menu" data-page="collections">
     	<div class="shadow"></div>
         <div class="select_menu">
             <a class="icon hasbr"><span></span></a>
