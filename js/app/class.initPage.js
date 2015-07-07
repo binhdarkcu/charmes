@@ -23,6 +23,7 @@ var initPage = (function() {
 	        	events();
 				menuOjb.init();
 				pageOjb.init();
+				ProductOjb.init();
 				createRadio();	
 	        });
 		});

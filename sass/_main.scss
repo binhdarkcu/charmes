@@ -103,8 +103,9 @@
         -o-transition: all .2s ease-in-out;
         transition: all .2s ease-in-out;
 					&:hover {
-						text-decoration: none;
-						background: #fff;
+						text-decoration: underline;
+						color: $grey;
+						/*background: #fff;*/
 					}
 					&.active {
 						background: $white;	

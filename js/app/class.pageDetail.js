@@ -29,12 +29,17 @@ var pageOjb = (function() {
 				}
 			
 		});
+		$('.page .bg_overlay').click(function(){
+			closeAll();
+			flag=true;
+		});
 		
 	}
 	function animatePopup(value)
 	{
 		tl = new TimelineMax();
 		tl.set ($('.page.'+value),{css:{'display':'block'}})
+		  .set( $('.page .bg_overlay'), { css:{display:'block' }} )
 		  .to( $('.page.'+value+' .bg_overlay'), 0.4, { css:{opacity:0.8 }} )
 		  .to( $('.page.'+value+' .content_view'), 0.4, { css:{height:64+'%' }},'-=0.4' )
 	}
@@ -42,7 +47,7 @@ var pageOjb = (function() {
 	{
 		$('.page.detailPage').css('display','none')
 		$('.page.'+value).css('display','block');
-		$('.page .bg_overlay').css({opacity:0.8 });
+		$('.page .bg_overlay').css({'display':'block', opacity:0.8 });
 		$('.page .content_view').css({height:64+'%'});
 		$('.page.'+value+' .desc, .page.'+value+' .img_block').addClass('fadeIn');
 		
@@ -52,14 +57,9 @@ var pageOjb = (function() {
 		tl
 		  .to( $('.page .bg_overlay'), 0.4, { css:{opacity:0 }} )
 		  .to( $('.page .content_view'), 0.4, { css:{height:0+'%' }},'-=0.4' )
-		  .set ($('.page.detailPage'),{css:{'display':'block'}})
+		  .set ($('.page.detailPage'),{css:{'display':'none'}})
+		  .set ($('.page .bg_overlay'),{ css:{display:'none' }})
 		  $('.page.detailPage'+' .desc, .page.detailPage .img_block').removeClass('fadeIn');
-		  
-		  
-		//$('.page.detailPage').css('display','none')
-		//$('.page.detailPage'+' .desc, .page.detailPage .img_block').removeClass('fadeIn');
-		//$('.page .bg_overlay').css({opacity:0 });
-		//$('.page .content_view').css({height:0+'%' });	
 	}
 
 	return {
