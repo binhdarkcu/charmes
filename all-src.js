@@ -1125,6 +1125,8 @@ var initPage = (function() {
 	
 	function init(){
 		loadPage();
+		pageOjb.init();
+		menuOjb.init();
 	}
 	function loadPage(){
 		$('.mouse-event').on('click',function(){
@@ -1138,7 +1140,7 @@ var initPage = (function() {
 	        	$('.page.home .header_content, .page .inner_fix.fixed nav').removeAttr('style');
 				setPos(pos);
 	        	events();
-				menuOjb.init();
+				
 				pageOjb.init();
 				ProductOjb.init();
 				createRadio();	

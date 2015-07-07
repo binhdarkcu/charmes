@@ -84,8 +84,8 @@ function activeMenu(value)
 {$(value).addClass('active');}}
 function checkHeader(){if($(this).scrollTop()>$(".header_content").height()){if(fixed==false){fixed=true;$('.left_menu').animate({'right':0+'px'},300);}}else{if(fixed==true){fixed=false;$('.left_menu').animate({'right':-62+'px'},300);}}}
 return{init:init}})();var initPage=(function(){setObj={}
-var flag=true;function init(){loadPage();}
-function loadPage(){$('.mouse-event').on('click',function(){var pos=$('.page.home').height();$.ajax({url:'modules/content.php'}).done(function(html){$('.loadPages').append(html);$('.page.home .header_content, .page .inner_fix.fixed nav').removeAttr('style');setPos(pos);events();menuOjb.init();pageOjb.init();ProductOjb.init();createRadio();});});}
+var flag=true;function init(){loadPage();pageOjb.init();menuOjb.init();}
+function loadPage(){$('.mouse-event').on('click',function(){var pos=$('.page.home').height();$.ajax({url:'modules/content.php'}).done(function(html){$('.loadPages').append(html);$('.page.home .header_content, .page .inner_fix.fixed nav').removeAttr('style');setPos(pos);events();pageOjb.init();ProductOjb.init();createRadio();});});}
 function createRadio(){$('.iCheck input').iCheck();}
 function activeMenuStore(){$('.page .top_menu .select_menu .icon.hasbr').on('click',function(){$(this).removeClass('hasbr');$('.shadow').show();$('.store-filter').show().animate({'opacity':1},500);});$('.store-filter .storeicon').on('click',function(){$('.shadow').hide();$('.page .top_menu .select_menu .icon').addClass('hasbr');$('.store-filter').hide().animate({'opacity':0},500);});}
 function events()
