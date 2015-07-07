@@ -1174,6 +1174,11 @@ var initPage = (function() {
 			});
 	 	});
 	 	activeMenuStore();
+		$('.store-filter .btnSubmit, .shadow').click(function(){
+			$('.shadow').hide();
+			$('.page .top_menu .select_menu .icon').addClass('hasbr');
+			$('.store-filter').hide().animate({'opacity':0},500);	
+		});
 	}
 	function setPos(value)
 	{
