@@ -20,7 +20,8 @@ var initPage = (function() {
 		events();
 		pageOjb.init();
 		ProductOjb.init();
-		createRadio();	
+		createRadio();
+		slider.init();	
 	}
 	function createRadio(){
 		$('.iCheck input').iCheck();

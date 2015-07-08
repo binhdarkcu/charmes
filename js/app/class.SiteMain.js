@@ -5,6 +5,7 @@ var SiteMain = (function() {
 	function init(){
 		initPage.init();
 		
+		
 	}
 	//RETURN
 	return {

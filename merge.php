@@ -7,6 +7,7 @@
 		"js/lib/SmoothScroll.js",
 		"js/lib/icheck.js",
 		
+		"js/app/class.slider.js",
 		"js/app/class.menu.js",
 		"js/app/class.initPage.js",
 		"js/app/class.pageDetail.js",

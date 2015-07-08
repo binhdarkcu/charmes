@@ -60,6 +60,7 @@
 				a {
 					@include HelveticaLight (14px);
 					@include setOpacity (0.8);
+					@include animation ();
 					color: $black;
 					padding-left: 23px;	
 					&:hover {

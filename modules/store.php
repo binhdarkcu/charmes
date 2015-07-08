@@ -1,11 +1,23 @@
 <section class="page store" data-page="store">
 	<h3 class="title notViewed animBlock" data-offset="-200" data-position="opacity">Jewelries</h3>
     <div class="inner_slider">
-    	<a class="pre"></a>
+    	<a class="pre" style="display: none;"></a>
         <a class="next"></a>
-        <ul class="list_slider notViewed animBlock" data-offset="100" data-position="opacity">
+        <ul class="list_slider">
             <li style="background: url('images/img_slider.png') no-repeat top center;background-size: cover;">
-                <p class="text">Wedding Jewelries<br><span>Customization</span></p>
+                <p class="text">Wedding Jewelries<br><span>Customization 1</span></p>
+                <a class="btn">Discover</a>
+            </li>
+            <li style="background: url('images/img_slider.png') no-repeat top center;background-size: cover;">
+                <p class="text">Wedding Jewelries<br><span>Customization 2</span></p>
+                <a class="btn">Discover</a>
+            </li>
+            <li style="background: url('images/img_slider.png') no-repeat top center;background-size: cover;">
+                <p class="text">Wedding Jewelries<br><span>Customization 3</span></p>
+                <a class="btn">Discover</a>
+            </li>
+            <li style="background: url('images/img_slider.png') no-repeat top center;background-size: cover;">
+                <p class="text">Wedding Jewelries<br><span>Customization 4</span></p>
                 <a class="btn">Discover</a>
             </li>
         </ul>

@@ -32,6 +32,11 @@
 			li {
 				clear: both;
 				  min-height: 414px;
+				  position: absolute;
+				  left: 0px;
+				  top: 0px;
+				  width: 100%;
+				 
 				img {
 					position: absolute;
 					left: 50%;
@@ -117,6 +122,8 @@
 					margin: 4px 8px 0px;
 					a {
 						display: block;
+						@include setOpacity (0.8);
+						@include animation ();
 						&.search {
 							width: 42px;
 							height: 50px;
@@ -131,6 +138,9 @@
 							width: 40px;
 							height: 42px;
 							background: url(../images/note.png) no-repeat;	
+						}
+						&:hover {
+							@include setOpacity (1);	
 						}	
 					}
 					&.line {
