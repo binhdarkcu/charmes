@@ -119,7 +119,7 @@ if((elemBottom<=docViewBottom)&&(elemTop>=docViewTop)){$(elem).removeClass('notV
 return{init:init,setPos:setPos,initFunctions:initFunctions}})();var pageOjb=(function(){setObj={item_menu:'.page nav ul.list_menu li a'}
 var tl=null,flag=true;function init(){events();}
 function events()
-{$('.page nav ul.list_menu li a.internal').click(function(){var value=$(this).attr('value');console.log(flag);menuOjb.activeMenu(this);if(flag==true&&value!='not')
+{$('.page nav ul.list_menu li a.internal').hover(function(){var value=$(this).attr('value');console.log(flag);menuOjb.activeMenu(this);if(flag==true&&value!='not')
 {animatePopup(value);flag=false;}
 else if(value!='not'&&flag==false)
 {FadeinContent(value);}
