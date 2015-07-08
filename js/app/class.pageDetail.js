@@ -11,7 +11,7 @@ var pageOjb = (function() {
 	}
 	function events()
 	{
-		$('.page nav ul.list_menu li a.internal').hover(function(){
+		$('.page nav ul.list_menu li a.internal').click(function(){
 			var value=$(this).attr('value');
 			console.log(flag);
 			menuOjb.activeMenu(this);
