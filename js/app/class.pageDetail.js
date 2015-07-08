@@ -11,9 +11,10 @@ var pageOjb = (function() {
 	}
 	function events()
 	{
-		$('.page nav ul.list_menu li a').click(function(){
+		$('.page nav ul.list_menu li a.internal').hover(function(){
 			var value=$(this).attr('value');
 			console.log(flag);
+			menuOjb.activeMenu(this);
 				if(flag==true&&value!='not')
 				{
 					animatePopup(value);
@@ -64,7 +65,8 @@ var pageOjb = (function() {
 	}
 
 	return {
-		init:init
+		init:init,
+		closeAll:closeAll
 	}
 })();		
 

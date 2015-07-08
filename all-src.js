@@ -1056,6 +1056,7 @@ var menuOjb = (function() {
 	}
 	var flag=true;
 	var fixed = false;
+	var click = false;
 	var element = $(".page .inner_fix");
 	var header = $(".header_content");
 	function init(){
@@ -1065,23 +1066,26 @@ var menuOjb = (function() {
 	}
 	function events()
 	{
-		
-		$('.page nav ul.list_menu li a').click(function(){
+		$('.page nav ul.list_menu li a.goto').click(function(){
 			var pos=$(this).attr('pos');
 			activeMenu(this);
-			if(pos==undefined)
-			{
-				return;		
+			pageOjb.closeAll();
+			if(click == false){
+				$.ajax({
+		            url:'modules/content.php' 
+		        })
+		        .done(function( html ) {
+		        	$('.loadPages').append(html);
+		        	$('.page.home .header_content, .inner_fix.fixed .list_menu').removeAttr('style');
+					initPage.initFunctions();
+					var value=$('[data-page='+pos+']').offset().top;
+					initPage.setPos(value);
+					click = true;
+		        });
+			}else{
+				var value=$('[data-page='+pos+']').offset().top;
+				initPage.setPos(value);
 			}
-			else {
-				var value=$('.page.'+pos).position().top;
-				
-			}
-			if(pos>=650)
-			{
-				return false;
-			}
-			initPage.setPos(value);
 		});
 	}
 	function activeMenu(value)
@@ -1111,8 +1115,9 @@ var menuOjb = (function() {
     }
     
 	return {
-		init:init
-	}
+		init:init,
+		activeMenu:activeMenu
+	};
 })();		
 
 // JavaScript Document
@@ -1125,25 +1130,19 @@ var initPage = (function() {
 	
 	function init(){
 		loadPage();
+		pageOjb.init();
+		menuOjb.init();
 	}
 	function loadPage(){
 		$('.mouse-event').on('click',function(){
-			var pos=$('.page.home').height();
 			
-			$.ajax({
-	            url:'modules/content.php' 
-	        })
-	        .done(function( html ) {
-	        	$('.loadPages').append(html);
-	        	$('.page.home .header_content, .page .inner_fix.fixed nav').removeAttr('style');
-				setPos(pos);
-	        	events();
-				menuOjb.init();
-				pageOjb.init();
-				ProductOjb.init();
-				createRadio();	
-	        });
 		});
+	}
+	function initFunctions(){
+		events();
+		pageOjb.init();
+		ProductOjb.init();
+		createRadio();	
 	}
 	function createRadio(){
 		$('.iCheck input').iCheck();
@@ -1182,6 +1181,7 @@ var initPage = (function() {
 	}
 	function setPos(value)
 	{
+		console.log(value);
 		$('html, body').animate({
         	scrollTop: value,
 			easing: 'linear'
@@ -1224,7 +1224,8 @@ var initPage = (function() {
 	
 	return {
 		init:init,
-		setPos:setPos
+		setPos:setPos,
+		initFunctions:initFunctions
 	}
 })();		
 
@@ -1241,9 +1242,10 @@ var pageOjb = (function() {
 	}
 	function events()
 	{
-		$('.page nav ul.list_menu li a').click(function(){
+		$('.page nav ul.list_menu li a.internal').hover(function(){
 			var value=$(this).attr('value');
 			console.log(flag);
+			menuOjb.activeMenu(this);
 				if(flag==true&&value!='not')
 				{
 					animatePopup(value);
@@ -1294,7 +1296,8 @@ var pageOjb = (function() {
 	}
 
 	return {
-		init:init
+		init:init,
+		closeAll:closeAll
 	}
 })();		
 

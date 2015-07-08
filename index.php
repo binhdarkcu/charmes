@@ -30,6 +30,8 @@
         <div class="wrapper">
         	<?php 
 				include("modules/home.php");
+				include("modules/engagement.php");
+				include("modules/wedding.php");
 			?>
 			<div class="loadPages">
 				

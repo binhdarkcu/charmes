@@ -1,4 +1,4 @@
-<section class="page detailPage collections">
+<section class="page detailPage" style="display: none;">
     <div class="inner_contentDetial">
     	<div class="bg_overlay"></div>
         <div class="content_view">
