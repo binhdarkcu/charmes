@@ -32,6 +32,10 @@
 				include("modules/home.php");
 				include("modules/engagement.php");
 				include("modules/wedding.php");
+				include("modules/intropage.php");
+				include("modules/store.php");
+				include("modules/collections.php");
+				include("modules/menu_left.php");
 			?>
 			<div class="loadPages">
 				

@@ -7,15 +7,11 @@ var initPage = (function() {
 	var flag=true;
 	
 	function init(){
-		loadPage();
 		pageOjb.init();
 		menuOjb.init();
+		initFunctions();
 	}
-	function loadPage(){
-		$('.mouse-event').on('click',function(){
-			
-		});
-	}
+	
 	function initFunctions(){
 		events();
 		pageOjb.init();
@@ -60,7 +56,6 @@ var initPage = (function() {
 	}
 	function setPos(value)
 	{
-		console.log(value);
 		$('html, body').animate({
         	scrollTop: value,
 			easing: 'linear'

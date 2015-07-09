@@ -11,27 +11,30 @@ var pageOjb = (function() {
 	}
 	function events()
 	{
-		$('.page nav ul.list_menu li a.internal').hover(function(){
+		$('.page nav ul.list_menu li a').hover(function(){
 			var value=$(this).attr('value');
-			console.log(flag);
 			menuOjb.activeMenu(this);
-				if(flag==true&&value!='not')
-				{
-					animatePopup(value);
-					flag=false;
-				}
-				else if(value!='not'&&flag==false)
-				{
-					FadeinContent(value);
-				}
-				else if(value=='not'){
-					closeAll();
-					flag=true;
-				}
-			
+			if(flag==true&&value!='not')
+			{
+				animatePopup(value);
+				flag=false;
+			}
+			else if(value!='not'&&flag==false)
+			{
+				FadeinContent(value);
+			}
+			else if(value=='not'){
+				closeAll();
+				flag=true;
+			}
+		});
+		$('.page nav ul.list_menu li a.goto').hover(function(){
+			flag=true;
+			$('.page nav ul.list_menu li a').removeClass('active');
 		});
 		$('.page .bg_overlay').click(function(){
 			closeAll();
+			$('.page nav ul.list_menu li a').removeClass('active');
 			flag=true;
 		});
 		
@@ -55,12 +58,13 @@ var pageOjb = (function() {
 	}
 	function closeAll()
 	{
+		console.log(3);
 		tl = new TimelineMax();
 		tl
 		  .to( $('.page .bg_overlay'), 0.4, { css:{opacity:0 }} )
 		  .to( $('.page .content_view'), 0.4, { css:{height:0+'%' }},'-=0.4' )
 		  .set ($('.page.detailPage'),{css:{'display':'none'}})
-		  .set ($('.page .bg_overlay'),{ css:{display:'none' }})
+		  .set ($('.page .bg_overlay'),{ css:{'display':'none' }});
 		  $('.page.detailPage'+' .desc, .page.detailPage .img_block').removeClass('fadeIn');
 	}
 

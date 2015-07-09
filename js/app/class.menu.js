@@ -17,25 +17,7 @@ var menuOjb = (function() {
 	function events()
 	{
 		$('.page nav ul.list_menu li a.goto').click(function(){
-			var pos=$(this).attr('pos');
-			activeMenu(this);
-			pageOjb.closeAll();
-			if(click == false){
-				$.ajax({
-		            url:'modules/content.php' 
-		        })
-		        .done(function( html ) {
-		        	$('.loadPages').append(html);
-		        	$('.page.home .header_content, .inner_fix.fixed .list_menu').removeAttr('style');
-					initPage.initFunctions();
-					var value=$('[data-page='+pos+']').offset().top;
-					initPage.setPos(value);
-					click = true;
-		        });
-			}else{
-				var value=$('[data-page='+pos+']').offset().top;
-				initPage.setPos(value);
-			}
+			
 		});
 	}
 	function activeMenu(value)

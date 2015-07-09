@@ -1,7 +1,7 @@
 <section class="page store" data-page="store">
 	<h3 class="title notViewed animBlock" data-offset="-200" data-position="opacity">Jewelries</h3>
     <div class="inner_slider">
-    	<a class="pre" style="display: none;"></a>
+    	<a class="pre"></a>
         <a class="next"></a>
         <ul class="list_slider">
             <li style="background: url('images/img_slider.png') no-repeat top center;background-size: cover;">
@@ -26,7 +26,7 @@
     	<div class="shadow"></div>
         <div class="select_menu">
             <a class="icon hasbr"><span></span></a>
-            <p class="text">Collections <span>/</span> Le Jardin<span>/</span> Flora ring</p>
+            <p class="text"><a href="#">Collections</a> <span>/</span> <a href="#">Le Jardin</a><span>/</span> <a href=""#>Flora ring</a></p>
             <?php include ('includes/filter.php'); ?>
         </div>
         <div class="option_menu">
