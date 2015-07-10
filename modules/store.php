@@ -5,20 +5,28 @@
         <a class="next"></a>
         <ul class="list_slider">
             <li style="background: url('images/img_slider.png') no-repeat top center;background-size: cover;">
-                <p class="text">Wedding Jewelries<br><span>Customization 1</span></p>
-                <a class="btn">Discover</a>
+                <div class="box-text">
+                	<p class="text">Wedding Jewelries<br><span>Customization 1</span></p>
+                	<a class="btn">Discover</a>
+                </div>
             </li>
             <li style="background: url('images/img_slider.png') no-repeat top center;background-size: cover;">
-                <p class="text">Wedding Jewelries<br><span>Customization 2</span></p>
-                <a class="btn">Discover</a>
+                <div class="box-text">
+                	<p class="text">Wedding Jewelries<br><span>Customization 2</span></p>
+                	<a class="btn">Discover</a>
+                </div>
             </li>
             <li style="background: url('images/img_slider.png') no-repeat top center;background-size: cover;">
-                <p class="text">Wedding Jewelries<br><span>Customization 3</span></p>
-                <a class="btn">Discover</a>
+                <div class="box-text">
+                	<p class="text">Wedding Jewelries<br><span>Customization 3</span></p>
+                	<a class="btn">Discover</a>
+                </div>
             </li>
             <li style="background: url('images/img_slider.png') no-repeat top center;background-size: cover;">
-                <p class="text">Wedding Jewelries<br><span>Customization 4</span></p>
-                <a class="btn">Discover</a>
+                <div class="box-text">
+                	<p class="text">Wedding Jewelries<br><span>Customization 4</span></p>
+                	<a class="btn">Discover</a>
+                </div>
             </li>
         </ul>
     </div>

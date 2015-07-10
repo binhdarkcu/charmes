@@ -58,11 +58,14 @@
 					margin-left: -693px;
 					z-index: 1;	
 				}
+				.box-text{
+				  position: absolute;
+          left: 50%;
+          z-index: 2;
+          top: 248px;
+          margin-left: 50px;
+				}
 				p.text {
-					position: absolute;
-					  right: 200px;
-  					top: 248px;
-					z-index: 2;	
 					@include PlayfairBold (30px);
 					font-weight: bold;	
 					span {
@@ -74,11 +77,11 @@
 					background: url(../images/btn.png) no-repeat;
 					width: 154px;
 					height: 38px;
-					position: absolute;
-					  right: 364px;
-            top: 347px;
 					text-align: center;
 					color: $white;
+					position: inherit;
+					margin: 0;
+					top: auto;
 					@include Adamina (18px,1.8);
 					z-index: 3;	
 				}	
