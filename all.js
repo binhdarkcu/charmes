@@ -122,7 +122,7 @@ function events()
 {animatePopup(value);flag=false;}
 else if(value!='not'&&flag==false)
 {FadeinContent(value);}
-else if(value=='not'){closeAll();flag=true;}});$('.page nav ul.list_menu li a.goto').hover(function(){flag=true;$('.page nav ul.list_menu li a').removeClass('active');});$('.page .bg_overlay').click(function(){closeAll();$('.page nav ul.list_menu li a').removeClass('active');flag=true;});}
+else if(value=='not'){closeAll();flag=true;}});$('.page nav ul.list_menu li a.goto').hover(function(){flag=true;$('.page nav ul.list_menu li a').removeClass('active');});$('.page .bg_overlay').hover(function(){closeAll();$('.page nav ul.list_menu li a').removeClass('active');flag=true;});}
 function animatePopup(value)
 {tl=new TimelineMax();tl.set($('.page.'+value),{css:{'display':'block'}}).set($('.page .bg_overlay'),{css:{display:'block'}}).to($('.page.'+value+' .bg_overlay'),0.4,{css:{opacity:0.8}}).to($('.page.'+value+' .content_view'),0.4,{css:{height:64+'%'}},'-=0.4')}
 function FadeinContent(value)

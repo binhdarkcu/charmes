@@ -32,7 +32,7 @@ var pageOjb = (function() {
 			flag=true;
 			$('.page nav ul.list_menu li a').removeClass('active');
 		});
-		$('.page .bg_overlay').click(function(){
+		$('.page .bg_overlay').hover(function(){
 			closeAll();
 			$('.page nav ul.list_menu li a').removeClass('active');
 			flag=true;
