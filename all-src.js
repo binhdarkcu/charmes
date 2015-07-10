@@ -1172,7 +1172,7 @@ var menuOjb = (function() {
 	{
 		$('nav ul.list_menu li a.goto').click(function(e){
 			var value=$(this).attr('pos');
-			var collections=parseInt($('.page.store .top_menu').offset().top)-20,
+			var collections=parseInt($('.page.store .top_menu').offset().top),
 			Jewelries=parseInt($('.page.store .inner_slider').offset().top)-330;
 			activeMenu($(this));
 			if(value=='collections')
@@ -1369,7 +1369,7 @@ var pageOjb = (function() {
 		$('.page nav ul.list_menu li a.goto').hover(function(){
 			closeAll();
 			
-			//$('.page nav ul.list_menu li a').removeClass('active');
+			$('.page nav ul.list_menu li a.internal').removeClass('active');
 			flaginit=true;
 		});
 		$('.page .bg_overlay').hover(function(){

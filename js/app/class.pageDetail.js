@@ -30,7 +30,7 @@ var pageOjb = (function() {
 		$('.page nav ul.list_menu li a.goto').hover(function(){
 			closeAll();
 			
-			//$('.page nav ul.list_menu li a').removeClass('active');
+			$('.page nav ul.list_menu li a.internal').removeClass('active');
 			flaginit=true;
 		});
 		$('.page .bg_overlay').hover(function(){
