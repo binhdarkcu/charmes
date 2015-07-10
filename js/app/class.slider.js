@@ -13,6 +13,7 @@ var slider = (function() {
 	}
 	function setCss()
 	{
+		set.total=$(set.name_list).length;
 		$('.page .inner_slider .list_slider li:gt(0)').css('opacity',0);
 		
 	}
@@ -56,8 +57,8 @@ var slider = (function() {
 	//NEXT
 	function NextSlider()
 	{
-		set.n=$(set.name_list).length;
-		if (set.current < set.n - 1) {
+		
+		if (set.current < set.total - 1) {
 			set.current++;
 		}
 		else {

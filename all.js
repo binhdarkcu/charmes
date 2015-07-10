@@ -73,7 +73,7 @@ function callbacks(input,checked,callback,keep){if(!keep){if(checked){input[_cal
 input[_callback]('ifChanged')[_callback]('if'+capitalize(callback));}}})(window.jQuery||window.Zepto);var slider=(function(){set={total:0,current:0,name_list:'.page .inner_slider .list_slider li'}
 function init(){events();setCss();}
 function setCss()
-{$('.page .inner_slider .list_slider li:gt(0)').css('opacity',0);}
+{set.total=$(set.name_list).length;$('.page .inner_slider .list_slider li:gt(0)').css('opacity',0);}
 function setW()
 {}
 function events()
@@ -86,7 +86,7 @@ else{$('a.pre, a.next').css('display','block');}}
 function ani_Slider(value)
 {TweenMax.to($(set.name_list),1,{opacity:"0"});TweenMax.fromTo($(set.name_list).eq(value),1,{opacity:"0"},{opacity:"1"});}
 function NextSlider()
-{set.n=$(set.name_list).length;if(set.current<set.n-1){set.current++;}
+{if(set.current<set.total-1){set.current++;}
 else{set.current=0;}
 ani_Slider(set.current);}
 function PreSlider()
