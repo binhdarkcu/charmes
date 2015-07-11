@@ -43,10 +43,42 @@
     <div class="content_product">
     	<?php include ('detailProduct.php'); ?>
         <ul class="list_products">
-            <li class="notViewed animBlock scale"  data-position="scale"><a><div class="group_img"><img src="images/img01.png"></div></a></li>
-            <li class="notViewed animBlock scale" data-position="scale"><a><div class="group_img"><img src="images/img02.png"></div></a></li>
-            <li class="notViewed animBlock scale" data-position="scale"><a><div class="group_img"><img src="images/img03.png"></div></a></li>
-            <li class="notViewed animBlock scale" data-position="scale"><a><div class="group_img"><img src="images/img04.png"></div></a></li>
+            <li class="notViewed animBlock scale" data-position="scale">
+            	<a>
+                	<div class="group_img"><img src="images/img01.png" class="large_view"></div>
+                    <div class="view_detail">
+                        <p class="text">Engagement Rings</p>
+                        <span class="view">View Details</span>
+                    </div>
+               </a>
+            </li>
+            <li class="notViewed animBlock scale" data-position="scale">
+            	<a>
+                	<div class="group_img"><img src="images/img02.png" class="large_view"></div>
+                    <div class="view_detail">
+                        <p class="text">Engagement Rings</p>
+                        <span class="view">View Details</span>
+                    </div>
+               </a>
+            </li>
+            <li class="notViewed animBlock scale" data-position="scale">
+            	<a>
+                	<div class="group_img"><img src="images/img03.png" class="large_view"></div>
+                    <div class="view_detail">
+                        <p class="text">Engagement Rings</p>
+                        <span class="view">View Details</span>
+                    </div>
+               </a>
+            </li>
+            <li class="notViewed animBlock scale" data-position="scale">
+            	<a>
+                	<div class="group_img"><img src="images/img04.png" class="large_view"></div>
+                    <div class="view_detail">
+                        <p class="text">Engagement Rings</p>
+                        <span class="view">View Details</span>
+                    </div>
+               </a>
+            </li>
             <li class="notViewed animBlock scale" data-position="scale">
             	<a href="#" class="active">
                 	<div class="group_img">
@@ -62,10 +94,42 @@
             	</a>
             	
             </li>
-            <li class="notViewed animBlock scale" data-position="scale"><a><div class="group_img"><img src="images/img06.png"></div></a></li>
-            <li class="notViewed animBlock scale" data-position="scale"><a><div class="group_img"><img src="images/img07.png"></div></a></li>
-            <li class="notViewed animBlock scale" data-position="scale"><a><div class="group_img"><img src="images/img08.png"></div></a></li>
-            <li class="notViewed animBlock scale" data-position="scale"><a><div class="group_img"><img src="images/img09.png"></div></a></li>
+            <li class="notViewed animBlock scale" data-position="scale">
+            	<a>
+                	<div class="group_img"><img src="images/img06.png" class="large_view"></div>
+                    <div class="view_detail">
+                        <p class="text">Engagement Rings</p>
+                        <span class="view">View Details</span>
+                    </div>
+               </a>
+            </li>
+            <li class="notViewed animBlock scale" data-position="scale">
+            	<a>
+                	<div class="group_img"><img src="images/img07.png" class="large_view"></div>
+                    <div class="view_detail">
+                        <p class="text">Engagement Rings</p>
+                        <span class="view">View Details</span>
+                    </div>
+               </a>
+            </li>
+            <li class="notViewed animBlock scale" data-position="scale">
+            	<a>
+                	<div class="group_img"><img src="images/img08.png" class="large_view"></div>
+                    <div class="view_detail">
+                        <p class="text">Engagement Rings</p>
+                        <span class="view">View Details</span>
+                    </div>
+               </a>
+            </li>
+            <li class="notViewed animBlock scale" data-position="scale">
+            	<a>
+                	<div class="group_img"><img src="images/img09.png" class="large_view"></div>
+                    <div class="view_detail">
+                        <p class="text">Engagement Rings</p>
+                        <span class="view">View Details</span>
+                    </div>
+               </a>
+            </li>
         </ul>
     </div>
     <div class="loading"></div>
