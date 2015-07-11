@@ -44,10 +44,10 @@ a{text-decoration: none; cursor: pointer;}
 		  animation-fill-mode: both;
 	}
 }
-.animBlock[data-position="left"] { -webkit-animation-duration: 2s;
-  animation-duration: 2s; }
-.animBlock[data-position="right"] { -webkit-animation-duration: 2s;
-  animation-duration: 2s;}
+.animBlock[data-position="left"] { -webkit-animation-duration: 1s;
+  animation-duration: 1s; }
+.animBlock[data-position="right"] { -webkit-animation-duration: 1s;
+  animation-duration: 1s;}
 
 .animBlock[data-position="left"].viewed {
  	-webkit-animation-name: fadeIn;
@@ -62,8 +62,8 @@ a{text-decoration: none; cursor: pointer;}
   filter: alpha(opacity=100);
 }
 .animBlock[data-position="scale"] {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
 }
 .animBlock[data-position="scale"].viewed {
  -webkit-animation-name: fadeIn;

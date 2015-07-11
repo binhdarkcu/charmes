@@ -40,6 +40,7 @@ var menuOjb = (function() {
 			var value=$(this).attr('pos');
 			var collections=parseInt($('.page.store .top_menu').offset().top)-20,
 			Jewelries=parseInt($('.page.store .inner_slider').offset().top)-330;
+			activeMenu(this);
 			if(value=='collections')
 			{
 				initPage.setPos(collections);	
@@ -61,6 +62,7 @@ var menuOjb = (function() {
 		{
 			$('nav ul.list_menu li a').removeClass('active')
 			$('nav ul.list_menu li a.'+'Jewelries').addClass('active');
+			
 			return false;	
 		}
 		else if(top>=collections-20) {

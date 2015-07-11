@@ -185,7 +185,7 @@
       padding-bottom: 60px;
 			li {
 				float: left;
-				margin: 47px 0px;
+				margin: 40px 0px;
 				position: relative;
 				&:hover {
 					.view_detail {
@@ -529,34 +529,53 @@
     }
   }
   .product-feed{
-    p{
+    position: relative;
+	p{
       @include Adamina (14px);
         padding-top: 22px;
       text-align: center;
       padding-bottom: 20px;
     }
+	i{
+		
+	}
     ul{
       display: table;
-  margin: 45px auto;
+  margin: 10px auto;
+  position: relative;
       li{
         display: inline-block;
+		&.i{
+			background: url(../images/link-hover.png) no-repeat 0px 0;
+			width: 192px;
+			height: 28px;
+			opacity: 1;
+			position: absolute;
+			left: 0px;
+			top: 43px;
+			z-index: 1;		
+		}
         a{
           color: #000;
           padding-top: 45px;
+		  width: 192px;
+		  position: relative;
+		  
+		  float: left;
           i{
             
           }
           span{
-             -webkit-transition: all .5s;
-        -moz-transition: all .5s;
-        -o-transition: all .5s;
-        transition: all .5s;
+             
             @include CabinSketchNormal (16px);
             width: 192px;
             height: 28px;
              text-align: center;
-  display: inline-block;
-  line-height: 28px;
+  			display: inline-block;
+  			line-height: 28px;
+			position: relative;
+			z-index: 2;
+			
           }
           &.cart{
             background: url(../images/cart-2.png) no-repeat top center;
@@ -568,9 +587,7 @@
             background: url(../images/share.png) no-repeat top center;
           }
           &:hover{
-            span{
-              background: url(../images/link-hover.png) no-repeat center;
-            }
+            
           }
         }
       }

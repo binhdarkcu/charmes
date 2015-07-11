@@ -21,22 +21,22 @@
     				Embracing unique shapes of flora and pure color tones from mother of nature,<br/>
 Flora ring represents natural essences of beauty, purity and serenity.
     			</p>
+                <i></i>
     			<ul>
-    				<li>
-    					<a href="#" class="cart">
-    						<i></i>
+    				<li class="i"></li>
+                    <li>
+    					<a  class="cart">
+    						
     						<span>Add to your purse</span>
     					</a>
     				</li>
     				<li>
-    					<a href="#" class="wishlist">
-    						<i></i>
+    					<a  class="wishlist">
     						<span>Add to wishlist</span>
     					</a>
     				</li>
     				<li>
-    					<a href="#" class="share">
-    						<i></i>
+    					<a  class="share">
     						<span>Share your wish!</span>
     					</a>
     				</li>

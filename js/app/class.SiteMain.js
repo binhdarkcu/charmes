@@ -4,7 +4,7 @@ var SiteMain = (function() {
 	
 	function init(){
 		initPage.init();
-		
+		ProductOjb.init();
 		
 	}
 	//RETURN
@@ -15,4 +15,5 @@ var SiteMain = (function() {
 
 $(document).ready(function(e) {
     SiteMain.init();
+	
 });

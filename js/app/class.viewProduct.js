@@ -9,6 +9,7 @@ var ProductOjb = (function() {
 	function init(){
 		events();
 		hoverProduct();
+		
 	}
 	function events()
 	{
@@ -23,6 +24,21 @@ var ProductOjb = (function() {
 			closeProduct();
 			//return false;
 		});
+		hoverPure();
+	}
+	function hoverPure()
+	{
+		$(document).on('hover','.product-detail .product-feed ul li a',function(event){
+            //var index=$(this).index();
+			//console.log(222);
+        });	
+		$('.product-detail .product-feed ul li a').hover(function(e) {
+            var index=$(this).parent('li').index();
+			console.log(index);
+			TweenMax.to( $('.product-detail .product-feed ul li.i'), 0.3, {left:192*(index-1)} );
+			
+        });
+		
 	}
 	function showProducts()
 	{

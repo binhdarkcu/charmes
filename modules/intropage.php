@@ -2,8 +2,8 @@
 	<div class="inner_content">
     	<ul class="list_collec">
         	<li>
-            	<div class="col1 notViewed animBlock " data-position="left" ><p>Gemstone <br>Knowledges</p></div>
-        		<div class="col2 notViewed animBlock" data-position="right"><img src="images/gemstone.png"></div>
+            	<div class="col1 notViewed animBlock " data-position="left" data-offset="-200" ><p>Gemstone <br>Knowledges</p></div>
+        		<div class="col2 notViewed animBlock" data-position="right" data-offset="-200"><img src="images/gemstone.png"></div>
             </li>
             <li>
             	<div class="col1 w1 notViewed animBlock" data-position="left"><img src="images/precious.png"></div>
