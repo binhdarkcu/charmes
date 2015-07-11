@@ -102,9 +102,9 @@ function activeMenu(value)
 {$(value).addClass('active');}}
 function gotoscroll()
 {$('nav ul.list_menu li a.goto').click(function(e){var value=$(this).attr('pos');var collections=parseInt($('.page.store .top_menu').offset().top),Jewelries=parseInt($('.page.store .inner_slider').offset().top)-330;activeMenu($(this));if(value=='collections')
-{initPage.setPos(collections);}
+{initPage.setPos(collections);return false;}
 else if(value=='Jewelries')
-{initPage.setPos(Jewelries);}});}
+{initPage.setPos(Jewelries);return false;}});}
 function activeScroll()
 {var collections=parseInt($('.page.store .top_menu').offset().top),Jewelries=parseInt($('.page.store .inner_slider').offset().top);var top=$(window).scrollTop();if(top>=Jewelries-330&&top<=collections-20)
 {$('nav ul.list_menu li a').removeClass('active')

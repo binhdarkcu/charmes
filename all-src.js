@@ -1177,11 +1177,13 @@ var menuOjb = (function() {
 			activeMenu($(this));
 			if(value=='collections')
 			{
-				initPage.setPos(collections);	
+				initPage.setPos(collections);
+				return false;		
 			}
 			else if(value=='Jewelries')
 			{
-				initPage.setPos(Jewelries);		
+				initPage.setPos(Jewelries);
+				return false;			
 			}
 		});	
 	}
