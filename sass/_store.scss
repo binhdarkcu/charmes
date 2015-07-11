@@ -14,7 +14,7 @@
       width: 38px;
       height: 78px;
       opacity: 0.5;
-      @include animation;
+      @include animation();
       &:hover{
         opacity: 1;  
       }
@@ -23,12 +23,22 @@
 			background: url(../images/arrrow_left.png) no-repeat;
 			z-index: 100;	
 			right: 55px;
+			@include setOpacity(0.5);
+      		@include animation();
+			&:hover {
+				@include setOpacity(1);	
+			}
 		}
 		a.pre {
 			margin-top: -22px;
 			background: url(../images/arrow_right.png) no-repeat;
 			z-index: 100;		
 			left: 55px;
+			@include setOpacity(0.5);
+      		@include animation();
+			&:hover {
+				@include setOpacity(1);	
+			}
 		}
 		.list_slider {
 			padding: 0;

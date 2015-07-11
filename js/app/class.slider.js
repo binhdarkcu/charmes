@@ -65,7 +65,7 @@ var slider = (function() {
 			set.current++;
 		}
 		else {
-			return;
+			set.current = 0;
 		}
 		ani_Slider(set.current);
 		
@@ -77,7 +77,7 @@ var slider = (function() {
 			set.current--;
 		}
 		else {
-			return;
+			set.current = set.total-1;
 		}
 		ani_Slider(set.current);
 	}

@@ -87,11 +87,11 @@ function ani_Slider(value)
 {TweenMax.to($(set.name_list),1,{opacity:"0"});TweenMax.fromTo($(set.name_list).eq(value),1,{opacity:"0"},{opacity:"1"});}
 function NextSlider()
 {set.n=$(set.name_list).length;if(set.current<set.n-1){set.current++;}
-else{return;}
+else{set.current=0;}
 ani_Slider(set.current);}
 function PreSlider()
 {if(set.current>0){set.current--;}
-else{return;}
+else{set.current=set.total-1;}
 ani_Slider(set.current);}
 return{init:init,NextSlider:NextSlider,PreSlider:PreSlider}})();var menuOjb=(function(){setObj={item_menu:'.page nav ul.list_menu li a'}
 var flag=true;var fixed=false;var click=false;var element=$(".page .inner_fix");var header=$(".header_content");function init(){events();$(window).scroll(checkHeader);$(window).resize(checkHeader);}
