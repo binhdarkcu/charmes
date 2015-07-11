@@ -1160,6 +1160,10 @@ var menuOjb = (function() {
 		$('.page nav ul.list_menu li a.goto').click(function(){
 			
 		});
+		$(window).scroll(function(){
+			activeScroll();	
+		});
+		gotoscroll();
 	}
 	function activeMenu(value)
 	{
@@ -1168,7 +1172,48 @@ var menuOjb = (function() {
 		{
 			$(value).addClass('active');	
 		}
+		
 			
+	}
+	function gotoscroll()
+	{
+		$('nav ul.list_menu li a.goto').click(function(e){
+			var value=$(this).attr('pos');
+			var collections=parseInt($('.page.store .top_menu').offset().top)-20,
+			Jewelries=parseInt($('.page.store .inner_slider').offset().top)-330;
+			if(value=='collections')
+			{
+				initPage.setPos(collections);	
+			}
+			else if(value=='Jewelries')
+			{
+				initPage.setPos(Jewelries);		
+			}
+		});	
+	}
+	function activeScroll()
+	{
+		var collections=parseInt($('.page.store .top_menu').offset().top),
+		Jewelries=parseInt($('.page.store .inner_slider').offset().top);
+		
+		var top=$(window).scrollTop();
+		//console.log(collections+'_'+Jewelries+'_'+top);
+		if(top>=Jewelries-330&&top<=collections-20)
+		{
+			$('nav ul.list_menu li a').removeClass('active')
+			$('nav ul.list_menu li a.'+'Jewelries').addClass('active');
+			return false;	
+		}
+		else if(top>=collections-20) {
+			$('nav ul.list_menu li a').removeClass('active')
+			$('nav ul.list_menu li a.'+'collections').addClass('active');	
+			return false;	
+		}
+		else if(top<=Jewelries){
+			$('nav ul.list_menu li a.'+'Jewelries').removeClass('active');	
+			return false;
+		}
+		
 	}
 	//FUNCTION
 	function checkHeader(){
@@ -1303,7 +1348,7 @@ var pageOjb = (function() {
 			item_menu	:	'.page nav ul.list_menu li a'
 	}
 	var tl=null,
-		flag=true;
+		flaginit=true;
 	function init(){
 		events();
 	}
@@ -1312,12 +1357,12 @@ var pageOjb = (function() {
 		$('.page nav ul.list_menu li a').hover(function(){
 			var value=$(this).attr('value');
 			menuOjb.activeMenu(this);
-			if(flag==true&&value!='not')
+			console.log(flaginit);
+			if(flaginit==true&&value!='not')
 			{
 				animatePopup(value);
-				flag=false;
 			}
-			else if(value!='not'&&flag==false)
+			else if(value!='not'&&flaginit==false)
 			{
 				FadeinContent(value);
 			}
@@ -1327,19 +1372,19 @@ var pageOjb = (function() {
 			}
 		});
 		$('.page nav ul.list_menu li a.goto').hover(function(){
-			flag=true;
+			flaginit=true;
 			$('.page nav ul.list_menu li a').removeClass('active');
 		});
 		$('.page .bg_overlay').hover(function(){
 			closeAll();
 			$('.page nav ul.list_menu li a').removeClass('active');
-			flag=true;
+			flaginit=true;
 		});
 		
 	}
 	function animatePopup(value)
 	{
-		tl = new TimelineMax();
+		tl = new TimelineMax({onComplete:function(){flaginit=false; }});
 		tl.set ($('.page.'+value),{css:{'display':'block'}})
 		  .set( $('.page .bg_overlay'), { css:{display:'block' }} )
 		  .to( $('.page.'+value+' .bg_overlay'), 0.4, { css:{opacity:0.8 }} )
@@ -1356,14 +1401,11 @@ var pageOjb = (function() {
 	}
 	function closeAll()
 	{
-		console.log(3);
 		tl = new TimelineMax();
 		tl
 		  .to( $('.page .bg_overlay'), 0.4, { css:{opacity:0 }} )
 		  .to( $('.page .content_view'), 0.4, { css:{height:0+'%' }},'-=0.4' )
-		  .set ($('.page.detailPage'),{css:{'display':'none'}})
-		  .set ($('.page .bg_overlay'),{ css:{'display':'none' }});
-		  $('.page.detailPage'+' .desc, .page.detailPage .img_block').removeClass('fadeIn');
+		 $('.page.detailPage'+' .desc, .page.detailPage .img_block').removeClass('fadeIn');
 	}
 
 	return {
@@ -1390,12 +1432,12 @@ var ProductOjb = (function() {
 			if(flag)
 			{
 				showProducts();	
-				return false;
+				//return false;
 			}
 		});
 		$('.page .top_menu .select_menu p.text').on('click',function(){
 			closeProduct();
-			return false;
+			//return false;
 		});
 	}
 	function showProducts()

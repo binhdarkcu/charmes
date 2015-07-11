@@ -16,12 +16,12 @@ var ProductOjb = (function() {
 			if(flag)
 			{
 				showProducts();	
-				return false;
+				//return false;
 			}
 		});
 		$('.page .top_menu .select_menu p.text').on('click',function(){
 			closeProduct();
-			return false;
+			//return false;
 		});
 	}
 	function showProducts()

@@ -5,7 +5,7 @@ var pageOjb = (function() {
 			item_menu	:	'.page nav ul.list_menu li a'
 	}
 	var tl=null,
-		flag=true;
+		flaginit=true;
 	function init(){
 		events();
 	}
@@ -14,12 +14,12 @@ var pageOjb = (function() {
 		$('.page nav ul.list_menu li a').hover(function(){
 			var value=$(this).attr('value');
 			menuOjb.activeMenu(this);
-			if(flag==true&&value!='not')
+			console.log(flaginit);
+			if(flaginit==true&&value!='not')
 			{
 				animatePopup(value);
-				flag=false;
 			}
-			else if(value!='not'&&flag==false)
+			else if(value!='not'&&flaginit==false)
 			{
 				FadeinContent(value);
 			}
@@ -29,19 +29,19 @@ var pageOjb = (function() {
 			}
 		});
 		$('.page nav ul.list_menu li a.goto').hover(function(){
-			flag=true;
+			flaginit=true;
 			$('.page nav ul.list_menu li a').removeClass('active');
 		});
 		$('.page .bg_overlay').hover(function(){
 			closeAll();
 			$('.page nav ul.list_menu li a').removeClass('active');
-			flag=true;
+			flaginit=true;
 		});
 		
 	}
 	function animatePopup(value)
 	{
-		tl = new TimelineMax();
+		tl = new TimelineMax({onComplete:function(){flaginit=false; }});
 		tl.set ($('.page.'+value),{css:{'display':'block'}})
 		  .set( $('.page .bg_overlay'), { css:{display:'block' }} )
 		  .to( $('.page.'+value+' .bg_overlay'), 0.4, { css:{opacity:0.8 }} )
@@ -58,14 +58,11 @@ var pageOjb = (function() {
 	}
 	function closeAll()
 	{
-		console.log(3);
 		tl = new TimelineMax();
 		tl
 		  .to( $('.page .bg_overlay'), 0.4, { css:{opacity:0 }} )
 		  .to( $('.page .content_view'), 0.4, { css:{height:0+'%' }},'-=0.4' )
-		  .set ($('.page.detailPage'),{css:{'display':'none'}})
-		  .set ($('.page .bg_overlay'),{ css:{'display':'none' }});
-		  $('.page.detailPage'+' .desc, .page.detailPage .img_block').removeClass('fadeIn');
+		 $('.page.detailPage'+' .desc, .page.detailPage .img_block').removeClass('fadeIn');
 	}
 
 	return {

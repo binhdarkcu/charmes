@@ -19,10 +19,10 @@
 	        <ul class="list_menu" style="right: 8.5px;">
 	            <li><a class="internal" value='engagement'>Engagement</a></li>
 	            <li><a class="internal" value='wedding'>Wedding</a></li>
-	            <li><a class="goto" pos="collections">Collections</a></li>
-	            <li><a class="goto" pos="store">Jewelries</a></li>
-	            <li><a value='not'>Services</a></li>
-	            <li><a value='not'>Membership</a></li>
+	            <li><a class="collections goto" pos="collections" value='not'>Collections</a></li>
+	            <li><a class="Jewelries goto" pos="Jewelries" value='not'>Jewelries</a></li>
+	            <li><a value='not' class="goto">Services</a></li>
+	            <li><a value='not' class="goto">Membership</a></li>
 	        </ul>
 	    </nav>
 	    <div class="contact"><a href="#">Contact</a></div>

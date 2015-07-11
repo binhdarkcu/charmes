@@ -96,10 +96,22 @@ ani_Slider(set.current);}
 return{init:init,NextSlider:NextSlider,PreSlider:PreSlider}})();var menuOjb=(function(){setObj={item_menu:'.page nav ul.list_menu li a'}
 var flag=true;var fixed=false;var click=false;var element=$(".page .inner_fix");var header=$(".header_content");function init(){events();$(window).scroll(checkHeader);$(window).resize(checkHeader);}
 function events()
-{$('.page nav ul.list_menu li a.goto').click(function(){});}
+{$('.page nav ul.list_menu li a.goto').click(function(){});$(window).scroll(function(){activeScroll();});gotoscroll();}
 function activeMenu(value)
 {$('.page nav ul.list_menu li a').removeClass('active');if(!$(value).hasClass('active'))
 {$(value).addClass('active');}}
+function gotoscroll()
+{$('nav ul.list_menu li a.goto').click(function(e){var value=$(this).attr('pos');var collections=parseInt($('.page.store .top_menu').offset().top)-20,Jewelries=parseInt($('.page.store .inner_slider').offset().top)-330;if(value=='collections')
+{initPage.setPos(collections);}
+else if(value=='Jewelries')
+{initPage.setPos(Jewelries);}});}
+function activeScroll()
+{var collections=parseInt($('.page.store .top_menu').offset().top),Jewelries=parseInt($('.page.store .inner_slider').offset().top);var top=$(window).scrollTop();if(top>=Jewelries-330&&top<=collections-20)
+{$('nav ul.list_menu li a').removeClass('active')
+$('nav ul.list_menu li a.'+'Jewelries').addClass('active');return false;}
+else if(top>=collections-20){$('nav ul.list_menu li a').removeClass('active')
+$('nav ul.list_menu li a.'+'collections').addClass('active');return false;}
+else if(top<=Jewelries){$('nav ul.list_menu li a.'+'Jewelries').removeClass('active');return false;}}
 function checkHeader(){if($(this).scrollTop()>$(".header_content").height()){if(fixed==false){fixed=true;$('.left_menu').animate({'right':0+'px'},300);}}else{if(fixed==true){fixed=false;$('.left_menu').animate({'right':-62+'px'},300);}}}
 return{init:init,activeMenu:activeMenu};})();var initPage=(function(){setObj={}
 var flag=true;function init(){pageOjb.init();menuOjb.init();initFunctions();}
@@ -116,25 +128,26 @@ var elemTop=$(elem).offset().top,elemBottom=elemTop+$(elem).height();if(elemOffs
 else{elemBottom=elemTop+$(elem).height()-elemOffset}}
 if((elemBottom<=docViewBottom)&&(elemTop>=docViewTop)){$(elem).removeClass('notViewed').addClass('viewed');var animElemsLeft=$('.animBlock.notViewed').length;if(animElemsLeft==0){}}}
 return{init:init,setPos:setPos,initFunctions:initFunctions}})();var pageOjb=(function(){setObj={item_menu:'.page nav ul.list_menu li a'}
-var tl=null,flag=true;function init(){events();}
+var tl=null,flaginit=true;function init(){events();}
 function events()
-{$('.page nav ul.list_menu li a').hover(function(){var value=$(this).attr('value');menuOjb.activeMenu(this);if(flag==true&&value!='not')
-{animatePopup(value);flag=false;}
-else if(value!='not'&&flag==false)
+{$('.page nav ul.list_menu li a').hover(function(){var value=$(this).attr('value');menuOjb.activeMenu(this);console.log(flaginit);if(flaginit==true&&value!='not')
+{animatePopup(value);}
+else if(value!='not'&&flaginit==false)
 {FadeinContent(value);}
-else if(value=='not'){closeAll();flag=true;}});$('.page nav ul.list_menu li a.goto').hover(function(){flag=true;$('.page nav ul.list_menu li a').removeClass('active');});$('.page .bg_overlay').hover(function(){closeAll();$('.page nav ul.list_menu li a').removeClass('active');flag=true;});}
+else if(value=='not'){closeAll();flag=true;}});$('.page nav ul.list_menu li a.goto').hover(function(){flaginit=true;$('.page nav ul.list_menu li a').removeClass('active');});$('.page .bg_overlay').hover(function(){closeAll();$('.page nav ul.list_menu li a').removeClass('active');flaginit=true;});}
 function animatePopup(value)
-{tl=new TimelineMax();tl.set($('.page.'+value),{css:{'display':'block'}}).set($('.page .bg_overlay'),{css:{display:'block'}}).to($('.page.'+value+' .bg_overlay'),0.4,{css:{opacity:0.8}}).to($('.page.'+value+' .content_view'),0.4,{css:{height:64+'%'}},'-=0.4')}
+{tl=new TimelineMax({onComplete:function(){flaginit=false;}});tl.set($('.page.'+value),{css:{'display':'block'}}).set($('.page .bg_overlay'),{css:{display:'block'}}).to($('.page.'+value+' .bg_overlay'),0.4,{css:{opacity:0.8}}).to($('.page.'+value+' .content_view'),0.4,{css:{height:64+'%'}},'-=0.4')}
 function FadeinContent(value)
 {$('.page.detailPage').css('display','none')
 $('.page.'+value).css('display','block');$('.page .bg_overlay').css({'display':'block',opacity:0.8});$('.page .content_view').css({height:64+'%'});$('.page.'+value+' .desc, .page.'+value+' .img_block').addClass('fadeIn');}
 function closeAll()
-{console.log(3);tl=new TimelineMax();tl.to($('.page .bg_overlay'),0.4,{css:{opacity:0}}).to($('.page .content_view'),0.4,{css:{height:0+'%'}},'-=0.4').set($('.page.detailPage'),{css:{'display':'none'}}).set($('.page .bg_overlay'),{css:{'display':'none'}});$('.page.detailPage'+' .desc, .page.detailPage .img_block').removeClass('fadeIn');}
+{tl=new TimelineMax();tl.to($('.page .bg_overlay'),0.4,{css:{opacity:0}}).to($('.page .content_view'),0.4,{css:{height:0+'%'}},'-=0.4')
+$('.page.detailPage'+' .desc, .page.detailPage .img_block').removeClass('fadeIn');}
 return{init:init,closeAll:closeAll}})();var ProductOjb=(function(){setObj={item_menu:'.page nav ul.list_menu li a'}
 var tl=null,flag=true;function init(){events();hoverProduct();}
 function events()
 {$(document).on('click','.page .content_product .list_products li',function(event){if(flag)
-{showProducts();return false;}});$('.page .top_menu .select_menu p.text').on('click',function(){closeProduct();return false;});}
+{showProducts();}});$('.page .top_menu .select_menu p.text').on('click',function(){closeProduct();});}
 function showProducts()
 {initPage.setPos($('.page.store .top_menu').offset().top);setTimeout(function(){$('.page .content_product .list_products').animate({'opacity':0},1000,function(){$('.page .content_product .list_products').css('display','none');});$('.product-detail').css('display','block').animate({'opacity':1},1000);},800);}
 function hoverProduct(){$('.page .content_product .list_products li').hover(function(){$(this).find('img.large_view').addClass('hover');});$('.page .content_product .list_products li .group_img .small_right').on('click',function(){});}

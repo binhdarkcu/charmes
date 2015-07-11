@@ -19,6 +19,10 @@ var menuOjb = (function() {
 		$('.page nav ul.list_menu li a.goto').click(function(){
 			
 		});
+		$(window).scroll(function(){
+			activeScroll();	
+		});
+		gotoscroll();
 	}
 	function activeMenu(value)
 	{
@@ -27,7 +31,48 @@ var menuOjb = (function() {
 		{
 			$(value).addClass('active');	
 		}
+		
 			
+	}
+	function gotoscroll()
+	{
+		$('nav ul.list_menu li a.goto').click(function(e){
+			var value=$(this).attr('pos');
+			var collections=parseInt($('.page.store .top_menu').offset().top)-20,
+			Jewelries=parseInt($('.page.store .inner_slider').offset().top)-330;
+			if(value=='collections')
+			{
+				initPage.setPos(collections);	
+			}
+			else if(value=='Jewelries')
+			{
+				initPage.setPos(Jewelries);		
+			}
+		});	
+	}
+	function activeScroll()
+	{
+		var collections=parseInt($('.page.store .top_menu').offset().top),
+		Jewelries=parseInt($('.page.store .inner_slider').offset().top);
+		
+		var top=$(window).scrollTop();
+		//console.log(collections+'_'+Jewelries+'_'+top);
+		if(top>=Jewelries-330&&top<=collections-20)
+		{
+			$('nav ul.list_menu li a').removeClass('active')
+			$('nav ul.list_menu li a.'+'Jewelries').addClass('active');
+			return false;	
+		}
+		else if(top>=collections-20) {
+			$('nav ul.list_menu li a').removeClass('active')
+			$('nav ul.list_menu li a.'+'collections').addClass('active');	
+			return false;	
+		}
+		else if(top<=Jewelries){
+			$('nav ul.list_menu li a.'+'Jewelries').removeClass('active');	
+			return false;
+		}
+		
 	}
 	//FUNCTION
 	function checkHeader(){
