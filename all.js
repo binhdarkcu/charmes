@@ -145,7 +145,7 @@ return{init:init,closeAll:closeAll}})();var ProductOjb=(function(){setObj={item_
 var tl=null,flag=true;function init(){events();hoverProduct();}
 function events()
 {$(document).on('click','.page .content_product .list_products li',function(event){if(flag)
-{showProducts();}});$('.page .top_menu .select_menu p.text').on('click',function(){closeProduct();});hoverPure();}
+{showProducts();return false;}});$('.page .top_menu .select_menu p.text').on('click',function(){closeProduct();return false;});hoverPure();}
 function hoverPure()
 {$(document).on('hover','.product-detail .product-feed ul li a',function(event){});$('.product-detail .product-feed ul li a').hover(function(e){var index=$(this).parent('li').index();console.log(index);TweenMax.to($('.product-detail .product-feed ul li.i'),0.3,{left:192*(index-1)});});}
 function showProducts()
