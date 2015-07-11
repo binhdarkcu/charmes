@@ -6,25 +6,29 @@
 		position: relative;
 		overflow: hidden;
 		height: 414px;
+		a{
+		  position: absolute;
+      
+      top: 50%;
+      margin-top: -22px;
+      width: 38px;
+      height: 78px;
+      opacity: 0.5;
+      @include animation;
+      &:hover{
+        opacity: 1;  
+      }
+		}
 		a.next {
-			position: absolute;
-			right: 55px;
-			top: 50%;
-			margin-top: -22px;
-			width: 38px;
-			height: 78px;
 			background: url(../images/arrrow_left.png) no-repeat;
 			z-index: 100;	
+			right: 55px;
 		}
 		a.pre {
-			position: absolute;
-			left: 55px;
-			top: 50%;
-			width: 38px;
-			height: 78px;
 			margin-top: -22px;
 			background: url(../images/arrow_right.png) no-repeat;
 			z-index: 100;		
+			left: 55px;
 		}
 		.list_slider {
 			padding: 0;
@@ -46,7 +50,7 @@
 				}
 				p.text {
 					position: absolute;
-					right: 358px;
+					  right: 200px;
   					top: 248px;
 					z-index: 2;	
 					@include PlayfairBold (30px);
@@ -61,8 +65,8 @@
 					width: 154px;
 					height: 38px;
 					position: absolute;
-					right: 507px;
-  					top: 330px;
+					  right: 364px;
+            top: 347px;
 					text-align: center;
 					color: $white;
 					@include Adamina (18px,1.8);
@@ -107,6 +111,9 @@
 				float: left;
 				@include CabinSketchNormal (22px,2.4);
 				padding-left: 28px;	
+				a{
+				  color: #000;
+				}
 				span {
 					font-size: 26px;	
 				}
@@ -163,6 +170,9 @@
 			padding: 0;
 			margin: 0;
 			clear: both;
+			float: left;
+      width: 100%;
+      padding-bottom: 60px;
 			li {
 				float: left;
 				margin: 47px 0px;
@@ -176,6 +186,8 @@
 							-ms-transform: scale(1.2,1.2); /* IE 9 */
     						-webkit-transform: scale(1.2,1.2); /* Safari */
     				 		transform: scale(1.2,1.2);
+    				 		-webkit-filter: grayscale(0%);
+                  filter: grayscale(100%);
 						}
 						.small_left {
 							opacity: 0.3;
@@ -215,10 +227,17 @@
     					-webkit-transform: scale(1,1); /* Safari */
     				 	transform: scale(1,1);
 						z-index: 1;
+					  -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+            filter: url(desaturate.svg#greyscale);
+            &.hover{
+                -webkit-filter: grayscale(0%);
+                filter: grayscale(100%);
+              }
 					}
 					.small_left {
 						position: absolute;
-						left: 5px;
+						left: -15px;
 						top: 50%;
   						margin-top: -30px;
 						@include animation ();
@@ -230,7 +249,7 @@
 					}
 					.small_right {
 						position: absolute;
-						right: 0;
+						right: -25px;
 						top: 50%;
   						margin-top: -30px;
 						opacity: 0;
@@ -452,8 +471,8 @@
     z-index: 100;
     background: #fff;
     display: none;
-    
-
+    opacity: 0;
+    padding-bottom: 50px;
   .product-box{
     width: auto;
     display: table;
