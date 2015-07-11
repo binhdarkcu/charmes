@@ -16,9 +16,6 @@ var menuOjb = (function() {
 	}
 	function events()
 	{
-		$('.page nav ul.list_menu li a.goto').click(function(){
-			
-		});
 		$(window).scroll(function(){
 			activeScroll();	
 		});
@@ -40,7 +37,7 @@ var menuOjb = (function() {
 			var value=$(this).attr('pos');
 			var collections=parseInt($('.page.store .top_menu').offset().top)-20,
 			Jewelries=parseInt($('.page.store .inner_slider').offset().top)-330;
-			activeMenu(this);
+			activeMenu($(this));
 			if(value=='collections')
 			{
 				initPage.setPos(collections);	

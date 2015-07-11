@@ -20,26 +20,23 @@ var pageOjb = (function() {
 				setTimeout(function(){
 					animatePopup(value);
 				},400);
-				//animatePopup(value);
-				console.log(111);
 			}
 			else if(flaginit==false)
 			{
 				FadeinContent(value);
-				console.log(222);
 			}
 			
 		});
 		$('.page nav ul.list_menu li a.goto').hover(function(){
 			closeAll();
 			
-			$('.page nav ul.list_menu li a').removeClass('active');
+			//$('.page nav ul.list_menu li a').removeClass('active');
 			flaginit=true;
 		});
 		$('.page .bg_overlay').hover(function(){
 			closeAll();
 			
-			$('.page nav ul.list_menu li a').removeClass('active');
+			//$('.page nav ul.list_menu li a').removeClass('active');
 			flaginit=true;
 		});
 		

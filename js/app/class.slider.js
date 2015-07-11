@@ -45,17 +45,13 @@ var slider = (function() {
 		else{
 			$('a.pre, a.next').css('display','block');				
 		}
-			
-		//console.log(value+'_'+set.n_dot);	
 	}
 
 	//animation
 	function ani_Slider(value)
 	{
 		TweenMax.to( $(set.name_list), 1, {opacity:"0"} );
-		TweenMax.fromTo( $(set.name_list).eq(value), 1, {opacity:"0"}, {opacity:"1"} );
-		//show_hide_arrow(value);
-		   	
+		TweenMax.fromTo( $(set.name_list).eq(value), 1, {opacity:"0"}, {opacity:"1"} ); 	
 	}
 	//NEXT
 	function NextSlider()

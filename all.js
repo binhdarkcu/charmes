@@ -96,12 +96,12 @@ ani_Slider(set.current);}
 return{init:init,NextSlider:NextSlider,PreSlider:PreSlider}})();var menuOjb=(function(){setObj={item_menu:'.page nav ul.list_menu li a'}
 var flag=true;var fixed=false;var click=false;var element=$(".page .inner_fix");var header=$(".header_content");function init(){events();$(window).scroll(checkHeader);$(window).resize(checkHeader);}
 function events()
-{$('.page nav ul.list_menu li a.goto').click(function(){});$(window).scroll(function(){activeScroll();});gotoscroll();}
+{$(window).scroll(function(){activeScroll();});gotoscroll();}
 function activeMenu(value)
 {$('.page nav ul.list_menu li a').removeClass('active');if(!$(value).hasClass('active'))
 {$(value).addClass('active');}}
 function gotoscroll()
-{$('nav ul.list_menu li a.goto').click(function(e){var value=$(this).attr('pos');var collections=parseInt($('.page.store .top_menu').offset().top)-20,Jewelries=parseInt($('.page.store .inner_slider').offset().top)-330;activeMenu(this);if(value=='collections')
+{$('nav ul.list_menu li a.goto').click(function(e){var value=$(this).attr('pos');var collections=parseInt($('.page.store .top_menu').offset().top)-20,Jewelries=parseInt($('.page.store .inner_slider').offset().top)-330;activeMenu($(this));if(value=='collections')
 {initPage.setPos(collections);}
 else if(value=='Jewelries')
 {initPage.setPos(Jewelries);}});}
@@ -131,9 +131,9 @@ return{init:init,setPos:setPos,initFunctions:initFunctions}})();var pageOjb=(fun
 var tl=null,flaginit=true;function init(){events();}
 function events()
 {$('.page nav ul.list_menu li a.internal').hover(function(){var value=$(this).attr('value');menuOjb.activeMenu(this);console.log(flaginit);if(flaginit==true)
-{setTimeout(function(){animatePopup(value);},400);console.log(111);}
+{setTimeout(function(){animatePopup(value);},400);}
 else if(flaginit==false)
-{FadeinContent(value);console.log(222);}});$('.page nav ul.list_menu li a.goto').hover(function(){closeAll();$('.page nav ul.list_menu li a').removeClass('active');flaginit=true;});$('.page .bg_overlay').hover(function(){closeAll();$('.page nav ul.list_menu li a').removeClass('active');flaginit=true;});}
+{FadeinContent(value);}});$('.page nav ul.list_menu li a.goto').hover(function(){closeAll();flaginit=true;});$('.page .bg_overlay').hover(function(){closeAll();flaginit=true;});}
 function animatePopup(value)
 {tl=new TimelineMax({onComplete:function(){flaginit=false;}});tl.set($('.page.'+value),{css:{'display':'block'}}).set($('.page .bg_overlay'),{css:{display:'block'}}).to($('.page.'+value+' .bg_overlay'),0.4,{css:{opacity:0.8}}).to($('.page.'+value+' .content_view'),0.4,{css:{height:64+'%'}},'-=0.4')}
 function FadeinContent(value)
