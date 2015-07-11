@@ -1192,13 +1192,11 @@ var menuOjb = (function() {
 	function checkHeader(){
         if($(this).scrollTop() > $(".header_content").height()){
             if(fixed == false){
-                //$(".page .inner_fix").addClass("fixed");
                 fixed = true;
                 $('.left_menu').animate({'right':0+'px'},300);
             }
         }else{
             if(fixed == true){
-                //$(".page .inner_fix").removeClass("fixed");
                 fixed = false;
                 $('.left_menu').animate({'right':-62+'px'},300);
             }

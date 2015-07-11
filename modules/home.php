@@ -1,5 +1,5 @@
 <section class="page home">
-	<div class="inner header_content" style="right: 8.5px;">
+	<div class="inner header_content">
     	<a class="logo">
         	<img src="images/logo.png">
             <p class="text_home">Art & Craftsmanship</p>
