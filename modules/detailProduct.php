@@ -23,20 +23,21 @@ Flora ring represents natural essences of beauty, purity and serenity.
     			</p>
                 <i></i>
     			<ul>
-    				<li class="i"></li>
-                    <li>
+                    <li class="">
     					<a  class="cart">
-    						
+    						<i></i>
     						<span>Add to your purse</span>
     					</a>
     				</li>
     				<li>
     					<a  class="wishlist">
+    						<i></i>
     						<span>Add to wishlist</span>
     					</a>
     				</li>
     				<li>
     					<a  class="share">
+    						<i></i>
     						<span>Share your wish!</span>
     					</a>
     				</li>

@@ -17,15 +17,15 @@ var pageOjb = (function() {
 			console.log(flaginit);
 			if(flaginit==true)
 			{
-				setTimeout(function(){
-					animatePopup(value);
-				},400);
+				animatePopup(value);
 			}
 			else if(flaginit==false)
 			{
 				FadeinContent(value);
 			}
 			
+		},function(){
+			menuOjb.activeScroll();
 		});
 		$('.page nav ul.list_menu li a.goto').hover(function(){
 			closeAll();

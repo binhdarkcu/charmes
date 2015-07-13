@@ -19,7 +19,7 @@
 	        <ul class="list_menu" style="right: 8.5px;">
 	            <li><a class="internal" value='engagement'>Engagement</a></li>
 	            <li><a class="internal" value='wedding'>Wedding</a></li>
-	            <li><a class="collections goto" pos="collections">Collections</a></li>
+	            <li><a class="internal" value="popup-collections">Collections</a></li>
 	            <li><a class="Jewelries goto" pos="Jewelries">Jewelries</a></li>
 	            <li><a  class="goto">Services</a></li>
 	            <li><a class="goto">Membership</a></li>

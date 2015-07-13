@@ -6,6 +6,8 @@
 		"js/lib/TweenMax.min.js",
 		"js/lib/SmoothScroll.js",
 		"js/lib/icheck.js",
+		"js/lib/scrolltobyspeed.jquery.js",
+		"js/lib/jquery.mThumbnailScroller.js",
 		
 		"js/app/class.slider.js",
 		"js/app/class.menu.js",

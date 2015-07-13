@@ -32,6 +32,7 @@
 				include("modules/home.php");
 				include("modules/engagement.php");
 				include("modules/wedding.php");
+				include("modules/popup-collections.php");
 				include("modules/intropage.php");
 				include("modules/store.php");
 				include("modules/collections.php");
@@ -44,3 +45,14 @@
     </div>
 </body>
 </html>
+<link rel="stylesheet" href="css/jquery.mThumbnailScroller.css">
+<script>
+(function($){
+	$(window).load(function(){
+		
+		SiteMain.initHoverSlide();
+		
+		
+	});
+})(jQuery);
+</script>

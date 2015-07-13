@@ -33,16 +33,16 @@ var ProductOjb = (function() {
 			//console.log(222);
         });	
 		$('.product-detail .product-feed ul li a').hover(function(e) {
-            var index=$(this).parent('li').index();
-			console.log(index);
-			TweenMax.to( $('.product-detail .product-feed ul li.i'), 0.3, {left:192*(index-1)} );
-			
+            var index=$(this).find('i');
+			TweenMax.to( $(this).find('i'), 0.8, {width:192, opacity: 1} );
+        },function(){
+        	TweenMax.to( $('.product-detail .product-feed ul li a i'), 0.8, {width:0, opacity: 0.1} );
         });
 		
 	}
 	function showProducts()
 	{
-		initPage.setPos($('.page.store .top_menu').offset().top);
+		initPage.setPos($('.page.store .top_menu').offset().top, 800);
 		setTimeout(function(){
 			$('.page .content_product .list_products').animate({'opacity':0},1000,function(){
 				$('.page .content_product .list_products').css('display','none');

@@ -13,6 +13,8 @@ var menuOjb = (function() {
 		events();
 		$(window).scroll(checkHeader);
     	$(window).resize(checkHeader);
+    	$(window).scroll(checkCollections);
+    	$(window).resize(checkCollections);
 	}
 	function events()
 	{
@@ -40,12 +42,12 @@ var menuOjb = (function() {
 			activeMenu($(this));
 			if(value=='collections')
 			{
-				initPage.setPos(collections);
+				initPage.setPos(collections, 800);
 				return false;		
 			}
 			else if(value=='Jewelries')
 			{
-				initPage.setPos(Jewelries);
+				initPage.setPos(Jewelries, 800);
 				return false;			
 			}
 		});	
@@ -59,13 +61,13 @@ var menuOjb = (function() {
 		//console.log(collections+'_'+Jewelries+'_'+top);
 		if(top>=Jewelries-330&&top<=collections-20)
 		{
-			$('nav ul.list_menu li a').removeClass('active')
+			$('nav ul.list_menu li a').removeClass('active');
 			$('nav ul.list_menu li a.'+'Jewelries').addClass('active');
 			
 			return false;	
 		}
 		else if(top>=collections-20) {
-			$('nav ul.list_menu li a').removeClass('active')
+			$('nav ul.list_menu li a').removeClass('active');
 			$('nav ul.list_menu li a.'+'collections').addClass('active');	
 			return false;	
 		}
@@ -89,10 +91,22 @@ var menuOjb = (function() {
             }
         }
     }
-    
+    var afixed = false;
+    function checkCollections(){
+    	var fixedscrolltop = $(window).scrollTop();
+    	
+    	height = $('.page.introPage').height() + $('.inner_slider').height() + $('.page.store h3.title').outerHeight() + $('.page.home .header_content').height();
+    	console.log(fixedscrolltop, height);
+    	if($(this).scrollTop() >= height){
+           $("div.top_menu").addClass("fixed");
+        }else{
+           $("div.top_menu").removeClass("fixed");
+        }
+    }
 	return {
 		init:init,
-		activeMenu:activeMenu
+		activeMenu:activeMenu,
+		activeScroll:activeScroll
 	};
 })();		
 

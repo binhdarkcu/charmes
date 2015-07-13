@@ -55,12 +55,12 @@ var initPage = (function() {
 			$('.store-filter').hide().animate({'opacity':0},500);	
 		});
 	}
-	function setPos(value)
+	function setPos(value, time)
 	{
 		$('html, body').animate({
         	scrollTop: value,
 			easing: 'linear'
-    	}, 800);	
+    	}, time);	
 	}
 	function isScrolledIntoView(elem) {
   		var docViewTop = $(window).scrollTop(),

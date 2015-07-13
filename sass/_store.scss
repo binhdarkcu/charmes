@@ -98,6 +98,14 @@
 	.top_menu {
 		clear: both;
 		padding: 10px 20px;
+		&.fixed{
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		    z-index: 100;
+      background-color: #fff;
+		}
 		.select_menu {
 			float: left;
 			.icon {
@@ -549,25 +557,16 @@
       li{
         display: inline-block;
 		&.i{
-			background: url(../images/link-hover.png) no-repeat 0px 0;
-			width: 192px;
-			height: 28px;
-			opacity: 1;
-			position: absolute;
-			left: 0px;
-			top: 43px;
-			z-index: 1;		
+			
 		}
         a{
           color: #000;
           padding-top: 45px;
-		  width: 192px;
-		  position: relative;
-		  
-		  float: left;
-          i{
-            
-          }
+    		  width: 192px;
+    		  position: relative;
+    		  
+    		  float: left;
+          
           span{
              
             @include CabinSketchNormal (16px);
@@ -591,6 +590,22 @@
           }
           &:hover{
             
+          }
+        }
+        i{
+          width: 0;
+          opacity: 0.1;
+        }
+        &.active, &:hover{
+          i{
+            background: url(../images/link-hover.png) no-repeat 0px 0;
+           
+            height: 28px;
+            opacity: 1;
+            position: absolute;
+            left: 0px;
+            top: 43px;
+            z-index: 1;   
           }
         }
       }
