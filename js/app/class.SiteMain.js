@@ -23,7 +23,16 @@ var SiteMain = (function() {
           type:"hover-precise",
           speed: 10
         });
-      
+		$('.left-shadow, .right-shadow, .list_item_collections li:first-child,.list_item_collections li:last-child').hover(function(){
+			$('.left-shadow').hide();
+		},function(){
+			$('.left-shadow').show();
+		});
+		$('.right-shadow, .list_item_collections li:last-child').hover(function(){
+			$('.right-shadow').hide();
+		},function(){
+			$('.right-shadow').show();
+		});
 	}
 	//RETURN
 	return {
