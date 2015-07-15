@@ -1,5 +1,13 @@
 <section class="page home">
-	<div class="inner header_content">
+	<ul class="cb-slideshow">
+        <li><span></span><div><h3></h3></div></li>
+        <li><span></span><div><h3></h3></div></li>
+        <li><span></span><div><h3></h3></div></li>
+        <li><span></span><div><h3></h3></div></li>
+        <li><span></span><div><h3></h3></div></li>
+        <li><span></span><div><h3></h3></div></li>
+    </ul>
+    <div class="inner header_content">
     	<a class="logo">
         	<img src="images/logo.png">
             <p class="text_home">Art & Craftsmanship</p>
@@ -11,6 +19,7 @@
         </div>
         
     </div>
+    
 </section>
 <section class="page">
 	<div class="inner_fix fixed">
