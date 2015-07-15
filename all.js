@@ -242,7 +242,7 @@ return{init:init,setPos:setPos,initFunctions:initFunctions}})();var pageOjb=(fun
 var tl=null,flaginit=true;function init(){events();}
 function events()
 {$('.page nav ul.list_menu li a.internal').hover(function(){var value=$(this).attr('value');menuOjb.activeMenu(this);console.log(flaginit);if(flaginit==true)
-{animatePopup(value);}
+{setTimeout(function(){animatePopup(value);},400);}
 else if(flaginit==false)
 {FadeinContent(value);}},function(){menuOjb.activeScroll();});$('.page nav ul.list_menu li a.goto').hover(function(){closeAll();$('.page nav ul.list_menu li a.internal').removeClass('active');flaginit=true;});$('.page .bg_overlay').hover(function(){closeAll();flaginit=true;});}
 function animatePopup(value)

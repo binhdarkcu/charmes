@@ -3080,7 +3080,10 @@ var pageOjb = (function() {
 			console.log(flaginit);
 			if(flaginit==true)
 			{
-				animatePopup(value);
+				setTimeout(function(){
+					animatePopup(value);
+				},400);
+				
 			}
 			else if(flaginit==false)
 			{
