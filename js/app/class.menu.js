@@ -9,6 +9,7 @@ var menuOjb = (function() {
 	var click = false;
 	var element = $(".page .inner_fix");
 	var header = $(".header_content");
+	var status=true;
 	function init(){
 		events();
 		$(window).scroll(checkHeader);
@@ -22,6 +23,13 @@ var menuOjb = (function() {
 			activeScroll();	
 		});
 		gotoscroll();
+		$('.page .mouse-event img').click(function(){
+			if (status==true)
+			{
+				$('.page .mouse-event').css('display','none');	
+				status==false;
+			}
+		});
 	}
 	function activeMenu(value)
 	{
@@ -102,6 +110,11 @@ var menuOjb = (function() {
         }else{
            $("div.top_menu").removeClass("fixed");
         }
+		if(fixedscrolltop>=400)
+		{
+			$('body').addClass('animation');
+			return false;	
+		}
     }
 	return {
 		init:init,

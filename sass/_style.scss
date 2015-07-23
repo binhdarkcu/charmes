@@ -4,9 +4,16 @@ html, body{width:100%; height: 100% !important; }
 body {
 	font-family: 'Adamina', serif; 
 	color: #000;
-	background: url(../images/bg_body.jpg) repeat-y;
-	background-size: cover;
+	
 	overflow-x: hidden;
+	-webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  &.animation {
+	  background: url(../images/bg_body.jpg) repeat-y;
+	 background-size: cover;
+	}
 }
 
 a{text-decoration: none; cursor: pointer;}
@@ -51,11 +58,17 @@ a{text-decoration: none; cursor: pointer;}
 
 .animBlock[data-position="left"].viewed {
  	-webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
+     animation-name: fadeIn;
+	 &.delay {
+		animation-delay: 0.5s;	 
+	}
 }
 .animBlock[data-position="right"].viewed {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+  &.delay {
+		animation-delay: 0.5s;	 
+	}
 }
 .animBlock[data-position="opacity"].viewed {
   opacity: 1;

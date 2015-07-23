@@ -206,9 +206,10 @@ function PreSlider()
 else{set.current=set.total-1;}
 ani_Slider(set.current);}
 return{init:init,NextSlider:NextSlider,PreSlider:PreSlider}})();var menuOjb=(function(){setObj={item_menu:'.page nav ul.list_menu li a'}
-var flag=true;var fixed=false;var click=false;var element=$(".page .inner_fix");var header=$(".header_content");function init(){events();$(window).scroll(checkHeader);$(window).resize(checkHeader);$(window).scroll(checkCollections);$(window).resize(checkCollections);}
+var flag=true;var fixed=false;var click=false;var element=$(".page .inner_fix");var header=$(".header_content");var status=true;function init(){events();$(window).scroll(checkHeader);$(window).resize(checkHeader);$(window).scroll(checkCollections);$(window).resize(checkCollections);}
 function events()
-{$(window).scroll(function(){activeScroll();});gotoscroll();}
+{$(window).scroll(function(){activeScroll();});gotoscroll();$('.page .mouse-event img').click(function(){if(status==true)
+{$('.page .mouse-event').css('display','none');status==false;}});}
 function activeMenu(value)
 {$('.page nav ul.list_menu li a').removeClass('active');if(!$(value).hasClass('active'))
 {$(value).addClass('active');}}
@@ -223,7 +224,9 @@ function activeScroll()
 else if(top>=collections-20){$('nav ul.list_menu li a').removeClass('active');$('nav ul.list_menu li a.'+'collections').addClass('active');return false;}
 else if(top<=Jewelries){$('nav ul.list_menu li a.'+'Jewelries').removeClass('active');return false;}}
 function checkHeader(){if($(this).scrollTop()>$(".header_content").height()){if(fixed==false){fixed=true;$('.left_menu').animate({'right':0+'px'},300);}}else{if(fixed==true){fixed=false;$('.left_menu').animate({'right':-62+'px'},300);}}}
-var afixed=false;function checkCollections(){var fixedscrolltop=$(window).scrollTop();height=$('.page.introPage').height()+$('.inner_slider').height()+$('.page.store h3.title').outerHeight()+$('.page.home .header_content').height();console.log(fixedscrolltop,height);if($(this).scrollTop()>=height){$("div.top_menu").addClass("fixed");}else{$("div.top_menu").removeClass("fixed");}}
+var afixed=false;function checkCollections(){var fixedscrolltop=$(window).scrollTop();height=$('.page.introPage').height()+$('.inner_slider').height()+$('.page.store h3.title').outerHeight()+$('.page.home .header_content').height();console.log(fixedscrolltop,height);if($(this).scrollTop()>=height){$("div.top_menu").addClass("fixed");}else{$("div.top_menu").removeClass("fixed");}
+if(fixedscrolltop>=400)
+{$('body').addClass('animation');return false;}}
 return{init:init,activeMenu:activeMenu,activeScroll:activeScroll};})();var initPage=(function(){setObj={}
 var flag=true;function init(){pageOjb.init();menuOjb.init();initFunctions();}
 function initFunctions(){events();pageOjb.init();ProductOjb.init();createRadio();slider.init();}
