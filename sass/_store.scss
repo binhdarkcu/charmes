@@ -517,7 +517,9 @@
     .br-top{
       background: url(../images/border.png) no-repeat center;
       height: 3px;
-      width: 100%;
+      width: 10%;
+	  margin: 0 auto;
+	  opacity: 0;
     }
     ul{
         display: inline-block;
