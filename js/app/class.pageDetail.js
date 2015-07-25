@@ -57,7 +57,7 @@ var pageOjb = (function() {
 		$('.page.detailPage').css('display','none')
 		$('.page.detailPage.'+value).css('display','block');
 		$('.page.detailPage.'+value+' .bg_overlay').css({'display':'block', opacity:0.8 });
-		$('.page.detailPage.'+value+' .content_view').css({height:64+'%'});
+		$('.page.detailPage.'+value+' .content_view').css({height:70+'%'});
 		$('.page.detailPage.'+value+' .desc, .page.detailPage'+value+' .img_block').addClass('fadeIn');
 		
 	}

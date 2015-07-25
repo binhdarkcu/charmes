@@ -97,7 +97,8 @@
 	/*top*/
 	.top_menu {
 		clear: both;
-		padding: 10px 20px;
+		padding: 10px 0px;
+		
 		&.fixed{
 		  position: fixed;
 		  top: 0;
@@ -108,6 +109,7 @@
 		}
 		.select_menu {
 			float: left;
+			margin-left: 20px;
 			.icon {
 				float: left;
 				

@@ -90,9 +90,7 @@
             <li class="notViewed animBlock scale" data-position="scale">
             	<a href="#" class="active">
                 	<div class="group_img">
-                    	<img src="images/small_left.png" class="small_left">
                         <img src="images/img10.png" class="large_view">
-                        <img src="images/small_right.png" class="small_right">
                     </div>
             		
             		<div class="view_detail">

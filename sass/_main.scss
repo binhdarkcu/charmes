@@ -28,12 +28,6 @@
 		}	
 	}
 	.mouse-event {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		margin-top: 81px;
-  		margin-left: -69px;
-		text-align: center;
 		z-index: 100;
   		cursor: pointer;
 		p.text {
@@ -46,7 +40,7 @@
 		}	
 	}
 	.inner_fix {
-		background: #cbbacf;
+		background: url(../images/bg_menu_home.png) center;
 		width: 97%;
 		height: 57px;
 		position: absolute;
@@ -63,20 +57,23 @@
 		}	
 	}
 	.left_title {
-		@include RECHTMAN (38px);
-		padding-top: 12px;
+		@include RECHTMAN (26px);
+		padding-top: 21px;
 		position: absolute;
 		left: 32px;
 		top: 0px;	
 	}
 	.contact {
 		position: absolute;
-		right: 32px;
+		right: 62px;
 		top: 25px;
-		@include Adamina (14px);	
+		@include HelveticaLight (13px,22px);	
+		font-weight: 700;
+		font-style: italic;
 		a{
 		  color: #000;
-		  text-transform: uppercase;
+		  text-transform: capitalize;
+		  padding-left: 20px;
 		}
 	}
 	nav {
@@ -87,32 +84,41 @@
 			padding: 0;
 			margin: 0 auto;
 			display: table;
-			position: relative;
+			position: relative; 
       		text-align: center;
 			li {
 				float: none;
 				
+          padding: 0px 12px;
 				  display: inline-block;
 				a {
 					color : $black;
-					@include Adamina (14px,63px);
+					@include HelveticaLight (13px,76px);
 					height: 57px;
 					display: block;
-					padding: 0px 12px;
+					font-weight: bold;
 					@include noselect();
 					text-transform: uppercase;
 					  -webkit-transition: all .2s ease-in-out;
         -moz-transition: all .2s ease-in-out;
         -o-transition: all .2s ease-in-out;
         transition: all .2s ease-in-out;
-					&:hover {
-						text-decoration: none;
-						color: $grey;
-						background: #fff;
-					}
-					&.active {
-						background: $white;	
-					}	
+        position: relative;
+        i{
+            border-bottom: 1px solid #5d4284;
+            width: 0;
+            position: absolute;
+            left: 0;
+            bottom: 8px;
+            @include animation();
+          }
+          &.active,&:hover{
+            color: #5d4284;
+            i{
+              width: 100%;
+            }
+          }
+					
 				}	
 			}	
 		}	

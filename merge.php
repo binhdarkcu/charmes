@@ -8,6 +8,9 @@
 		"js/lib/icheck.js",
 		"js/lib/scrolltobyspeed.jquery.js",
 		"js/lib/jquery.mThumbnailScroller.js",
+		"js/lib/hammer.min.js",
+		"js/lib/jquery.animate-enhanced.min.js",
+		"js/lib/jquery.superslides.js",
 		
 		"js/app/class.slider.js",
 		"js/app/class.menu.js",

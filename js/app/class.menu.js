@@ -87,15 +87,17 @@ var menuOjb = (function() {
 	}
 	//FUNCTION
 	function checkHeader(){
-        if($(this).scrollTop() > $(".header_content").height()){
+        if($(this).scrollTop() > $("#slides").height()){
+        	
             if(fixed == false){
                 fixed = true;
-                $('.left_menu').animate({'right':0+'px'},300);
+                console.log(1);
+                $('.left_menu').animate({'right':0},300);
             }
         }else{
             if(fixed == true){
                 fixed = false;
-                $('.left_menu').animate({'right':-62+'px'},300);
+//                $('.left_menu').animate({'right':-62},300);
             }
         }
     }
@@ -103,7 +105,7 @@ var menuOjb = (function() {
     function checkCollections(){
     	var fixedscrolltop = $(window).scrollTop();
     	
-    	height = $('.page.introPage').height() + $('.inner_slider').height() + $('.page.store h3.title').outerHeight() + $('.page.home .header_content').height();
+    	height = $('.page.introPage').height() + $('.inner_slider').height() + $('.page.store h3.title').outerHeight() + $('.page.home #slides').height();
     	console.log(fixedscrolltop, height);
     	if($(this).scrollTop() >= height){
            $("div.top_menu").addClass("fixed");

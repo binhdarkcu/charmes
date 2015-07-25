@@ -6,15 +6,30 @@ var SiteMain = (function() {
 		initPage.init();
 		ProductOjb.init();
 		scrolltoView();
-		
+		clickhomemenu();
 		
 	}
 	function scrolltoView(){
 		$('.page.home .mouse-event').on('click',function(){
 			$('html, body').stop(true, false ).animate({
 	        	scrollTop: $('.page.store .top_menu').offset().top
-	    	}, 15000,'linear');
+	    	}, 25000,'linear');
 	    	
+		});
+		
+	}
+	function clickhomemenu(){
+		var cl = false;
+		$('.menu_top .icon-homemenu').on('click',function(){
+			if(cl == false){
+				$(this).css('height',8);
+				$('.menu_top .nav_menu').animate({'top':0},400);
+				cl = true;
+			}else{
+				$(this).css('height',24);
+				$('.menu_top .nav_menu').animate({'top':-70},400);
+				cl = false;
+			}
 		});
 		
 	}
