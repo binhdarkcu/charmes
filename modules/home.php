@@ -54,7 +54,8 @@
 	
 	      $slides.superslides({
 	        hashchange: false,
-	        pagination: false
+	        pagination: false,
+	        animation: 'fade'
 	      });
 	    });
 	
