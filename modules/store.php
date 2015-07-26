@@ -34,7 +34,40 @@
     	<div class="shadow"></div>
         <div class="select_menu">
             <a class="icon hasbr"><span></span></a>
-            <p class="text"><a href="#">Collections</a> <span>/</span> <a href="#">Le Jardin</a><span>/</span> <a href=""#>Flora ring</a></p>
+            <div class="text">
+            	<div class="item-search">
+            		<div class="item-name">
+            			<div class="top"></div>
+            			<div class="left">Aladdin Theme</div>
+            			<div class="bottom"></div>
+            		</div>
+            		<a href="javascript:void(0);" class="close"></a>
+            	</div>
+            	<div class="item-search">
+            		<div class="item-name">
+            			<div class="top"></div>
+            			<div class="left">Rings</div>
+            			<div class="bottom"></div>
+            		</div>
+            		<a href="javascript:void(0);" class="close"></a>
+            	</div>
+            	<div class="item-search">
+            		<div class="item-name">
+            			<div class="top"></div>
+            			<div class="left">Gold</div>
+            			<div class="bottom"></div>
+            		</div>
+            		<a href="javascript:void(0);" class="close"></a>
+            	</div>
+            	<div class="item-search">
+            		<div class="item-name">
+            			<div class="top"></div>
+            			<div class="left">Ruby</div>
+            			<div class="bottom"></div>
+            		</div>
+            		<a href="javascript:void(0);" class="close"></a>
+            	</div>
+            </div>
             <?php include ('includes/filter.php'); ?>
         </div>
         <div class="option_menu">
@@ -53,7 +86,7 @@
         <ul class="list_products">
             <li class="notViewed animBlock scale" data-position="scale">
             	<a>
-                	<div class="group_img"><img src="images/img01.png" class="large_view"></div>
+                	<div class="group_img"><img src="images/product/img01.jpg" data-color="images/product/img01-hover.jpg" class="large_view"></div>
                     <div class="view_detail">
                         <p class="text">Engagement Rings</p>
                         <span class="view">View Details</span>
@@ -62,7 +95,7 @@
             </li>
             <li class="notViewed animBlock scale" data-position="scale">
             	<a>
-                	<div class="group_img"><img src="images/img02.png" class="large_view"></div>
+                	<div class="group_img"><img src="images/product/img02.jpg" data-color="images/product/img02-hover.jpg" class="large_view"></div>
                     <div class="view_detail">
                         <p class="text">Engagement Rings</p>
                         <span class="view">View Details</span>
@@ -71,7 +104,7 @@
             </li>
             <li class="notViewed animBlock scale" data-position="scale">
             	<a>
-                	<div class="group_img"><img src="images/img03.png" class="large_view"></div>
+                	<div class="group_img"><img src="images/product/img03.jpg" data-color="images/product/img03-hover.jpg" class="large_view"></div>
                     <div class="view_detail">
                         <p class="text">Engagement Rings</p>
                         <span class="view">View Details</span>
@@ -80,7 +113,7 @@
             </li>
             <li class="notViewed animBlock scale" data-position="scale">
             	<a>
-                	<div class="group_img"><img src="images/img04.png" class="large_view"></div>
+                	<div class="group_img"><img src="images/product/img04.jpg" data-color="images/product/img04-hover.jpg" class="large_view"></div>
                     <div class="view_detail">
                         <p class="text">Engagement Rings</p>
                         <span class="view">View Details</span>
@@ -90,7 +123,7 @@
             <li class="notViewed animBlock scale" data-position="scale">
             	<a href="#" class="active">
                 	<div class="group_img">
-                        <img src="images/img10.png" class="large_view">
+                        <img src="images/product/img05.jpg" data-color="images/product/img05-hover.jpg" class="large_view">
                     </div>
             		
             		<div class="view_detail">
@@ -102,7 +135,7 @@
             </li>
             <li class="notViewed animBlock scale" data-position="scale">
             	<a>
-                	<div class="group_img"><img src="images/img06.png" class="large_view"></div>
+                	<div class="group_img"><img src="images/product/img06.jpg" data-color="images/product/img06-hover.jpg" class="large_view"></div>
                     <div class="view_detail">
                         <p class="text">Engagement Rings</p>
                         <span class="view">View Details</span>
@@ -111,7 +144,7 @@
             </li>
             <li class="notViewed animBlock scale" data-position="scale">
             	<a>
-                	<div class="group_img"><img src="images/img07.png" class="large_view"></div>
+                	<div class="group_img"><img src="images/product/img07.jpg" data-color="images/product/img07-hover.jpg" class="large_view"></div>
                     <div class="view_detail">
                         <p class="text">Engagement Rings</p>
                         <span class="view">View Details</span>
@@ -120,7 +153,7 @@
             </li>
             <li class="notViewed animBlock scale" data-position="scale">
             	<a>
-                	<div class="group_img"><img src="images/img08.png" class="large_view"></div>
+                	<div class="group_img"><img src="images/product/img08.jpg" data-color="images/product/img08-hover.jpg" class="large_view"></div>
                     <div class="view_detail">
                         <p class="text">Engagement Rings</p>
                         <span class="view">View Details</span>
@@ -129,7 +162,7 @@
             </li>
             <li class="notViewed animBlock scale" data-position="scale">
             	<a>
-                	<div class="group_img"><img src="images/img09.png" class="large_view"></div>
+                	<div class="group_img"><img src="images/product/img09.jpg" data-color="images/product/img09-hover.jpg" class="large_view"></div>
                     <div class="view_detail">
                         <p class="text">Engagement Rings</p>
                         <span class="view">View Details</span>
@@ -137,6 +170,7 @@
                </a>
             </li>
         </ul>
+        <div class="clear"></div>
     </div>
     <div class="loading"></div>
 </section>

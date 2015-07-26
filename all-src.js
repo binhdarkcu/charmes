@@ -3619,22 +3619,20 @@ var menuOjb = (function() {
         	
             if(fixed == false){
                 fixed = true;
-                console.log(1);
-                $('.left_menu').animate({'right':0},300);
+                $('.left_menu').css({'right':0});
             }
         }else{
             if(fixed == true){
                 fixed = false;
-//                $('.left_menu').animate({'right':-62},300);
+				$('.left_menu').css({'right':-62});
             }
         }
     }
     var afixed = false;
     function checkCollections(){
     	var fixedscrolltop = $(window).scrollTop();
-    	
     	height = $('.page.introPage').height() + $('.inner_slider').height() + $('.page.store h3.title').outerHeight() + $('.page.home #slides').height();
-    	console.log(fixedscrolltop, height);
+    	
     	if($(this).scrollTop() >= height){
            $("div.top_menu").addClass("fixed");
         }else{
@@ -3850,7 +3848,7 @@ var ProductOjb = (function() {
 	function init(){
 		events();
 		hoverProduct();
-		
+		closeSearchItem();
 	}
 	function events()
 	{
@@ -3899,13 +3897,13 @@ var ProductOjb = (function() {
 	}
 	function hoverProduct(){
 		$('.page .content_product .list_products li').hover(function(){
-			$(this).find('img.large_view').addClass('hover');
+			var src = $(this).find('img').attr('data-color');
+			$(this).find('img.large_view').attr('src',src);
 		});
-		$('.page .content_product .list_products li .group_img .small_right').on('click',function(){
-			//var src = $(this).attr('src');
-			//var large_src = $('.page .content_product .list_products li .group_img .large_view').attr('src');
-			//$('.page .content_product .list_products li .group_img .small_right').attr('src',large_src);
-			//$('.page .content_product .list_products li .group_img .large_view').attr('src',src);
+	}
+	function closeSearchItem(){
+		$('.page .top_menu .select_menu div.text .item-search a.close').on('click',function(){
+			$(this).parent().remove()
 		});
 	}
 	function closeProduct()

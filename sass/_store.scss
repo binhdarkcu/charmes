@@ -98,7 +98,7 @@
 	.top_menu {
 		clear: both;
 		padding: 10px 0px;
-		
+		background: #fff;
 		&.fixed{
 		  position: fixed;
 		  top: 0;
@@ -110,11 +110,12 @@
 		.select_menu {
 			float: left;
 			margin-left: 20px;
+			width: 75%;
 			.icon {
 				float: left;
 				
-				width: 69px;
-				height: 57px;
+				width: 52px;
+				height: 44px;
 				display: block;	
 				-webkit-transition: all .5s;
         -moz-transition: all .5s;
@@ -122,23 +123,66 @@
         transition: all .5s;
         &.hasbr{
           background: url(../images/br-menu.png) no-repeat;
+          opacity: 0.5;
+          &:hover{
+            opacity: 1;
+          }
         }
 				span{
 				    background: url(../images/inner-menu.png) no-repeat;
-          width: 69px;
-          height: 57px;
+          width: 52px;
+          height: 44px;
           display: inline-block;
 				}
 			}
-			p.text {
+			div.text {
 				float: left;
-				@include CabinSketchNormal (22px,2.4);
-				padding-left: 28px;	
+				@include CabinSketchNormal (14px,1);
+				padding-left: 11px;	
+				color: #59407c;
 				a{
 				  color: #000;
 				}
 				span {
 					font-size: 26px;	
+				}
+				.item-search{
+				  padding-top: 3px;
+				  margin-right: 12px;
+				  float: left; 
+				  .item-name{
+				    float: left;
+				    .top{
+				      background: url(../images/line-top.png) no-repeat top center;
+				      height: 3px;
+				      width: 100%;
+				      margin-left: 2px;
+              position: relative;
+              top: 3px;
+				    }
+				    .left{
+				      background: url(../images/line-left.png) no-repeat left;
+				        height: 30px;
+              line-height: 30px;
+              padding-right: 10px;
+              padding-left: 12px;
+				    }
+				    .bottom{
+				      background: url(../images/line-bottom.png) no-repeat bottom center;
+				       width: 100%;
+				       margin-left: 2px;
+				       height: 3px;
+              position: relative;
+              top: -3px;
+				    }
+				  }
+				  a.close{
+				    background: url(../images/close.png) no-repeat;
+				    width: 32px;
+				    height: 30px;
+				    float: left;
+				    margin-top :3px;
+				  }
 				}
 			}
 		}
@@ -186,19 +230,21 @@
 	/*end top*/
 	.content_product {
 		clear: both;
-		width: 1230px;
-		margin: 36px auto;
 		
+		background: #Fff;
 		.list_products {
 			padding: 0;
 			margin: 0;
 			clear: both;
-			float: left;
-      width: 100%;
-      padding-bottom: 120px;
+			float: none;
+			display: table;
+      width: 720px;
+      margin: 0 auto;
+      padding-bottom: 100px;
+      padding-top: 40px;
 			li {
 				float: left;
-				margin: 40px 0px;
+				margin: 0 0px 80px;
 				position: relative;
 				&:hover {
 					.view_detail {
@@ -241,7 +287,7 @@
 				.group_img {
 					clear: both;
 					position: relative;
-					width: 400px;
+					width: 240px;
   					
   					text-align: center;
 					.large_view {
@@ -249,13 +295,10 @@
 						-ms-transform: scale(1,1); /* IE 9 */
     					-webkit-transform: scale(1,1); /* Safari */
     				 	transform: scale(1,1);
+    				 	width: 140px;
 						z-index: 1;
-					  -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
-            filter: url(desaturate.svg#greyscale);
             &.hover{
-                -webkit-filter: grayscale(0%);
-                filter: grayscale(100%);
+               
               }
 					}
 					.small_left {
@@ -286,7 +329,7 @@
 				.view_detail {
 					position: absolute;
 					left: 50%;
-					margin-left: -199px;
+					margin-left: -120px;
   					bottom: -65px;
 					width: 100%;
 					text-align: center;
@@ -296,16 +339,16 @@
 						clear: both;
 						background: url(../images/line_detail.png) no-repeat left bottom;
 						
-						padding-bottom: 15px;
-						@include Adamina (24px);	
+						padding-bottom: 10px;
+						@include HelveticaLight (15px);	
 						color: #000;
 					}
 					.view {
 						clear: both;
 						color: #000;
-						padding-top: 12px;
+						padding-top: 5px;
   						display: block;
-						@include CabinSketchNormal (21px);
+						@include CabinSketchNormal (15px);
 					}	
 				}	
 			}			

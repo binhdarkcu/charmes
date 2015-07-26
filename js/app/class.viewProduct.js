@@ -9,7 +9,7 @@ var ProductOjb = (function() {
 	function init(){
 		events();
 		hoverProduct();
-		
+		closeSearchItem();
 	}
 	function events()
 	{
@@ -58,13 +58,13 @@ var ProductOjb = (function() {
 	}
 	function hoverProduct(){
 		$('.page .content_product .list_products li').hover(function(){
-			$(this).find('img.large_view').addClass('hover');
+			var src = $(this).find('img').attr('data-color');
+			$(this).find('img.large_view').attr('src',src);
 		});
-		$('.page .content_product .list_products li .group_img .small_right').on('click',function(){
-			//var src = $(this).attr('src');
-			//var large_src = $('.page .content_product .list_products li .group_img .large_view').attr('src');
-			//$('.page .content_product .list_products li .group_img .small_right').attr('src',large_src);
-			//$('.page .content_product .list_products li .group_img .large_view').attr('src',src);
+	}
+	function closeSearchItem(){
+		$('.page .top_menu .select_menu div.text .item-search a.close').on('click',function(){
+			$(this).parent().remove()
 		});
 	}
 	function closeProduct()

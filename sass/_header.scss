@@ -1,0 +1,66 @@
+.slides-container{
+  .item-slide{
+    span{
+      @include HelveticaLight(40px);
+       color: #000;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 17%;
+    }
+  }
+}
+.menu_top{
+  position: absolute;
+  width: 100%;
+  top: 0;
+    z-index: 100;
+  .icon-homemenu{
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    background: url(../images/icon-menu.png) no-repeat;
+    width: 28px;
+    height: 24px;
+    z-index: 2;
+  }
+  .nav_menu{
+    background: #fff;
+      z-index: 1;
+  position: absolute;
+      width: 100%;
+      height: 68px;
+      top: -70px;
+      box-shadow: 0 0px 5px 2px #e9e4ef;
+    ul{
+      display: table;
+      margin: 0 auto;
+      padding-top: 36px;
+      li{
+        display: inline-block;
+        padding-left: 15px;
+  padding-right: 15px; 
+    
+        a{
+          @include HelveticaLight(14px);
+          color: #4d4d4d;
+          position: relative;
+          i{
+            border-bottom: 1px solid #5d4284;
+            width: 0;
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            @include animation();
+          }
+          &:hover{
+            color: #5d4284;
+            i{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

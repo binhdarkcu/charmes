@@ -56,19 +56,33 @@ a{text-decoration: none; cursor: pointer;}
 .animBlock[data-position="right"] { -webkit-animation-duration: 1s;
   animation-duration: 1s;}
 
-.animBlock[data-position="left"].viewed {
- 	-webkit-animation-name: fadeIn;
-     animation-name: fadeIn;
+.animBlock[data-position="left"].txtCol.viewed {
+ 	-webkit-animation-name: fadeInLeft;
+     animation-name: fadeInLeft;
 	 &.delay {
 		animation-delay: 0.5s;	 
 	}
 }
-.animBlock[data-position="right"].viewed {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
+.animBlock[data-position="right"].txtCol.viewed {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
   &.delay {
 		animation-delay: 0.5s;	 
 	}
+}
+.animBlock[data-position="left"].imgCol.viewed {
+  -webkit-animation-name: fadeIn;
+     animation-name: fadeIn;
+   &.delay {
+    animation-delay: 0.5s;   
+  }
+}
+.animBlock[data-position="right"].imgCol.viewed {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  &.delay {
+    animation-delay: 0.5s;   
+  }
 }
 .animBlock[data-position="opacity"].viewed {
   opacity: 1;

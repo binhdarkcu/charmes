@@ -91,22 +91,20 @@ var menuOjb = (function() {
         	
             if(fixed == false){
                 fixed = true;
-                console.log(1);
-                $('.left_menu').animate({'right':0},300);
+                $('.left_menu').css({'right':0});
             }
         }else{
             if(fixed == true){
                 fixed = false;
-//                $('.left_menu').animate({'right':-62},300);
+				$('.left_menu').css({'right':-62});
             }
         }
     }
     var afixed = false;
     function checkCollections(){
     	var fixedscrolltop = $(window).scrollTop();
-    	
     	height = $('.page.introPage').height() + $('.inner_slider').height() + $('.page.store h3.title').outerHeight() + $('.page.home #slides').height();
-    	console.log(fixedscrolltop, height);
+    	
     	if($(this).scrollTop() >= height){
            $("div.top_menu").addClass("fixed");
         }else{
