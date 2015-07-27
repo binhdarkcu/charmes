@@ -62,7 +62,7 @@
 	  </script>
 </section>
 <section class="page">
-	<div class="inner_fix fixed">
+	<div class="inner_fix fixed nav_bar_home">
 	    <div class="left_title">Albert Lavenda</div>
 	    <nav>
 	        <ul class="list_menu" style="right: 8.5px;">
@@ -71,12 +71,12 @@
 	            <li><a class="internal" value="popup-collections">Themes<i></i></a></li>
 	            <li><a class="Jewelries goto" pos="Jewelries">Jewelries<i></i></a></li>
 	            <li><a class="internal" href="#">Silverwears<i></i></a></li>
-	            <li><a  class="goto">Services<i></i></a></li>
-	            <li><a class="goto">Membership<i></i></a></li>
+	            <li><a class="goto">Services<i></i></a></li>
+	            <li><a class="internal" value="membership">Membership<i></i></a></li>
 	        </ul>
 	    </nav>
 	    <div class="contact">
-	    	<a href="#">About</a>
+	    	<a href="#" class="internal" value="about">About</a>
 	    	<a href="#">Contact</a>
 	    </div>
 	</div>

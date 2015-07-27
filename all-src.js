@@ -3770,7 +3770,7 @@ var pageOjb = (function() {
 	}
 	function events()
 	{
-		$('.page nav ul.list_menu li a.internal').hover(function(){
+		$('.page .nav_bar_home a.internal').hover(function(){
 			var value=$(this).attr('value');
 			menuOjb.activeMenu(this);
 			console.log(flaginit);
@@ -3792,7 +3792,7 @@ var pageOjb = (function() {
 		$('.page nav ul.list_menu li a.goto').hover(function(){
 			closeAll();
 			
-			$('.page nav ul.list_menu li a.internal').removeClass('active');
+			$('.page .nav_bar_home a.internal').removeClass('active');
 			flaginit=true;
 		});
 		$('.page .bg_overlay').hover(function(){
@@ -3809,14 +3809,14 @@ var pageOjb = (function() {
 		tl.set ($('.page.'+value),{css:{'display':'block'}})
 		  .set( $('.page .bg_overlay'), { css:{display:'block' }} )
 		  .to( $('.page.'+value+' .bg_overlay'), 0.4, { css:{opacity:0.8 }} )
-		  .to( $('.page.'+value+' .content_view'), 0.4, { css:{height:64+'%' }},'-=0.4' )
+		  .to( $('.page.'+value+' .content_view'), 0.4, { css:{height:75+'%' }},'-=0.4' )
 	}
 	function FadeinContent(value)
 	{
 		$('.page.detailPage').css('display','none')
 		$('.page.detailPage.'+value).css('display','block');
 		$('.page.detailPage.'+value+' .bg_overlay').css({'display':'block', opacity:0.8 });
-		$('.page.detailPage.'+value+' .content_view').css({height:70+'%'});
+		$('.page.detailPage.'+value+' .content_view').css({height:75+'%'});
 		$('.page.detailPage.'+value+' .desc, .page.detailPage'+value+' .img_block').addClass('fadeIn');
 		
 	}
@@ -3882,7 +3882,12 @@ var ProductOjb = (function() {
         },function(){
         	TweenMax.to( $('.product-detail .product-feed ul li a i'), 0.8, {width:0, opacity: 0.1} );
         });
-		
+		$('.popup-collections .list_item_collections li .link a').hover(function(e) {
+            var index=$(this).find('i');
+			TweenMax.to( $(this).find('i'), 0.8, {width:215, opacity: 1} );
+        },function(){
+        	TweenMax.to( $('.popup-collections .list_item_collections li .link a i'), 0.8, {width:0, opacity: 0.1} );
+        });
 	}
 	function showProducts()
 	{

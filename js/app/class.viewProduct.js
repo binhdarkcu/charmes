@@ -43,7 +43,12 @@ var ProductOjb = (function() {
         },function(){
         	TweenMax.to( $('.product-detail .product-feed ul li a i'), 0.8, {width:0, opacity: 0.1} );
         });
-		
+		$('.popup-collections .list_item_collections li .link a').hover(function(e) {
+            var index=$(this).find('i');
+			TweenMax.to( $(this).find('i'), 0.8, {width:215, opacity: 1} );
+        },function(){
+        	TweenMax.to( $('.popup-collections .list_item_collections li .link a i'), 0.8, {width:0, opacity: 0.1} );
+        });
 	}
 	function showProducts()
 	{

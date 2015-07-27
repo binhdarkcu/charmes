@@ -1,4 +1,4 @@
-﻿<section class="popup-collections page detailPage">
+﻿<section class="popup-collections page detailPage" style="display: none;">
     <div class="inner_contentDetial">
     	<div class="bg_overlay"></div>
         <div class="content_view">
@@ -11,8 +11,8 @@
                     		<div>Éclair</div>
                     	</a>
                     	<div class="link">
-                			<a href="#" class="link01">Discover collection</a>
-                			<a href="#" class="link02">Explore jewelleries</a>
+                			<a href="#" class="link01"><span>Discover theme</span><i></i></a>
+                			<a href="#" class="link02"><span>Explore jewelleries</span><i></i></a>
                 		</div>
                     </li>
                     <li class="">
@@ -21,8 +21,8 @@
                     		<div>Safari</div>
                     	</a>
                     	<div class="link">
-                			<a href="#" class="link01">Discover collection</a>
-                			<a href="#" class="link02">Explore jewelleries</a>
+                			<a href="#" class="link01"><span>Discover theme</span><i></i></a>
+                			<a href="#" class="link02"><span>Explore jewelleries</span><i></i></a>
                 		</div>
                     </li>
                     <li>
@@ -31,8 +31,8 @@
                     		<div>Le jardin</div>
                     	</a>
                     	<div class="link">
-                			<a href="#" class="link01">Discover collection</a>
-                			<a href="#" class="link02">Explore jewelleries</a>
+                			<a href="#" class="link01"><span>Discover theme</span><i></i></a>
+                			<a href="#" class="link02"><span>Explore jewelleries</span><i></i></a>
                 		</div>
                     </li>
                     <li>
@@ -41,8 +41,8 @@
                     		<div>Éclair</div>
                     	</a>
                     	<div class="link">
-                			<a href="#" class="link01">Discover collection</a>
-                			<a href="#" class="link02">Explore jewelleries</a>
+                			<a href="#" class="link01"><span>Discover theme</span><i></i></a>
+                			<a href="#" class="link02"><span>Explore jewelleries</span><i></i></a>
                 		</div>
                     </li>
                     <li>
@@ -51,8 +51,8 @@
                     		<div>Trés Chér</div>
                     	</a>
                     	<div class="link">
-                			<a href="#" class="link01">Discover collection</a>
-                			<a href="#" class="link02">Explore jewelleries</a>
+                			<a href="#" class="link01"><span>Discover theme</span><i></i></a>
+                			<a href="#" class="link02"><span>Explore jewelleries</span><i></i></a>
                 		</div>
                     </li>
                     <li>
@@ -61,8 +61,8 @@
                     		<div>Éclair</div>
                     	</a>
                     	<div class="link">
-                			<a href="#" class="link01">Discover collection</a>
-                			<a href="#" class="link02">Explore jewelleries</a>
+                			<a href="#" class="link01"><span>Discover theme</span><i></i></a>
+                			<a href="#" class="link02"><span>Explore jewelleries</span><i></i></a>
                 		</div>
                     </li>
                     <li>
@@ -71,8 +71,8 @@
                     		<div>Safari</div>
                     	</a>
                     	<div class="link">
-                			<a href="#" class="link01">Discover collection</a>
-                			<a href="#" class="link02">Explore jewelleries</a>
+                			<a href="#" class="link01"><span>Discover theme</span><i></i></a>
+                			<a href="#" class="link02"><span>Explore jewelleries</span><i></i></a>
                 		</div>
                     </li>
                     <li>
@@ -81,8 +81,8 @@
                     		<div>Le jardin</div>
                     	</a>
                     	<div class="link">
-                			<a href="#" class="link01">Discover collection</a>
-                			<a href="#" class="link02">Explore jewelleries</a>
+                			<a href="#" class="link01"><span>Discover theme</span><i></i></a>
+                			<a href="#" class="link02"><span>Explore jewelleries</span><i></i></a>
                 		</div>
                     </li>
                     <li>
@@ -91,8 +91,8 @@
                     		<div>Éclair</div>
                     	</a>
                     	<div class="link">
-                			<a href="#" class="link01">Discover collection</a>
-                			<a href="#" class="link02">Explore jewelleries</a>
+                			<a href="#" class="link01"><span>Discover theme</span><i></i></a>
+                			<a href="#" class="link02"><span>Explore jewelleries</span><i></i></a>
                 		</div>
                     </li>
                     <li>
@@ -101,8 +101,8 @@
                     		<div>Trés Chér</div>
                     	</a>
                     	<div class="link">
-                			<a href="#" class="link01">Discover collection</a>
-                			<a href="#" class="link02">Explore jewelleries</a>
+                			<a href="#" class="link01"><span>Discover theme</span></span><i></i></a>
+                			<a href="#" class="link02"><span>Explore jewelleries</span><i></i></a>
                 		</div>
                     </li>
                 </ul>

@@ -37,6 +37,8 @@
 				include("modules/store.php");
 				include("modules/collections.php");
 				include("modules/menu_left.php");
+				include("modules/about.php");
+				include("modules/membership.php");
 			?>
 			<div class="loadPages">
 				
