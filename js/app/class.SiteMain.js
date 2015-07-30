@@ -11,9 +11,20 @@ var SiteMain = (function() {
 	}
 	function scrolltoView(){
 		$('.page.home .mouse-event').on('click',function(){
-			$('html, body').stop(true, false ).animate({
-	        	scrollTop: $('.page.store .top_menu').offset().top
-	    	}, 25000,'linear');
+			$('.page.home').animate({'opacity':0},700,function(){
+				$('html, body').stop(true, false ).animate({
+		        	scrollTop: $('.page.introPage').offset().top
+		    	}, 10,'linear', function(){
+		    		setTimeout(function(){
+		    			$('html, body').stop(true, false ).animate({
+				        	scrollTop: $('.page.store').offset().top
+				    	}, 25000,'linear');
+		    		},2000);
+		    		$('.page.home').animate({'opacity':1},700);
+		    	});
+			});
+
+			
 	    	
 		});
 		
@@ -58,5 +69,5 @@ var SiteMain = (function() {
 
 $(document).ready(function(e) {
     SiteMain.init();
-	
+	$("html, body").animate({ scrollTop: 0 }, 100);
 });

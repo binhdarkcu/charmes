@@ -24,6 +24,16 @@ var initPage = (function() {
 		$('.iCheck input').iCheck();
 	}
 	function activeMenuStore(){
+		$('.Jewelries.goon').hover(function(){
+			$("html, body").animate({ scrollTop: $('.page.store .top_menu').offset().top }, 1000);
+			$('.page .top_menu .select_menu .icon.hasbr').removeClass('hasbr');
+			$('.shadow').show();
+			$('.store-filter').show().animate({'opacity':1},500);
+		},function(){
+			$('.shadow').hide();
+			$('.page .top_menu .select_menu .icon').addClass('hasbr');
+			$('.store-filter').hide().animate({'opacity':0},500);
+		});
 		$('.page .top_menu .select_menu .icon.hasbr').on('click',function(){
 			$(this).removeClass('hasbr');
 			$('.shadow').show();

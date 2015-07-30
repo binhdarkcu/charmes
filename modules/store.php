@@ -72,11 +72,21 @@
         </div>
         <div class="option_menu">
             <ul class="list_item">
-                <li><a class="search"></a></li>
+                <li class="search-li">
+                    <a class="search"></a>
+                    <div class="hide-listitem">
+                        <form action="" method="">
+                            <input type="text" value="" name="" placeholder="Type here to search"/>
+                        </form>
+                    </div>
+                    <div class="line-listitem"></div>
+                </li>
                 <li class="line"></li>
-                <li><a class="cart"></a></li>
+                <li class="note-li cart">
+                    <a class="cart"><span class="hide-text">Check my shopping bag</span><div class="line-listitem"></div></a>
+                </li>
                 <li class="line"></li>
-                <li><a class="note"></a></li>
+                <li class="note-li"><a class="note"><span class="hide-text">Check my wishlist</span><div class="line-listitem"></div></a></li>
             </ul>
         </div>
         <div class="clear"></div>
@@ -85,86 +95,125 @@
     	<?php include ('detailProduct.php'); ?>
         <ul class="list_products">
             <li class="notViewed animBlock scale" data-position="scale">
-            	<a>
+            	<a href="javascript:void(0);">
                 	<div class="group_img"><img src="images/product/img01.jpg" data-color="images/product/img01-hover.jpg" class="large_view"></div>
                     <div class="view_detail">
                         <p class="text">Engagement Rings</p>
+                        <div class="rowline"></div>
                         <span class="view">View Details</span>
                     </div>
                </a>
             </li>
             <li class="notViewed animBlock scale" data-position="scale">
-            	<a>
+            	<a href="javascript:void(0);">
                 	<div class="group_img"><img src="images/product/img02.jpg" data-color="images/product/img02-hover.jpg" class="large_view"></div>
                     <div class="view_detail">
                         <p class="text">Engagement Rings</p>
+                        <div class="rowline"></div>
                         <span class="view">View Details</span>
                     </div>
                </a>
             </li>
             <li class="notViewed animBlock scale" data-position="scale">
-            	<a>
+            	<a href="javascript:void(0);">
                 	<div class="group_img"><img src="images/product/img03.jpg" data-color="images/product/img03-hover.jpg" class="large_view"></div>
                     <div class="view_detail">
                         <p class="text">Engagement Rings</p>
+                        <div class="rowline"></div>
                         <span class="view">View Details</span>
                     </div>
                </a>
             </li>
             <li class="notViewed animBlock scale" data-position="scale">
-            	<a>
+            	<a href="javascript:void(0);">
                 	<div class="group_img"><img src="images/product/img04.jpg" data-color="images/product/img04-hover.jpg" class="large_view"></div>
                     <div class="view_detail">
                         <p class="text">Engagement Rings</p>
+                        <div class="rowline"></div>
                         <span class="view">View Details</span>
                     </div>
                </a>
             </li>
             <li class="notViewed animBlock scale" data-position="scale">
-            	<a href="#" class="active">
+            	<a href="javascript:void(0);">
                 	<div class="group_img">
                         <img src="images/product/img05.jpg" data-color="images/product/img05-hover.jpg" class="large_view">
                     </div>
             		
             		<div class="view_detail">
 	                	<p class="text">Engagement Rings</p>
+                        <div class="rowline"></div>
 	                    <span class="view">View Details</span>
 	                </div>
             	</a>
             	
             </li>
             <li class="notViewed animBlock scale" data-position="scale">
-            	<a>
+            	<a href="javascript:void(0);">
                 	<div class="group_img"><img src="images/product/img06.jpg" data-color="images/product/img06-hover.jpg" class="large_view"></div>
                     <div class="view_detail">
                         <p class="text">Engagement Rings</p>
+                        <div class="rowline"></div>
                         <span class="view">View Details</span>
                     </div>
                </a>
             </li>
             <li class="notViewed animBlock scale" data-position="scale">
-            	<a>
+            	<a href="javascript:void(0);">
                 	<div class="group_img"><img src="images/product/img07.jpg" data-color="images/product/img07-hover.jpg" class="large_view"></div>
                     <div class="view_detail">
                         <p class="text">Engagement Rings</p>
+                        <div class="rowline"></div>
                         <span class="view">View Details</span>
                     </div>
                </a>
             </li>
             <li class="notViewed animBlock scale" data-position="scale">
-            	<a>
+            	<a href="javascript:void(0);">
                 	<div class="group_img"><img src="images/product/img08.jpg" data-color="images/product/img08-hover.jpg" class="large_view"></div>
                     <div class="view_detail">
                         <p class="text">Engagement Rings</p>
+                        <div class="rowline"></div>
                         <span class="view">View Details</span>
                     </div>
                </a>
             </li>
             <li class="notViewed animBlock scale" data-position="scale">
-            	<a>
+            	<a href="javascript:void(0);">
                 	<div class="group_img"><img src="images/product/img09.jpg" data-color="images/product/img09-hover.jpg" class="large_view"></div>
                     <div class="view_detail">
                         <p class="text">Engagement Rings</p>
+                        <div class="rowline"></div>
+                        <span class="view">View Details</span>
+                    </div>
+               </a>
+            </li>
+            <li class="notViewed animBlock scale" data-position="scale">
+                <a href="javascript:void(0);">
+                    <div class="group_img"><img src="images/product/img10.jpg" data-color="images/product/img10-hover.jpg" class="large_view"></div>
+                    <div class="view_detail">
+                        <p class="text">Engagement Rings</p>
+                        <div class="rowline"></div>
+                        <span class="view">View Details</span>
+                    </div>
+               </a>
+            </li>
+            <li class="notViewed animBlock scale" data-position="scale">
+                <a href="javascript:void(0);">
+                    <div class="group_img"><img src="images/product/img11.jpg" data-color="images/product/img11-hover.jpg" class="large_view"></div>
+                    <div class="view_detail">
+                        <p class="text">Engagement Rings</p>
+                        <div class="rowline"></div>
+                        <span class="view">View Details</span>
+                    </div>
+               </a>
+            </li>
+            <li class="notViewed animBlock scale" data-position="scale">
+                <a href="javascript:void(0);">
+                    <div class="group_img"><img src="images/product/img12.jpg" data-color="images/product/img12-hover.jpg" class="large_view"></div>
+                    <div class="view_detail">
+                        <p class="text">Engagement Rings</p>
+                        <div class="rowline"></div>
                         <span class="view">View Details</span>
                     </div>
                </a>

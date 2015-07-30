@@ -108,4 +108,26 @@
 	.bg_overlay{
 	  display: none;
 	}
+	&.contact{
+		.social-box{
+		    margin-top: 10px;
+    		margin-left: 20px;
+			a{
+				background: url(../images/social.png) no-repeat;
+				width: 36px;
+				height: 36px;
+				display: inline-block;
+				margin-right: 4px;
+				&.tw{
+					background-position: -41px 0px;
+				}
+				&.insta{
+					background-position: right 0px;
+				}
+			}
+		}
+		.img_block{
+
+		}
+	}
 }

@@ -11,6 +11,7 @@ var pageOjb = (function() {
 	}
 	function events()
 	{
+		
 		$('.page .nav_bar_home a.internal').hover(function(){
 			var value=$(this).attr('value');
 			menuOjb.activeMenu(this);
@@ -50,14 +51,14 @@ var pageOjb = (function() {
 		tl.set ($('.page.'+value),{css:{'display':'block'}})
 		  .set( $('.page .bg_overlay'), { css:{display:'block' }} )
 		  .to( $('.page.'+value+' .bg_overlay'), 0.4, { css:{opacity:0.8 }} )
-		  .to( $('.page.'+value+' .content_view'), 0.4, { css:{height:75+'%' }},'-=0.4' )
+		  .to( $('.page.'+value+' .content_view'), 0.4, { css:{height:'510px' }},'-=0.4' )
 	}
 	function FadeinContent(value)
 	{
 		$('.page.detailPage').css('display','none')
 		$('.page.detailPage.'+value).css('display','block');
 		$('.page.detailPage.'+value+' .bg_overlay').css({'display':'block', opacity:0.8 });
-		$('.page.detailPage.'+value+' .content_view').css({height:75+'%'});
+		$('.page.detailPage.'+value+' .content_view').css({height:'510px'});
 		$('.page.detailPage.'+value+' .desc, .page.detailPage'+value+' .img_block').addClass('fadeIn');
 		
 	}
