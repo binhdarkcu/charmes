@@ -15,7 +15,6 @@ var pageOjb = (function() {
 		$('.page .nav_bar_home a.internal').hover(function(){
 			var value=$(this).attr('value');
 			menuOjb.activeMenu(this);
-			console.log(flaginit);
 			if(flaginit==true)
 			{
 				setTimeout(function(){
@@ -47,18 +46,26 @@ var pageOjb = (function() {
 	}
 	function animatePopup(value)
 	{
+		var he = 510;
 		tl = new TimelineMax({onComplete:function(){flaginit=false; }});
+		if(value == 'popup-collections'){
+			he=465;
+		}
 		tl.set ($('.page.'+value),{css:{'display':'block'}})
 		  .set( $('.page .bg_overlay'), { css:{display:'block' }} )
 		  .to( $('.page.'+value+' .bg_overlay'), 0.4, { css:{opacity:0.8 }} )
-		  .to( $('.page.'+value+' .content_view'), 0.4, { css:{height:'510px' }},'-=0.4' )
+		  .to( $('.page.'+value+' .content_view'), 0.4, { css:{height: he}},'-=0.4' )
 	}
 	function FadeinContent(value)
 	{
+		var he = 510;
+		if(value == 'popup-collections'){
+			he=465;
+		}
 		$('.page.detailPage').css('display','none')
 		$('.page.detailPage.'+value).css('display','block');
 		$('.page.detailPage.'+value+' .bg_overlay').css({'display':'block', opacity:0.8 });
-		$('.page.detailPage.'+value+' .content_view').css({height:'510px'});
+		$('.page.detailPage.'+value+' .content_view').css({height:he});
 		$('.page.detailPage.'+value+' .desc, .page.detailPage'+value+' .img_block').addClass('fadeIn');
 		
 	}

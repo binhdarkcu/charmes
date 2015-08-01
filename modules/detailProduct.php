@@ -1,9 +1,9 @@
 		<div class="product-detail">
     		<div class="product-box">
     			<ul>
-    				<li><img src="images/detail-2.jpg"/></li>
+    				<li class="li-opacity"><img src="images/detail-2.jpg"/></li>
     				<li><img src="images/detail-1.jpg"/></li>
-    				<li><img src="images/detail-3.jpg"/></li>
+    				<li class="li-opacity"><img src="images/detail-3.jpg"/></li>
     			</ul>
     		</div>
     		<div class="product-type">

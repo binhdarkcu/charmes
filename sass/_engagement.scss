@@ -97,6 +97,22 @@
         width: 98%;
       }
     }
+    &.maxheight {
+    	.content_view{
+    		height: 100%!important;
+    	}
+    	.content_width{
+    		width: 94%;
+    	}
+    	.img_block {
+    		    position: absolute;
+			    right: 0;
+			    bottom: -70px;
+    	}
+    }
+    &.login{
+
+    }
   }
 	&.about{
 	  .img_block{
@@ -128,6 +144,127 @@
 		}
 		.img_block{
 
+		}
+	}
+	&.login{
+		.membership_width{
+			    width: 303px;
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    margin-left: -151px;
+			    margin-top: -115px;
+		}
+	}
+	&.register{
+		.membership_width{
+			width: 564px;
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    margin-left: -282px;
+		    margin-top: -115px;
+		}
+		.membership_box {
+			.header-box {
+				text-align: center;
+				h3{
+					font-size: 24px;
+				}
+				span{
+					font-size: 13px;
+				}
+			}
+			.input-box{
+				span{
+					span{
+						display: inline-block;
+						font-size: 13px;
+						padding-bottom: 0;
+					}
+				}
+				.col{
+					float: left;
+					width: 245px;	
+					&.col01{
+						border-right: 1px solid #c9c2db;
+						padding-right: 32px;
+					}
+					&.col02{
+						padding-left: 32px;
+					}
+					.row{
+						padding-bottom: 18px;
+						    min-height: 60px;
+					}
+					.iCheck{
+						float: left;
+						margin-right: 9px;
+						.icheckbox{
+							float: left;
+							margin-top: 10px;
+						}
+						label{
+							@include HelveticaLight(13px);
+							position: relative;
+							top: 10px;
+						}
+					}
+					.selectStyle{
+						float: left;
+					}
+				}
+				.col01{
+
+				}
+			}
+		}
+		
+	}
+	.membership_box{
+		display: none;
+		.header-box{
+			h3{
+				@include HelveticaLight(31px);
+				color: #000;
+			}
+			span{
+				@include HelveticaLight(15px);
+				font-style: italic;
+				margin-top: 3px;
+				color: #000;
+			}
+		}
+		.input-box{
+			margin-top: 25px;
+			padding-bottom: 39px;
+			span{
+				@include HelveticaLight(13px);
+				text-transform: uppercase;
+				font-weight: 700;
+				    letter-spacing: 0.4px;
+				color: #000;
+				    display: block;
+				padding-bottom: 8px;
+			}
+			input[type="text"]{
+				@include HelveticaLight(14px);
+				color: #000;
+				    border: 1px solid #9385b8;
+			    height: 35px;
+			    padding: 0 10px;
+			    width: 91%;
+			    line-height: 35px;
+			}
+		}
+		input[type="submit"]{
+			@include HelveticaLight(16px);
+			background: #d3c8e3;
+			text-transform: uppercase;
+			width: 100%;
+			font-weight: 700;
+			    padding: 14px 0 13px 0;
+			cursor: pointer;
 		}
 	}
 }

@@ -17,6 +17,7 @@
 		"js/app/class.initPage.js",
 		"js/app/class.pageDetail.js",
 		"js/app/class.viewProduct.js",
+		"js/app/class.detail.js",
 		"js/app/class.siteMain.js"
 	);
 
