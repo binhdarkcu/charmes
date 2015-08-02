@@ -71,7 +71,7 @@
 	            <li><a class="internal" value="popup-collections">Themes<i></i></a></li>
 	            <li><a class="Jewelries goon">Jewelries<i></i></a></li>
 	            <li><a class="internal" href="#">Silverwears<i></i></a></li>
-	            <li><a class="goto">Services<i></i></a></li>
+	            <li><a class="internal" value="service_support">Services<i></i></a></li>
 	            <li><a class="internal" value="membership">Membership<i></i></a></li>
 	        </ul>
 	    </nav>

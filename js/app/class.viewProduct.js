@@ -10,6 +10,7 @@ var ProductOjb = (function() {
 		events();
 		hoverProduct();
 		closeSearchItem();
+		hoverProduct();
 	}
 	function events()
 	{
@@ -58,7 +59,7 @@ var ProductOjb = (function() {
 			});
 			$('.product-detail').css('display','block').animate({'opacity':1},1000);
 			
-		});
+		}, 500);
 	}
 	function hoverProduct(){
 		$('.page .content_product .list_products li').hover(function(){
@@ -77,11 +78,20 @@ var ProductOjb = (function() {
 		$('.page .content_product .list_products').css('display','block').animate({'opacity':1},1000);
 		$('.product-detail').animate({'opacity':0},1000,function(){
 			$('.product-detail').css('display','none');
+			$('.product-detail .product-type .br-top').removeClass('makeline');	
+			$('.product-box .button-group .box').removeClass('fadeIn animated');
 		});
 	}
 	function animationline()
 	{
-		$('.product-detail .product-type .br-top').stop(true,false).animate({'opacity':1,'width':100+'%'},1000);	
+		$('.product-detail .product-type .br-top').addClass('makeline');	
+	}
+	function hoverProduct(){
+		$('.ul-product .product-img').hover(function(){
+			$('.product-box .button-group .box').addClass('fadeIn animated');
+		},function(){
+			
+		});
 	}
 	return {
 		init:init

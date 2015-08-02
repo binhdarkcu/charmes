@@ -1,8 +1,33 @@
 /* CSS Document */
+.hide{
+	display: none;
+}
+.social-box{
+    margin-top: 10px;
+	margin-left: 20px;
+	a{
+		background: url(../images/social.png) no-repeat;
+		width: 36px;
+		height: 36px;
+		display: inline-block;
+		margin-right: 4px;
+		&.tw{
+			background-position: -41px 0px;
+		}
+		&.insta{
+			background-position: right 0px;
+		}
+		&.other{
+			    width: 41px;
+			background: url(../images/other.png) no-repeat;
+		}
+	}
+}
 .page {
 	.content_width{
     width: 715px;
     margin: 0 auto;
+    
     display: table; 
   }
 	.bg_overlay {
@@ -52,7 +77,7 @@
 			clear: both;
 			@include HelveticaLight (19px);
 			border-bottom: 1px #7f7f7f solid;
-			padding-bottom: 10px;
+			padding-bottom: 13px;
 			font-weight: 700;
 		}
 		ul.list_item {
@@ -60,7 +85,7 @@
 			margin: 0;
 			li {
 				clear: both;
-				margin-top: 16px;
+				margin-top: 12px;
 				background: url(../images/engagement/bullet.png) no-repeat 0 9px;
 				a {
 					@include HelveticaLight (14px);
@@ -110,10 +135,19 @@
 			    bottom: -70px;
     	}
     }
-    &.login{
-
-    }
   }
+  &.service_support{
+  	.content_width{
+  		position: relative;
+  	}
+		.img_block {
+			img{
+				position: absolute;
+				bottom: -80px;
+				right:0;
+			}
+		}
+	}
 	&.about{
 	  .img_block{
 	    float: left;
@@ -124,24 +158,9 @@
 	.bg_overlay{
 	  display: none;
 	}
+
 	&.contact{
-		.social-box{
-		    margin-top: 10px;
-    		margin-left: 20px;
-			a{
-				background: url(../images/social.png) no-repeat;
-				width: 36px;
-				height: 36px;
-				display: inline-block;
-				margin-right: 4px;
-				&.tw{
-					background-position: -41px 0px;
-				}
-				&.insta{
-					background-position: right 0px;
-				}
-			}
-		}
+		
 		.img_block{
 
 		}
@@ -163,7 +182,7 @@
 		    top: 50%;
 		    left: 50%;
 		    margin-left: -282px;
-		    margin-top: -115px;
+		    margin-top: -195px;
 		}
 		.membership_box {
 			.header-box {
@@ -176,12 +195,16 @@
 				}
 			}
 			.input-box{
+				padding-bottom: 33px;
 				span{
 					span{
 						display: inline-block;
 						font-size: 13px;
 						padding-bottom: 0;
 					}
+				}
+				input[type="text"]{
+					width: 90%;
 				}
 				.col{
 					float: left;
@@ -196,23 +219,59 @@
 					.row{
 						padding-bottom: 18px;
 						    min-height: 60px;
+						&.last-row{
+							padding-bottom: 0;
+						}
 					}
 					.iCheck{
 						float: left;
 						margin-right: 9px;
-						.icheckbox{
+						.iradio{
 							float: left;
-							margin-top: 10px;
+						    margin-top: 6px;
+						    background: url(../images/m-radio.png) no-repeat;
+						    width: 21px;
+						    height: 21px;
+							&:hover, &.checked{
+								background: url(../images/m-radio-hover.png) no-repeat;
+							}
 						}
 						label{
 							@include HelveticaLight(13px);
 							position: relative;
 							top: 10px;
 						}
+
 					}
 					.selectStyle{
+						    width: 117px;
+						    margin-right: 9px;
 						float: left;
+						.selectBox-label{
+							@include HelveticaLight(13px);
+							display: inline-block;
+							color: #a194c3;
+							padding-bottom: 0;
+							width: 100%!important;
+							    text-transform: capitalize;
+						}
+						.selectBox-arrow{
+							padding-bottom: 0;
+							right: 4px;
+						}
+						&.last{
+							margin-right: 0;
+						}
 					}
+					.relationship{
+						.selectStyle{
+							width: 100%;
+						}
+						.selectBox-dropdown{
+							width: 245px!important;
+						}
+					}
+
 				}
 				.col01{
 
@@ -222,6 +281,7 @@
 		
 	}
 	.membership_box{
+
 		display: none;
 		.header-box{
 			h3{
@@ -253,7 +313,7 @@
 				    border: 1px solid #9385b8;
 			    height: 35px;
 			    padding: 0 10px;
-			    width: 91%;
+			    width: 280px;
 			    line-height: 35px;
 			}
 		}

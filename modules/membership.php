@@ -18,7 +18,7 @@
 	            		<form action="" method="">
 		            		<div class="header-box">
 		            			<h3>Log into your account</h3>
-		            			<span> Please log in with your email or account infos</span>
+		            			<span class="txt"> Please log in with your email or account infos</span>
 		            		</div>
 		            		<div class="input-box">
 		            			<span>EMAIL / ACCOUNT NUMBER / ACCOUNT NAME</span>
@@ -34,7 +34,7 @@
 	            		<form action="" method="">
 		            		<div class="header-box">
 		            			<h3>With an exclusive Albert Lavenda account,</h3>
-		            			<span>you can gain exclusive accesses to Albert Lavenda's unique jewelleries collections & services.<br/>
+		            			<span class="txt">you can gain exclusive accesses to Albert Lavenda's unique jewelleries collections & services.<br/>
 And, you can also save time during checkout, access your shopping bag from any devices.<br/>
 Moreover, you can keep track of your shipping orders online with your membership. </span>
 		            		</div>
@@ -48,7 +48,7 @@ Moreover, you can keep track of your shipping orders online with your membership
 		            					<span>LAST NAME</span>
 		            					<input type="text" value="" name="" placeholder="Your last name"/>
 		            				</div>
-		            				<div class="row">
+		            				<div class="row last-row">
 		            					<span>EMAIL</span>
 		            					<input type="text" value="" name="" placeholder="Your email"/>
 		            				</div>
@@ -57,11 +57,11 @@ Moreover, you can keep track of your shipping orders online with your membership
 		            				<div class="row">
 		            					<span>GENDER <span>(optional)</span></span>
 		            					<div class="iCheck">
-		            						<input type="checkbox" name="" value="" id="female" />
+		            						<input type="radio" name="gender" value="" id="female" />
 		                                	<label for="female">Female</label>
 		            					</div>
 		            					<div class="iCheck">
-		            						<input type="checkbox" name="" value="" id="male" />
+		            						<input type="radio" name="gender" value="" id="male" />
 		                                	<label for="female">Male</label>
 		            					</div>
 		            					<div class="clear"></div>
@@ -73,21 +73,24 @@ Moreover, you can keep track of your shipping orders online with your membership
 		            							<option value="0">Month</option>
 		            						</select>
 		            					</div>
-		            					<div class="selectStyle">
+		            					<div class="selectStyle last">
 		            						<select name="day">
 		            							<option value="0">Day</option>
+		            							<option value="1">1</option>
 		            						</select>
 		            					</div>
 		            				</div>
-		            				<div class="row relationship">
+		            				<div class="row relationship last-row">
 		            					<span>RELATIONSHIP STATUS <span>(optional)</span></span>
 		            					<div class="selectStyle">
 		            						<select name="relationship">
 		            							<option value="0">Your relationship status</option>
+		            							<option value="friend">Friend</option>
 		            						</select>
 		            					</div>
 		            				</div>
 		            			</div>
+		            			<div class="clear"></div>
 		            		</div>
 		            		<input type="submit" value="REGISTER"/>
 		            	</form>

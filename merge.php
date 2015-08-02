@@ -11,6 +11,7 @@
 		"js/lib/hammer.min.js",
 		"js/lib/jquery.animate-enhanced.min.js",
 		"js/lib/jquery.superslides.js",
+		"js/lib/jquery.selectBox.js",
 		
 		"js/app/class.slider.js",
 		"js/app/class.menu.js",

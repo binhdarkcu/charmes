@@ -39,6 +39,7 @@
 				include("modules/menu_left.php");
 				include("modules/about.php");
 				include("modules/contact.php");
+				include("modules/service_support.php");
 				include("modules/membership.php");
 			?>
 			<div class="loadPages">

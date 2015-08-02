@@ -58,7 +58,7 @@ var pageOjb = (function() {
 	}
 	function FadeinContent(value)
 	{
-		var he = 510;
+		var he = 500;
 		if(value == 'popup-collections'){
 			he=465;
 		}
