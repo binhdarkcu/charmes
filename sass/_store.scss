@@ -752,7 +752,14 @@
         bottom: 20px;
         right: -20px;
          .line{
-          
+          height: 65px;
+          -moz-transform: rotate(-52deg);
+          -o-transform: rotate(-52deg);
+          -webkit-transform: rotate(-52deg);
+          -ms-transform: rotate(-52deg);
+          transform: rotate(-52deg);
+              left: -26px;
+          top: -62px;
         }
         a{
               background: url(../images/detail/star.png) no-repeat left center;
@@ -775,9 +782,11 @@
       .mywish{
         bottom: 0;
         left: 50%;
-        margin-left: -70px;
+        margin-left: -61px;
          .line{
-          
+           height: 35px;
+               left: 74px;
+    top: -45px;
         }
         a{
           background: url(../images/detail/paper.png) no-repeat top center;
@@ -790,7 +799,14 @@
         left: 0;
         bottom: 0;
          .line{
-          
+           height: 65px;
+            -moz-transform: rotate(52deg);
+            -o-transform: rotate(52deg);
+            -webkit-transform: rotate(52deg);
+            -ms-transform: rotate(52deg);
+            transform: rotate(52deg);
+                right: -40px;
+    top: -59px;
         }
         a{
           background: url(../images/detail/bag.png) no-repeat right center;
