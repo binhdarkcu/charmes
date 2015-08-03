@@ -676,6 +676,7 @@
     margin: 20px auto 22px;
     position: relative;
     min-height: 480px;
+    z-index: 1;
     .button-group{
           width: 710px;
       height: 100%;
@@ -690,6 +691,7 @@
            background: #9385b8;
            height: 100%;
                position: absolute;
+                   opacity: 0.7;
         }
       }
       a{
@@ -844,6 +846,125 @@
           }
         }
         img{
+        }
+      }
+    }
+    .viewmore_detail{
+      width: 800px;
+      .back_box{
+        display: inline-block;
+        a{
+          background: url(../images/detail/arr-back.png) no-repeat bottom center;
+          @include CabinSketchNormal (18px);
+          display: inline-block;
+          padding-left: 18px;
+          color: #000;
+          padding-bottom: 7px;
+        }
+      }
+    }
+    .detail_group{
+      .img_detail{
+        width: 255px;
+        float: left;
+        margin-top: 38px;
+            margin-left: 90px;
+        img{
+          width: 100%;
+        }
+      }
+      .detail_desc{
+        width: 450px;
+        float: left;
+            margin-top: -30px;
+            position: relative;
+        h3.moretitle{
+          @include CabinSketchNormal (18px);
+          color: #000;
+           background: url(../images/detail/bg_more.png) no-repeat left center;
+          padding-top: 7px;
+          padding-bottom: 6px;
+          display: inline-block;
+          text-align: right;
+          padding-left: 85px;
+          padding-right: 17px;
+        }
+        .left-line{
+          background: url(../images/detail/hor-line.png) no-repeat;
+          width: 41px;
+          height: 41px;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+        .top_line{
+              background: #c5bbd4;
+            height: 1px;
+            width: 410px;
+            float: left;
+            opacity: 0.7;
+            margin-left: -1px;
+        }
+        .detail_content{
+          padding-left: 41px;
+          position: relative;
+          margin-top: 4px;
+        }
+        .row_detail{
+          padding-bottom: 6px;
+          float: left;
+          width: 100%;
+          &.first{
+            padding-top: 22px;
+          }
+          &.certified{
+            .col02{
+              a{
+                width: 150px;
+                margin-right: 9px;
+                display: inline-block; 
+                position: relative;
+                .overlay{
+                  background: #9385b8;
+                  opacity: 0.75;
+                  display: none;
+                  position: absolute;
+                  width: 100%;
+                  height: 85%;
+                  border-radius: 3px;
+                }
+                &:hover{
+                  .overlay{
+                    display: block;
+                  }
+                }
+                &.last{
+                  margin-right: 0;
+                }
+              }
+              img{
+                width: 100%;
+              }
+              span{
+                @include HelveticaLight(13px, 1.2);
+                color: #000;
+                text-align: center;
+                display: block;
+              }
+            }
+          }
+          .col{
+            float: left;
+            &.col01{
+                width: 90px;
+                @include HelveticaLight(13px, 1.2);
+                font-weight: bold;
+            }
+            &.col02{
+              width: 315px;
+              @include HelveticaLight(13px,1.2);
+            }
+          }
         }
       }
     }

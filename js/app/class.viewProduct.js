@@ -10,7 +10,7 @@ var ProductOjb = (function() {
 		events();
 		hoverProduct();
 		closeSearchItem();
-		hoverProduct();
+		hoverProduct_detail();
 	}
 	function events()
 	{
@@ -52,14 +52,14 @@ var ProductOjb = (function() {
 	}
 	function showProducts()
 	{
-		$("html, body").animate({ scrollTop: $('.page.store .top_menu').offset().top }, 500);
+		$("html, body").animate({ scrollTop: $('.page.store .content_product').offset().top - 100 }, 500);
 		setTimeout(function(){
 			$('.page .content_product .list_products').animate({'opacity':0},1000,function(){
 				$('.page .content_product .list_products').css('display','none');
 			});
 			$('.product-detail').css('display','block').animate({'opacity':1},1000);
 			
-		}, 500);
+		}, 600);
 	}
 	function hoverProduct(){
 		$('.page .content_product .list_products li').hover(function(){
@@ -86,7 +86,7 @@ var ProductOjb = (function() {
 	{
 		$('.product-detail .product-type .br-top').addClass('makeline');	
 	}
-	function hoverProduct(){
+	function hoverProduct_detail(){
 		$('.ul-product .product-img').hover(function(){
 			$('.product-box .button-group .box').addClass('fadeIn animated');
 		},function(){

@@ -7,6 +7,7 @@ var SiteMain = (function() {
 		ProductOjb.init();
 		scrolltoView();
 		clickhomemenu();
+		popup.init();
 		detailPage.init();
 	}
 	function scrolltoView(){

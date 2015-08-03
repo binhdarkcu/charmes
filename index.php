@@ -42,11 +42,9 @@
 				include("modules/service_support.php");
 				include("modules/membership.php");
 			?>
-			<div class="loadPages">
-				
-			</div>
         </div>
     </div>
+			<?php include("modules/includes/certified.php");?>
 </body>
 </html>
 <link rel="stylesheet" href="css/jquery.mThumbnailScroller.css">

@@ -89,7 +89,7 @@
   }
   .right-shadow{
  position: absolute;
-    width: 13%;
+    width: 11%;
     height: 100%;
       top: 0;
     z-index: 100;
@@ -137,7 +137,7 @@
         width: 102%;
         a{
           color: #000;
-          @inlude HelveticaLight(16px);
+          @include HelveticaLight(16px);
          text-decoration: underline;
          &.link01{
            padding-left: 30px;

@@ -1,6 +1,7 @@
 		<div class="product-detail">
+            <!--Product Box-->
     		<div class="product-box">
-                <div class="button-group">
+                <div class="button-group" id="product_detail_box">
                     <div class="likeit box">
                         <a href="#">Like it!</a>
                         <div class="line"></div>
@@ -10,7 +11,7 @@
                         <div class="line"></div>
                     </div>
                     <div class="moredetail box">
-                        <a href="#">More details</a>
+                        <a href="javascript:void(0)" data-page="viewmore_detail">More details</a>
                         <div class="line"></div>
                     </div>
                     <div class="sharewish box">
@@ -33,8 +34,68 @@
                         <li class="product-img li-opacity"><img src="images/detail-3.jpg"/></li>
                     </ul>
                 </div>
-    			
+    			 <div class="viewmore_detail hide" id="viewmore_detail">
+                    <div class="back_box">
+                        <a href="javascript:void(0)" data-hide="viewmore_detail" data-page="product_detail_box">Back</a>
+                    </div>
+                    <div class="detail_group">
+                        <div class="img_detail">
+                            <img src="images/detail-1.jpg"/>
+                        </div>
+                        <div class="detail_desc">
+                            <h3 class="moretitle">More details</h3>
+                            <div class="detail_content">
+                                <div class="left-line"></div>
+                                <div class="top_line"></div>
+                                <div class="clear"></div>
+                                <div class="row_detail first">
+                                    <div class="col col01">Details</div>
+                                    <div class="col col02">
+                                        Bangle in 18 Kt rose gold with princess-cut diamonds set in 24 square-shaped white gold mountings on the upper section of the bangle. 
+                                    </div>
+                                </div>
+                                <div class="row_detail">
+                                    <div class="col col01">Security</div>
+                                    <div class="col col02">
+                                        Safety lock.
+                                    </div>
+                                </div>
+                                <div class="row_detail">
+                                    <div class="col col01">Metal</div>
+                                    <div class="col col02">
+                                        Au 750
+                                    </div>
+                                </div>
+                                <div class="row_detail">
+                                    <div class="col col01">Gems</div>
+                                    <div class="col col02">
+                                        Dia 24/3.87  cts G/VS
+                                    </div>
+                                </div>
+                                <div class="row_detail certified">
+                                    <div class="col col01">Certificate</div>
+                                    <div class="col col02">
+                                        <a href="javascript:void(0)">
+                                            <div class="overlay"></div>
+                                            <img src="images/detail/certified.png"/>
+                                            <span>Quality Certificate</span>
+                                        </a>
+                                        <a href="javascript:void(0)" class="last">
+                                            <div class="overlay"></div>
+                                            <img src="images/detail/certified-2.png"/>
+                                            <span>Warranty Certificate</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
     		</div>
+            <!--Product Box-->
+           
     		<div class="product-type">
     			<div class="br-top"></div>
     			<ul>
