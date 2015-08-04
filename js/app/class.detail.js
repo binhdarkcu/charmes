@@ -28,7 +28,7 @@ var detailPage = (function() {
 			var hidepage = $(this).attr('data-hide');
 			$("#"+ hidepage).animate({'opacity': 0},200,function(){
 				$("#"+hidepage).hide();
-				$("#"+datapage).css('display','block').animate({'opacity': 1},100);
+				$("#"+datapage).css('display','table').animate({'opacity': 1},100);
 			});
 		});
 	}

@@ -70,5 +70,5 @@ var SiteMain = (function() {
 
 $(document).ready(function(e) {
     SiteMain.init();
-	$("html, body").animate({ scrollTop: 0 }, 100);
+	
 });

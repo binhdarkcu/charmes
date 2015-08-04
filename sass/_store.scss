@@ -92,20 +92,18 @@
 		clear: both;
 		@include Adamina (60px)	;
 		padding: 90px 0px;
-		text-align: center;
-	}
+		text-align: center; 
+	} 
 	/*top*/
 	.top_menu {
 		clear: both;
 		padding: 10px 0px;
-		background: #fff;
 		&.fixed{
 		  position: fixed;
 		  top: 0;
 		  left: 0;
 		  width: 100%;
 		    z-index: 100;
-      background-color: #fff;
 		}
 		.select_menu {
 			float: left;
@@ -335,7 +333,6 @@
 	.content_product {
 		clear: both;
 		
-		background: #fff;
 		.list_products {
 			padding: 0;
 			margin: 0;
@@ -397,18 +394,31 @@
 					width: 240px;
   					
   					text-align: center;
+          .relative{
+            position: relative;
+            margin: 0 auto;
+            width: 140px;
+          }
 					.large_view {
 						    -webkit-transition: all 1s;
-            -moz-transition: all 1s;
-            transition: all 1s;
-						-ms-transform: scale(1,1); /* IE 9 */
-    					-webkit-transform: scale(1,1); /* Safari */
-    				 	transform: scale(1,1);
-    				 	width: 140px;
-						z-index: 1;
+                -moz-transition: all 1s;
+                transition: all 1s;
+    						-ms-transform: scale(1,1); /* IE 9 */
+      					-webkit-transform: scale(1,1); /* Safari */
+      				 	transform: scale(1,1);
+      				 	width: 140px;
+                margin: 0 auto;
+    						z-index: 1;
+                &.colorimage{
+                  display: none;
+                  position: absolute;
+                  top: 0;
+                  opacity: 0;
+                  left: 0;
+                }
             &.hover{
                
-              }
+            }
 					}
 					.small_left {
 						position: absolute;
@@ -882,12 +892,13 @@
           @include CabinSketchNormal (18px);
           color: #000;
            background: url(../images/detail/bg_more.png) no-repeat left center;
-          padding-top: 7px;
-          padding-bottom: 6px;
+              padding-top: 6px;
+          padding-bottom: 8px;
           display: inline-block;
           text-align: right;
-          padding-left: 85px;
+          padding-left: 77px;
           padding-right: 17px;
+          margin-left: -35px;
         }
         .left-line{
           background: url(../images/detail/hor-line.png) no-repeat;

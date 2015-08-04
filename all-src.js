@@ -5060,19 +5060,20 @@ var ProductOjb = (function() {
 	}
 	function showProducts()
 	{
-		$("html, body").animate({ scrollTop: $('.page.store .content_product').offset().top - 100 }, 500);
-		setTimeout(function(){
-			$('.page .content_product .list_products').animate({'opacity':0},1000,function(){
-				$('.page .content_product .list_products').css('display','none');
-			});
-			$('.product-detail').css('display','block').animate({'opacity':1},1000);
-			
-		}, 600);
+		//$("html, body").animate({ scrollTop: $('.page.store .content_product').offset().top - 100 }, 500);
+		$('.page .content_product .list_products').animate({'opacity':0},1000,function(){
+			$('.page .content_product .list_products').css('display','none');
+		});
+		$('.product-detail').css('display','block').animate({'opacity':1},1000);
 	}
 	function hoverProduct(){
 		$('.page .content_product .list_products li').hover(function(){
-			var src = $(this).find('img').attr('data-color');
-			$(this).find('img.large_view').attr('src',src);
+			$(this).find('img.large_view.blackimage').animate({'opacity':0},300);
+			if($(this).find('img.large_view.blackimage').css('opacity') == 0){
+				$(this).find('img.large_view.colorimage').fadeIn(300);
+			}
+			
+			
 		});
 	}
 	function closeSearchItem(){
@@ -5136,7 +5137,7 @@ var detailPage = (function() {
 			var hidepage = $(this).attr('data-hide');
 			$("#"+ hidepage).animate({'opacity': 0},200,function(){
 				$("#"+hidepage).hide();
-				$("#"+datapage).css('display','block').animate({'opacity': 1},100);
+				$("#"+datapage).css('display','table').animate({'opacity': 1},100);
 			});
 		});
 	}
@@ -5171,6 +5172,7 @@ var popup = (function() {
 	function get_source_img(){
 		$('.row_detail.certified a').on('click',function(){
 			openPopup('#pp_certified');
+			$('.popup.view_certified .popup_content').css({'margin-top':- $('.popup.view_certified .popup_content .certified_content').height()/2});
 			var src = $(this).find('img').attr('src');
 			$('#large_images img').attr('src',src);
 		});
@@ -5185,6 +5187,127 @@ var popup = (function() {
 		closePopup:closePopup
 	};
 })();	// JavaScript Document
+var Loading = (function() {
+	// PARAMATER
+	var setting = {
+		runOneTime	:	true,
+		divReady	:	'divReadyLoader',
+		classReady	:	'readyloading',
+		divRun		:	'divRun',
+		classRun	:	'runloading'
+	}
+	var imageList_Ready = new Array(
+		"images/home/1.jpg",
+		"images/home/2.jpg",
+		"images/home/3.jpg"
+	);
+	
+	var imageList_Run = new Array(
+		
+
+		"images/icon-menu.png",
+		"images/gemstone.png",
+		"images/precious.png",
+		
+		"images/precision.png",
+		"images/conceptual.png",
+
+		"images/meticulous.png",
+		"images/warranty.png",
+		"images/engagement/img_view_1.png",
+		"images/wedding/ring.jpg",
+		"images/wedding/flower.jpg",
+		"images/wedding/img_view_2.png",
+		"images/img_view_4.png",
+		"images/img_view_3.png",
+		"images/contact-house.png",
+		"images/social.png",
+		"images/search.png",
+		"images/line_v.png",
+		"images/cart.png",
+		"images/note.png",
+		"images/4-icon-2.png",
+		"images/question.png",
+		"images/inner-menu.png",
+		"images/br-menu.png"	
+	);
+	// READY LOADING	
+	function ready(){
+		$('<div style="display:none;" id="' + setting.divReady + '"></div>').prependTo('body');
+		var lenghtArray = imageList_Ready.length;;
+		for(i=0; i<lenghtArray; i++){
+			$('#' + setting.divReady).append('<img class="' + setting.classReady + '" onload="Loading.checkReadyloading(this);" src="' + imageList_Ready[i]  + '" />');
+		}		
+	}
+	
+	function checkReadyloading(obj){
+		$(obj).removeClass(setting.classReady);
+		var totalLoading = $('#' + setting.divReady + ' img.' + setting.classReady).length;
+		if(totalLoading == 0)
+		{
+			if(setting.runOneTime){
+				run();
+				setting.runOneTime = false;
+			}//endif
+		}//end if
+	}
+		
+	// RUN LOADING 
+	function run(){
+		$('<div style="display:none;" id="' + setting.divRun + '"></div>').prependTo('body');
+		var lenghtArray = imageList_Run.length;;
+		for(i=0; i<lenghtArray; i++){
+			$('#' + setting.divRun).append('<img class="' + setting.classRun + '" onload="Loading.checkRunloading(this);" src="' + imageList_Run[i]  + '" />');
+		}		
+	}
+	
+	var timeToDisplay = false;
+	function checkRunloading(obj){
+		$('#container').hide();
+		$(obj).removeClass(setting.classRun);
+		var totalLoading = $('#' + setting.divRun + ' img').length ;
+		var value_percent = Math.round((totalLoading - $('#' + setting.divRun + ' img.' + setting.classRun).length )*100/totalLoading);
+		
+		$('#loadingprocess').show();
+			
+		if(value_percent == 100){
+			display();
+			$('#container').show();
+			$('#loadingprocess').hide();
+			$("html, body").animate({ scrollTop: 0 }, 100);
+		}
+	}
+	
+	// RESULT
+	function display(){
+		//remove DIV TEMP
+		$('#' + setting.divRun).remove();
+		$('#' + setting.divReady ).remove();
+	}
+		
+	// TRACK 
+	function track(msg){
+		try
+		{
+			console.log(msg);
+		}
+		catch(err)
+		{
+		}		
+	}	
+	// return
+	return {
+		ready:ready,
+		display:display,
+		checkReadyloading:checkReadyloading,
+		checkRunloading:checkRunloading
+	}
+})();
+
+$(document).ready(function(e) {	
+    Loading.ready();
+});
+// JavaScript Document
 var SiteMain = (function() {
 	//INIT
 	
@@ -5256,5 +5379,5 @@ var SiteMain = (function() {
 
 $(document).ready(function(e) {
     SiteMain.init();
-	$("html, body").animate({ scrollTop: 0 }, 100);
+	
 });

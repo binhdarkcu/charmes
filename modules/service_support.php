@@ -16,7 +16,6 @@
 	                    <li><a>FAQs</a></li>
 	                </ul>
 	            </article>
-	            <div class="img_block animated"><img src="images/man.jpg"></div>
         	</div>
         </div>
     </div>

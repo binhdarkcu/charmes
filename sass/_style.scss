@@ -10,11 +10,26 @@ body {
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  background: url(../images/bg_body.jpg) repeat-y;
   &.animation {
 	  
 	}
 }
 
+#loadingprocess{
+    position: absolute;
+    z-index: 1000;
+    background: url(../images/bg_body.jpg) repeat-y;
+    height: 100%;
+    width: 100%;
+    img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -75px;
+      margin-left: -75px;
+    }
+}
 a{text-decoration: none; cursor: pointer;}
 .clear{clear:both;}
 
