@@ -42,6 +42,7 @@
 				include("modules/contact.php");
 				include("modules/service_support.php");
 				include("modules/membership.php");
+				include("modules/filter.php");
 			?>
         </div>
     </div>

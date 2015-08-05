@@ -98,8 +98,8 @@
             	<a href="javascript:void(0);">
                 	<div class="group_img">
                         <div class="relative">
-                            <img src="images/product/img01.jpg" class="large_view blackimage"/>
-                            <img src="images/product/img01-hover.jpg" class="large_view colorimage"/>
+                            <img src="images/product/img01.jpg" class="blackimage" data-imageid="colorimage_1"/>
+                            <img src="images/product/img01-hover.jpg" class="colorimage" id="colorimage_1"/>
                         </div>
                     </div>
                     <div class="view_detail">
@@ -113,8 +113,8 @@
             	<a href="javascript:void(0);">
                 	<div class="group_img">
                         <div class="relative">
-                            <img src="images/product/img02.jpg" class="large_view blackimage"/>
-                            <img src="images/product/img02-hover.jpg" class="large_view colorimage"/>
+                            <img src="images/product/img02.jpg" class="blackimage" data-imageid="colorimage_2"/>
+                            <img src="images/product/img02-hover.jpg" class="colorimage" id="colorimage_2"/>
                         </div>
                     </div>
                     <div class="view_detail">
@@ -128,8 +128,8 @@
             	<a href="javascript:void(0);">
                 	<div class="group_img">
                         <div class="relative">
-                            <img src="images/product/img03.jpg" class="large_view blackimage"/>
-                            <img src="images/product/img03-hover.jpg" class="large_view colorimage"/>
+                            <img src="images/product/img03.jpg" class="blackimage" data-imageid="colorimage_3"/>
+                            <img src="images/product/img03-hover.jpg" class="colorimage" id="colorimage_3"/>
                         </div>
                     </div>
                     <div class="view_detail">
@@ -143,8 +143,8 @@
             	<a href="javascript:void(0);">
                 	<div class="group_img">
                         <div class="relative">
-                            <img src="images/product/img04.jpg" class="large_view blackimage"/>
-                            <img src="images/product/img04-hover.jpg" class="large_view colorimage"/>
+                            <img src="images/product/img04.jpg" class="blackimage" data-imageid="colorimage_4"/>
+                            <img src="images/product/img04-hover.jpg" class="colorimage" id="colorimage_4"/>
                         </div>
                     </div>
                     <div class="view_detail">
@@ -158,8 +158,8 @@
             	<a href="javascript:void(0);">
                 	<div class="group_img">
                         <div class="relative">
-                            <img src="images/product/img05.jpg" class="large_view blackimage"/>
-                            <img src="images/product/img05-hover.jpg" class="large_view colorimage"/>
+                            <img src="images/product/img05.jpg" class="blackimage" data-imageid="colorimage_5"/>
+                            <img src="images/product/img05-hover.jpg" class="colorimage" id="colorimage_5"/>
                         </div>
                     </div>
             		<div class="view_detail">
@@ -174,8 +174,8 @@
             	<a href="javascript:void(0);">
                 	<div class="group_img">
                         <div class="relative">
-                            <img src="images/product/img06.jpg" class="large_view blackimage"/>
-                            <img src="images/product/img06-hover.jpg" class="large_view colorimage"/>
+                            <img src="images/product/img06.jpg" class="blackimage" data-imageid="colorimage_6"/>
+                            <img src="images/product/img06-hover.jpg" class="colorimage" id="colorimage_6"/>
                         </div>
                     </div>
                     <div class="view_detail">
@@ -189,8 +189,8 @@
             	<a href="javascript:void(0);">
                 	<div class="group_img">
                         <div class="relative">
-                            <img src="images/product/img07.jpg" class="large_view blackimage"/>
-                            <img src="images/product/img07-hover.jpg" class="large_view colorimage"/>
+                            <img src="images/product/img07.jpg" class="blackimage" data-imageid="colorimage_7"/>
+                            <img src="images/product/img07-hover.jpg" class="colorimage" id="colorimage_7"/>
                         </div>
                     </div>
                     <div class="view_detail">
@@ -204,8 +204,8 @@
             	<a href="javascript:void(0);">
                 	<div class="group_img">
                         <div class="relative">
-                            <img src="images/product/img08.jpg" class="large_view blackimage"/>
-                            <img src="images/product/img08-hover.jpg" class="large_view colorimage"/>
+                            <img src="images/product/img08.jpg" class="blackimage" data-imageid="colorimage_8"/>
+                            <img src="images/product/img08-hover.jpg" class="colorimage" id="colorimage_8"/>
                         </div>
                     </div>
                     <div class="view_detail">
@@ -219,8 +219,8 @@
             	<a href="javascript:void(0);">
                 	<div class="group_img">
                         <div class="relative">
-                            <img src="images/product/img09.jpg" class="large_view blackimage"/>
-                            <img src="images/product/img09-hover.jpg" class="large_view colorimage"/>
+                            <img src="images/product/img09.jpg" class="blackimage" data-imageid="colorimage_9"/>
+                            <img src="images/product/img09-hover.jpg" class="colorimage" id="colorimage_9"/>
                         </div>
                     </div>
                     <div class="view_detail">
@@ -234,8 +234,8 @@
                 <a href="javascript:void(0);">
                     <div class="group_img">
                         <div class="relative">
-                            <img src="images/product/img10.jpg" class="large_view blackimage"/>
-                            <img src="images/product/img10-hover.jpg" class="large_view colorimage"/>
+                            <img src="images/product/img10.jpg" class="blackimage" data-imageid="colorimage_10"/>
+                            <img src="images/product/img10-hover.jpg" class="colorimage" id="colorimage_10"/>
                         </div>
                     </div>
                     <div class="view_detail">
@@ -249,8 +249,8 @@
                 <a href="javascript:void(0);">
                     <div class="group_img">
                         <div class="relative">
-                            <img src="images/product/img11.jpg" class="large_view blackimage"/>
-                            <img src="images/product/img11-hover.jpg" class="large_view colorimage"/>
+                            <img src="images/product/img11.jpg" class="blackimage" data-imageid="colorimage_11"/>
+                            <img src="images/product/img11-hover.jpg" class="colorimage" id="colorimage_11"/>
                         </div>
                     </div>
                     <div class="view_detail">
@@ -264,8 +264,8 @@
                 <a href="javascript:void(0);">
                     <div class="group_img">
                         <div class="relative">
-                            <img src="images/product/img12.jpg" class="large_view blackimage"/>
-                            <img src="images/product/img12-hover.jpg" class="large_view colorimage"/>
+                            <img src="images/product/img12.jpg" class="blackimage" data-imageid="colorimage_12"/>
+                            <img src="images/product/img12-hover.jpg" class="colorimage" id="colorimage_12"/>
                         </div>
                     </div>
                     <div class="view_detail">

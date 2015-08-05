@@ -4828,16 +4828,6 @@ var initPage = (function() {
 		$('.iCheck input').iCheck();
 	}
 	function activeMenuStore(){
-		$('.Jewelries.goon').hover(function(){
-			$("html, body").animate({ scrollTop: $('.page.store .top_menu').offset().top }, 1000);
-			$('.page .top_menu .select_menu .icon.hasbr').removeClass('hasbr');
-			$('.shadow').show();
-			$('.store-filter').show().animate({'opacity':1},500);
-		},function(){
-			$('.shadow').hide();
-			$('.page .top_menu .select_menu .icon').addClass('hasbr');
-			$('.store-filter').hide().animate({'opacity':0},500);
-		});
 		$('.page .top_menu .select_menu .icon.hasbr').on('click',function(){
 			$(this).removeClass('hasbr');
 			$('.shadow').show();
@@ -5068,12 +5058,12 @@ var ProductOjb = (function() {
 	}
 	function hoverProduct(){
 		$('.page .content_product .list_products li').hover(function(){
-			$(this).find('img.large_view.blackimage').animate({'opacity':0},300);
-			if($(this).find('img.large_view.blackimage').css('opacity') == 0){
-				$(this).find('img.large_view.colorimage').fadeIn(300);
-			}
-			
-			
+			$(this).find('img.blackimage').hide();
+			var imgID = $(this).find('.blackimage').attr('data-imageid');
+			console.log(imgID);
+			$(this).find('img.colorimage').show().animate({'opacity':1},100,function(){
+				$('#'+imgID).addClass('large_view');
+			});
 		});
 	}
 	function closeSearchItem(){
@@ -5081,7 +5071,11 @@ var ProductOjb = (function() {
 			$(this).parent().remove();
 			closeProduct();
 		});
+		$('.store-filter .btnSubmit a').on('click',function(){
+			pageOjb.closeAll();
+		});
 	}
+		
 	function closeProduct()
 	{
 		$('.page .content_product .list_products').css('display','block').animate({'opacity':1},1000);

@@ -136,6 +136,12 @@
     	}
     }
   }
+  &.filterJewelry{
+  	.store-filter{
+  		display: block;
+  		opacity: 1;
+  	}
+  }
   &.service_support{
   	.content_width{
   		position: relative;

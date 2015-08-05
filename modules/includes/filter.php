@@ -162,56 +162,56 @@
 		            		<ul>
 		            			<li>
 		            				<div class="iCheck">
-		                                <input type="checkbox" name="collection-events" value="" id="collection01" />
-		                                <label for="collection01">Le Jardin</label>
+		                                <input type="checkbox" name="precious-events" value="" id="precious01" />
+		                                <label for="precious01">Le Jardin</label>
 		                            </div>
 		            			</li>
 		            			<li>
 		            				<div class="iCheck">
-		                                <input type="checkbox" name="collection-events" value="" id="collection02" />
-		                                <label for="collection02">Aladdin</label>
+		                                <input type="checkbox" name="precious-events" value="" id="precious02" />
+		                                <label for="precious02">Aladdin</label>
 		                            </div>
 		            			</li>
 		            			<li>
 		            				<div class="iCheck">
-		                                <input type="checkbox" name="collection-events" value="" id="collection03" />
-		                                <label for="collection03">Safari</label>
+		                                <input type="checkbox" name="precious-events" value="" id="precious03" />
+		                                <label for="precious03">Safari</label>
 		                            </div>
 		            			</li>
 		            			<li>
 		            				<div class="iCheck">
-		                                <input type="checkbox" name="collection-events" value="" id="collection04" />
-		                                <label for="collection04">Éclair</label>
+		                                <input type="checkbox" name="precious-events" value="" id="precious04" />
+		                                <label for="precious04">Éclair</label>
 		                            </div>
 		            			</li>
 		            			<li>
 		            				<div class="iCheck">
-		                                <input type="checkbox" name="collection-events" value="" id="collection05" />
-		                                <label for="collection05">Trés Chér</label>
+		                                <input type="checkbox" name="precious-events" value="" id="precious05" />
+		                                <label for="precious05">Trés Chér</label>
 		                            </div>
 		            			</li>
 		            			<li>
 		            				<div class="iCheck">
-		                                <input type="checkbox" name="collection-events" value="" id="collection06" />
-		                                <label for="collection06">Happy Diamond</label>
+		                                <input type="checkbox" name="precious-events" value="" id="precious06" />
+		                                <label for="precious06">Happy Diamond</label>
 		                            </div>
 		            			</li>
 		            			<li>
 		            				<div class="iCheck">
-		                                <input type="checkbox" name="collection-events" value="" id="collection07" />
-		                                <label for="collection07">Alphabets</label>
+		                                <input type="checkbox" name="precious-events" value="" id="precious07" />
+		                                <label for="precious07">Alphabets</label>
 		                            </div>
 		            			</li>
 		            			<li>
 		            				<div class="iCheck">
-		                                <input type="checkbox" name="collection-events" value="" id="collection08" />
-		                                <label for="collection08">Lolly Forever</label>
+		                                <input type="checkbox" name="precious-events" value="" id="precious08" />
+		                                <label for="precious08">Lolly Forever</label>
 		                            </div>
 		            			</li>
 		            			<li>
 		            				<div class="iCheck">
-		                                <input type="checkbox" name="collection-events" value="" id="collection09" />
-		                                <label for="collection09	">Mesh is Beautiful</label>
+		                                <input type="checkbox" name="precious-events" value="" id="precious09" />
+		                                <label for="precious09">Mesh is Beautiful</label>
 		                            </div>
 		            			</li>
 		            		</ul>
