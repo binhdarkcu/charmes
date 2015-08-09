@@ -5,10 +5,11 @@ var SiteMain = (function() {
 	function init(){
 		initPage.init();
 		ProductOjb.init();
-		scrolltoView();
+		//scrolltoView();
 		clickhomemenu();
 		popup.init();
 		detailPage.init();
+		animationPage.init();
 	}
 	function scrolltoView(){
 		$('.page.home .mouse-event').on('click',function(){

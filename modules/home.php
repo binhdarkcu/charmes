@@ -18,28 +18,32 @@
 	<div id="slides">
 	    <div class="slides-container">
 	    	<div class="item-slide">
-	    		<img src="images/home/1.jpg">
-	    		<span class="mouse-event">Le Jardin</span>
-	    	</div>
-	      	<div class="item-slide">
-	    		<img src="images/home/2.jpg">
-	    		<span>Le Jardin</span>
-	    	</div>
-	    	<div class="item-slide">
-	    		<img src="images/home/3.jpg">
-	    		<span>Le Jardin</span>
-	    	</div>
-	    	<div class="item-slide">
-	    		<img src="images/home/4.jpg">
-	    		<span>Le Jardin</span>
-	    	</div>
+	    		<img src="images/home/1.jpg" style="display: none;">
+<!-- 	    		<span class="mouse-event">Le Jardin</span>
+ -->	    	</div>
 	    </div>
 	
 	    <div class="slides-navigation">
 	      <a href="#" class="next"></a>
 	      <a href="#" class="prev"></a>
 	    </div>
-	  </div>
+	    <div class="scense_container">
+			<div class="scense_one">
+				<span class="text-jardin"></span>
+				<div class="jewelry_top position_ab"></div>
+				<div class="tree_left position_ab"></div>
+				<div class="tree_right position_ab"></div>
+				<div class="tall-tree position_ab"></div>
+				<div class="green_circle position_ab"></div>
+				<div class="cloud_01 position_ab"></div>
+				<div class="cloud_02 position_ab"></div>
+				<span class="text-jardin textjardin02"></span>
+				<div class="mouse_click position_ab"></div>
+				<div class="buttterfly position_ab"><img src="images/animation/buttterfly.png"/></div>
+			</div>
+			<a href="javascript:void(0)" class="discover_link animate-flicker">Click to discover</a>
+		</div>
+	</div>
     <script>
 	    $(function() {
 	      var $slides = $('#slides');

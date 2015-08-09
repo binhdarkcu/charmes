@@ -12,7 +12,9 @@
 		"js/lib/jquery.animate-enhanced.min.js",
 		"js/lib/jquery.superslides.js",
 		"js/lib/jquery.selectBox.js",
-		
+
+		"js/app/class.animationPage.js",
+
 		"js/app/class.slider.js",
 		"js/app/class.menu.js",
 		"js/app/class.initPage.js",
