@@ -12,6 +12,7 @@
 		"js/lib/jquery.animate-enhanced.min.js",
 		"js/lib/jquery.superslides.js",
 		"js/lib/jquery.selectBox.js",
+		"js/lib/jquery.mousewheel.min.js",
 
 		"js/app/class.animationPage.js",
 
