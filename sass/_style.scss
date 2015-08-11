@@ -22,12 +22,12 @@ body {
     background: url(../images/bg_body.jpg) repeat-y;
     height: 100%;
     width: 100%;
-    img{
+    img,svg{
       position: absolute;
       top: 50%;
       left: 50%;
-      margin-top: -75px;
-      margin-left: -75px;
+      margin-top: -160px;
+      margin-left: -160px;
     }
 }
 a{text-decoration: none; cursor: pointer;}

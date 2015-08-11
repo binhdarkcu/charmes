@@ -11,7 +11,11 @@ var Loading = (function() {
 	var imageList_Ready = new Array(
 		"images/home/1.jpg",
 		"images/home/2.jpg",
-		"images/home/3.jpg"
+		"images/home/3.jpg",
+		"images/animation/jewelry.png",
+		"images/animation/tree-right.png",
+		"images/animation/tree-left.png",
+		"images/animation/tall-tree.png"
 	);
 	
 	var imageList_Run = new Array(

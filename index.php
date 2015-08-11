@@ -26,7 +26,9 @@
 <?php $lang = isset($_REQUEST['lang']) ? $_REQUEST['lang']: "nl";?>
 
 <body class="css_lang_<?php echo $lang;?>">
-	<div id="loadingprocess"><img src="images/loading.gif"/></div>
+	<div id="loadingprocess">
+		<?php include('modules/includes/loader.php');?>
+	</div>
 	<div id="container">
         <div class="wrapper">
         	<?php 
