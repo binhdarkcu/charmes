@@ -4599,7 +4599,12 @@ $.fn[plugin].fx = {};
  */
 !function(a){"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?module.exports=a:a(jQuery)}(function(a){function b(b){var g=b||window.event,h=i.call(arguments,1),j=0,l=0,m=0,n=0,o=0,p=0;if(b=a.event.fix(g),b.type="mousewheel","detail"in g&&(m=-1*g.detail),"wheelDelta"in g&&(m=g.wheelDelta),"wheelDeltaY"in g&&(m=g.wheelDeltaY),"wheelDeltaX"in g&&(l=-1*g.wheelDeltaX),"axis"in g&&g.axis===g.HORIZONTAL_AXIS&&(l=-1*m,m=0),j=0===m?l:m,"deltaY"in g&&(m=-1*g.deltaY,j=m),"deltaX"in g&&(l=g.deltaX,0===m&&(j=-1*l)),0!==m||0!==l){if(1===g.deltaMode){var q=a.data(this,"mousewheel-line-height");j*=q,m*=q,l*=q}else if(2===g.deltaMode){var r=a.data(this,"mousewheel-page-height");j*=r,m*=r,l*=r}if(n=Math.max(Math.abs(m),Math.abs(l)),(!f||f>n)&&(f=n,d(g,n)&&(f/=40)),d(g,n)&&(j/=40,l/=40,m/=40),j=Math[j>=1?"floor":"ceil"](j/f),l=Math[l>=1?"floor":"ceil"](l/f),m=Math[m>=1?"floor":"ceil"](m/f),k.settings.normalizeOffset&&this.getBoundingClientRect){var s=this.getBoundingClientRect();o=b.clientX-s.left,p=b.clientY-s.top}return b.deltaX=l,b.deltaY=m,b.deltaFactor=f,b.offsetX=o,b.offsetY=p,b.deltaMode=0,h.unshift(b,j,l,m),e&&clearTimeout(e),e=setTimeout(c,200),(a.event.dispatch||a.event.handle).apply(this,h)}}function c(){f=null}function d(a,b){return k.settings.adjustOldDeltas&&"mousewheel"===a.type&&b%120===0}var e,f,g=["wheel","mousewheel","DOMMouseScroll","MozMousePixelScroll"],h="onwheel"in document||document.documentMode>=9?["wheel"]:["mousewheel","DomMouseScroll","MozMousePixelScroll"],i=Array.prototype.slice;if(a.event.fixHooks)for(var j=g.length;j;)a.event.fixHooks[g[--j]]=a.event.mouseHooks;var k=a.event.special.mousewheel={version:"3.1.12",setup:function(){if(this.addEventListener)for(var c=h.length;c;)this.addEventListener(h[--c],b,!1);else this.onmousewheel=b;a.data(this,"mousewheel-line-height",k.getLineHeight(this)),a.data(this,"mousewheel-page-height",k.getPageHeight(this))},teardown:function(){if(this.removeEventListener)for(var c=h.length;c;)this.removeEventListener(h[--c],b,!1);else this.onmousewheel=null;a.removeData(this,"mousewheel-line-height"),a.removeData(this,"mousewheel-page-height")},getLineHeight:function(b){var c=a(b),d=c["offsetParent"in a.fn?"offsetParent":"parent"]();return d.length||(d=a("body")),parseInt(d.css("fontSize"),10)||parseInt(c.css("fontSize"),10)||16},getPageHeight:function(b){return a(b).height()},settings:{adjustOldDeltas:!0,normalizeOffset:!0}};a.fn.extend({mousewheel:function(a){return a?this.bind("mousewheel",a):this.trigger("mousewheel")},unmousewheel:function(a){return this.unbind("mousewheel",a)}})});// JavaScript Document
 var animationPage = (function() {
-	
+	var tl = null;
+
+	var settting = {
+		running : false
+	}
+
 	function init(){
 		actionFirst();
 
@@ -4607,7 +4612,10 @@ var animationPage = (function() {
 	function actionFirst(){
 		//click discover
 		$('.discover_link').click(function(){
-			var tl = new TimelineMax(),
+			$('html, body').stop(true, false ).animate({
+	        	scrollTop: 0
+	    	}, 10);
+			tl = new TimelineMax({}),
 				discover_text = $('.discover_link'),
 				//large_branches = $('.large_branches'),
 				three_left = $('.tree_left'),
@@ -4621,8 +4629,9 @@ var animationPage = (function() {
 				text_jardin_2 = $('.text-jardin.textjardin02'),
 				mouse_click = $('.mouse_click'),
 				buttterfly = $('.buttterfly');
+
             //banner animation code (only 11 lines)
-            tl.to(discover_text, .1, {display:'none'})
+            tl.to(discover_text, .1, {display:'none'}, "label_action_1")
               .to(text_jardin, 1.1, {opacity:0})
               .to(jewelry_top, 1.1, {opacity:0}, '-=1.1')
               .to(three_left, 4.5, {top:-50, left:'-30%', opacity: 0})
@@ -4635,37 +4644,62 @@ var animationPage = (function() {
               .to(text_jardin_2, 1.2, {opacity:1})
               .to(mouse_click, 1.2, {opacity:1})
               .to(buttterfly, 1.2, {opacity:1})
-              .to(buttterfly, .8, {opacity:0.4, left: '49.5%'})
+              .to(buttterfly, .8, {opacity:0.4, left: '49.5%', onComplete:setAllowScroll})
               .to(buttterfly, 1.7, {opacity:1, left:'50%'})
-            action_mouseWheel();
+             //action 3
+              .to(text_jardin_2, 1.2, {opacity:0}, "label_action_2")
+              .to(mouse_click, 1.2, {opacity:0}, "-=1.2")
+              .to(cloud_01, 9, {left: "-25%"})
+              .to(green_circle, 20, {left:'-50%'}, '-=9')
+              .to(tall_tree, 8, {left:-400}, '-=20')
+              .to(cloud_02, 15, {right: "100%"},  '-=20')
+              .to(buttterfly, 5, {opacity:1,repeat: 3 }, "label_action_3")
+              .to(buttterfly, 4, {opacity:0 }, "label_action_3")
+				settting.running = true;
+				tl.tweenTo("label_action_2");
+            	action_mouseWheel(); // add mouse wheel
 		});
 	}
+
+	function pause(){
+	 tl.pause();  
+	}  
+
+function setAllowScroll (){
+	console.log('setAllowScroll');
+	settting.running = false;
+}
+
 	function action_scense_2(){
-		var tl_2 = new TimelineMax(),
-			tall_tree = $('.tall-tree'),
-			green_circle = $('.green_circle'),
-			cloud_01 = $('.cloud_01'),
-			cloud_02 = $('.cloud_02'),
-			text_jardin_2 = $('.text-jardin.textjardin02'),
-			mouse_click = $('.mouse_click'),
-			buttterfly = $('.buttterfly');
-		tl_2.to(text_jardin_2, 1, {opacity:0})
-			.to(mouse_click, 1, {display:'none'}, "-=1")
+		tl.tweenTo("label_action_3");
 	}
 
 	function action_mouseWheel(){
         $('#slides').bind('mousewheel DOMMouseScroll', function(event){
+        	event.preventDefault();
+
+			if (settting.running)
+				return false;
+			console.log('settting.running');
+			settting.running = true;
+			//tl.tweenTo("label3");
+
 		    if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
 		        // scroll up
+
 		    }
 		    else {
 		        // scroll down
 		        action_scense_2();
 		    }
+
+		    
+		    return false;
 		});
 	}
 	return {
-		init:init
+		init:init,
+		action_scense_2:action_scense_2
 	};
 })();		// JavaScript Document
 var slider = (function() {

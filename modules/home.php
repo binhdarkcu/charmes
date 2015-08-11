@@ -43,11 +43,6 @@
 				<div class="buttterfly position_ab"><img src="images/animation/buttterfly.png"/></div>
 			</div>
 			<a href="javascript:void(0)" class="discover_link animate-flicker">Click to discover</a>
-			<div class="scense_two">
-				<div class="scense_top">
-		    		<div class="large_branches position_ab"></div>
-		    	</div>
-			</div>
 		</div>
 	</div>
     <script>
