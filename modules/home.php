@@ -30,17 +30,42 @@
 	    <div class="scense_container" id="scense_container">
 	    	
 			<div class="scense_one">
-				<span class="text-jardin"></span>
-				<div class="jewelry_top position_ab"></div>
-				<div class="tree_left position_ab"></div>
-				<div class="tree_right position_ab"></div>
-				<div class="tall-tree position_ab"></div>
-				<div class="green_circle position_ab"></div>
-				<div class="cloud_01 position_ab"></div>
-				<div class="cloud_02 position_ab"></div>
-				<span class="text-jardin textjardin02"></span>
-				<div class="mouse_click position_ab"></div>
-				<div class="buttterfly position_ab"><img src="images/animation/buttterfly.png"/></div>
+				<div class="scense_first">
+					<span class="text-jardin">Le Jardin</span>
+					<div class="jewelry_top position_ab"></div>
+					<div class="tree_left position_ab"></div>
+					<div class="tree_right position_ab"></div>
+					<div class="tall-tree position_ab"></div>
+					<div class="green_circle position_ab"></div>
+					<div class="cloud_01 position_ab"></div>
+					<div class="cloud_02 position_ab"></div>
+					<span class="text-jardin textjardin02">Le Jardin</span>
+					<div class="mouse_click position_ab"></div>
+					<div class="hand_scroll position_ab animate-flicker-2"></div>
+					<div class="arrow_scroll position_ab animate-flicker-3"></div>
+					<span class="handtext position_ab">Scroll down to discover</span>
+					<div class="buttterfly position_ab"><img src="images/animation/buttterfly.png"/></div>
+				</div>
+
+				<div class="scense_next_1">
+					<div class="jewelry_behind position_ab">
+						<img src="images/animation/jewelry_behind.png"/>
+					</div>
+					<div class="jewelry_1 position_ab">
+						<a href="#" class="scrolldown-event"><img src="images/animation/jewelry_1.png"/></a>
+					</div>
+					<div class="jewelry_2 position_ab">
+						<a href="#" class="scrolldown-event"><img src="images/animation/jewelry_2.png"/></a>
+					</div>
+					<div class="tree_2 position_ab">
+						<img src="images/animation/tree-2.png"/>
+					</div>
+					<div class="two_jewelry position_ab">
+						<a href="#" class="scrolldown-event"><img src="images/animation/two_jewelry.png"/></a>
+					</div>
+					<div class="bg_foot"></div>
+					<div class="bg_light position_ab"></div>
+				</div>
 			</div>
 			<a href="javascript:void(0)" class="discover_link animate-flicker">Click to discover</a>
 		</div>

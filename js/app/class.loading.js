@@ -34,7 +34,30 @@ var Loading = (function() {
 	);
 	
 	var imageList_Run = new Array(
-		
+		"images/animation/arrow_down.png",
+		"images/animation/bg_foot.png",
+		"images/animation/bg_light.png",
+		"images/animation/buttterfly.png",
+		"images/animation/cloud.png",
+		"images/animation/cloud-2.png",
+		"images/animation/green_circle.png",
+		"images/animation/hand.png",
+		"images/animation/jewelry.png",
+		"images/animation/jewelry_1.png",	
+
+		"images/animation/jewelry_2.png",
+		"images/animation/jewelry_behind.png",
+		"images/animation/large_branches.png",
+		"images/animation/le-gardin.png",
+		"images/animation/mouse.png",
+		"images/animation/tall-tree.png",
+		"images/animation/tree-2.png",
+		"images/animation/tree-left.png",
+		"images/animation/tree-right.png",
+		"images/animation/tree-small.png",	
+		"images/animation/two_jewelry.png",	
+		"images/animation/two_small_jewelry.png",	
+
 
 		"images/icon-menu.png",
 		"images/gemstone.png",

@@ -5,14 +5,15 @@ var SiteMain = (function() {
 	function init(){
 		initPage.init();
 		ProductOjb.init();
-		//scrolltoView();
+		scrolltoView();
 		clickhomemenu();
 		popup.init();
 		detailPage.init();
 		animationPage.init();
+		Responsize.init();
 	}
 	function scrolltoView(){
-		$('.page.home .mouse-event').on('click',function(){
+		$('.page.home .scrolldown-event').on('click',function(){
 			$('.page.home').animate({'opacity':0},700,function(){
 				$('html, body').stop(true, false ).animate({
 		        	scrollTop: $('.page.introPage').offset().top
@@ -65,7 +66,8 @@ var SiteMain = (function() {
 	//RETURN
 	return {
 		init:init,
-		initHoverSlide: initHoverSlide
+		initHoverSlide: initHoverSlide,
+		scrolltoView:scrolltoView
 	};
 })();		
 

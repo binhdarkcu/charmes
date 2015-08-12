@@ -24,6 +24,7 @@
 		"js/app/class.detail.js",
 		"js/app/class.popup.js",
 		"js/app/class.loading.js",
+		"js/app/class.responsize.js",
 		"js/app/class.siteMain.js"
 	);
 
