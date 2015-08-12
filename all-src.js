@@ -5309,19 +5309,7 @@ var Loading = (function() {
 		"images/animation/jewelry.png",
 		"images/animation/tree-right.png",
 		"images/animation/tree-left.png",
-		"images/animation/tall-tree.png"
-	);
-	
-	var imageList_Run = new Array(
-		
-
-		"images/icon-menu.png",
-		"images/gemstone.png",
-		"images/precious.png",
-		
-		"images/precision.png",
-		"images/conceptual.png",
-
+		"images/animation/tall-tree.png",
 		"images/meticulous.png",
 		"images/warranty.png",
 		"images/engagement/img_view_1.png",
@@ -5336,7 +5324,18 @@ var Loading = (function() {
 		"images/line_v.png",
 		"images/cart.png",
 		"images/note.png",
-		"images/4-icon-2.png",
+		"images/4-icon-2.png"
+	);
+	
+	var imageList_Run = new Array(
+		
+
+		"images/icon-menu.png",
+		"images/gemstone.png",
+		"images/precious.png",
+		
+		"images/precision.png",
+		"images/conceptual.png",
 		"images/question.png",
 		"images/inner-menu.png",
 		"images/br-menu.png"	
@@ -5364,6 +5363,7 @@ var Loading = (function() {
 		
 	// RUN LOADING 
 	function run(){
+		$('#loadingprocess').show();
 		$('<div style="display:none;" id="' + setting.divRun + '"></div>').prependTo('body');
 		var lenghtArray = imageList_Run.length;;
 		for(i=0; i<lenghtArray; i++){
@@ -5378,8 +5378,6 @@ var Loading = (function() {
 		var totalLoading = $('#' + setting.divRun + ' img').length ;
 		var value_percent = Math.round((totalLoading - $('#' + setting.divRun + ' img.' + setting.classRun).length )*100/totalLoading);
 		
-		$('#loadingprocess').show();
-			
 		if(value_percent == 100){
 			display();
 			$('#container').show();
