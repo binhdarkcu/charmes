@@ -63,8 +63,18 @@
 					<div class="two_jewelry position_ab">
 						<a href="#" class="scrolldown-event"><img src="images/animation/two_jewelry.png"/></a>
 					</div>
-					<div class="bg_foot"></div>
+					<div class="bg_foot position_ab"></div>
 					<div class="bg_light position_ab"></div>
+					<div class="bg_overlays position_ab"></div>
+					<div class="eli_1 position_ab"><img src="images/animation/light_ring_1.png"/></div>
+					<div class="eli_2 position_ab"><img src="images/animation/light_ring_2.png"/></div>
+					<div class="eli_3 position_ab"><img src="images/animation/light_ring_3.png"/></div>
+					<div class="small_tree position_ab">
+						<div class="apple_1 position_ab"><img src="images/animation/apple_1.png"/></div>
+						<div class="apple_box position_ab"><img src="images/animation/box.png"/></div>
+						<div class="apple_2 position_ab"><img src="images/animation/apple_2.png"/></div>
+					</div>
+					
 				</div>
 			</div>
 			<a href="javascript:void(0)" class="discover_link animate-flicker">Click to discover</a>
