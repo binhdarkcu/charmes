@@ -30,7 +30,19 @@ var Loading = (function() {
 		"images/line_v.png",
 		"images/cart.png",
 		"images/note.png",
-		"images/4-icon-2.png"
+		"images/4-icon-2.png",
+		"images/animation/apple_1.png",
+		"images/animation/apple_2.png",
+		"images/animation/box.png",
+		"images/animation/fence.png",
+		"images/animation/foot_ring.png",
+		"images/animation/light_ring_1.png",
+		"images/animation/light_ring_2.png",
+		"images/animation/light_ring_3.png",
+		"images/animation/small-tree.png",
+		"images/animation/tree-2.png",
+		"images/animation/tree-small.png",
+		"images/animation/two_small_jewelry.png"
 	);
 	
 	var imageList_Run = new Array(

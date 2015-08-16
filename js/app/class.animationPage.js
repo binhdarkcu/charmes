@@ -46,7 +46,9 @@ var animationPage = (function() {
 				eli_1 = $('.eli_1'),
 				eli_2 = $('.eli_2'),
 				eli_3 = $('.eli_3'),
-				small_tree = $('.small_tree')
+				small_tree = $('.small_tree'),
+				bg_overlays  = $('.bg_overlays'),
+				fence = $('.fence')
 				;
 
             //banner animation code (only 11 lines)
@@ -83,10 +85,10 @@ var animationPage = (function() {
               .to(jewelry_1, 15, {left: "7%"}, '-=15')
               .to(jewelry_2, 16, {left: "28%"}, '-=17')
               .to(tree_2, 21, {right: "-84em"}, '-=13')
-              .to(bg_foot, 12, {right: "45%"}, '-=12')
-			  .to(bg_light, 12, {right: "-25em"}, '-=12')
+              .to(bg_foot, 11, {right: "45%"}, '-=12')
+			  .to(bg_light, 12, {right: "-36em"}, '-=12')
 			  .to(two_jewelry, 16, {right: "16%"}, '-=16')
-			  .to(buttterfly, 4, {opacity: 0,width: "6em", repeat: 5, yoyo:true }, '-=23')
+			  .to(buttterfly, 2, {opacity: 0.3,width: "6em", repeat: 5, yoyo:true }, '-=22')
 			  .to(buttterfly, 6, {opacity: 0,right: "35%"}, '-=20')
 			  .to(buttterfly, 6, {opacity: 1,width: "6em", right: "33em"}, '-=15')
 			  .to(buttterfly, 1, {opacity: 1, onComplete:setAllowScroll})
@@ -94,20 +96,21 @@ var animationPage = (function() {
 
 			  //animation scense 3
 			  .to(tree_2, 14, {right: "26em"})
-			  .to(bg_foot, 13, {right: "100%"},"-=14")
-			  .to(bg_light, 16, {right: "0em"}, '-=14')
-			  .to(jewelry_1, 13, {left: "-40%"}, '-=14')
-              .to(jewelry_2, 13, {left: "-25%"}, '-=14')
-              
-              .to(two_jewelry, 13, {right: "100%"}, '-=14')
-              .to(jewelry_behind, 5, {right: "-45em"}, '-=14')
+			  .to(jewelry_1, 10, {left: "-40%"}, '-=14')
+              .to(jewelry_2, 10, {left: "-25%"}, '-=14')
+			  .to(bg_foot, 14, {right: "100%"},"-=14")
+			  .to(bg_light, 22, {right: "0em"}, '-=14')
+              .to(two_jewelry, 14, {right: "100%"}, '-=22')
+              .to(jewelry_behind, 5, {right: "-10em"}, '-=22')
               .to(eli_1, 7, {right: "51em"},"-=13")
               .to(eli_3, 9, {right: "25em"},"-=12")
               .to(eli_2, 8, {right: "30em"},"-=12")
               .to(eli_3, 3, {top: "-18em"},"-=12")
-              .to(small_tree, 26, {right: "0"},"-=14")
-              .to(buttterfly, 3, {opacity: 0, repeat: 3, yoyo:true},"-=12")
-              .to(buttterfly, 6, {opacity: .6,bottom:"11em", right: "54em"},"-=12")
+              .to(small_tree, 18, {right: "-50em"},"-=18")
+              .to(fence, 18, {right: "-1em"},"-=18")
+              .to(buttterfly, 3, {opacity: 0, repeat: 3, yoyo:true},"-=18")
+              .to(buttterfly, 10, {opacity: .6,bottom:"12em", right: "29em"},"-=12")
+              .to(bg_overlays, 5, {opacity: .2},"-=12")
               .to(buttterfly, 1, {opacity: 1})
 
 			  .to(tree_2, 1, {opacity: 1}, "label_action_4")

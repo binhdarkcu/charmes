@@ -1,5 +1,5 @@
 <?PHP
-	$mergeJS = true;
+	$mergeJS = false;
 
 	$array = array(	
 		"js/lib/jquery-1.11.1.min.js",

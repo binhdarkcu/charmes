@@ -205,13 +205,13 @@
 			.bg_light{
 				    background: url(../images/animation/bg_light.png) no-repeat left 0;
 				    background-size: cover;
-				        width: 130.769em;
-    				height: 66.308em;
+				    width: 155.769em;
+    				height: 72.308em;
 
 				    position: absolute;
 				    bottom: 0;
 				    top: auto;
-				    right: -131em;
+				    right: -156em;
 				        z-index: 0; 
 			}
 			.bg_foot{
@@ -234,7 +234,7 @@
 			.bg_overlays{
 				background: url(../images/animation/further_bg.png) repeat-x;
 			    width: 100%;
-			    height: 42.231em;
+			    height: 100%;
 			    top: 0;
 			    opacity: 0;
 			    z-index: 0;
@@ -280,6 +280,11 @@
 				width: 6.231em;
 				bottom: -2em;
     			top: auto;
+			}
+			.fence{
+				right: -16em;
+				width: 16.000em;
+				    top: 18em;
 			}
 		}
 	}
