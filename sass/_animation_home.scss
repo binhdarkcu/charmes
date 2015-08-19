@@ -51,7 +51,7 @@
 		    z-index: 101;
 		    left: 50%;
 		    background-size: contain;
-		    margin-left: -19em;
+		    margin-left: -20em;
 		    top: -25px;
 		}
 		.tree_left{
@@ -306,6 +306,7 @@
     width: 100%;
     text-align: center;
     bottom: 6.563em;
+        margin-left: 1em;
 }
 @keyframes flickerAnimation {
   0%   { opacity:1; }

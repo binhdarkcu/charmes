@@ -4678,18 +4678,20 @@ var animationPage = (function() {
               .to(tall_tree, 4, {left:-400}, '-=20')
               .to(cloud_02, 12, {right: "100%"},  '-=20')
               .to(buttterfly, 4, {bottom: "25em" }, '-=20')
-              .to(buttterfly, 2.5, {opacity: 0, width: "5.231em" , repeat: 2, yoyo:true}, '-=20')
-              .to(buttterfly, 5, {bottom: "30em",width: "5.5em", opacity: 1}, '-=13')
+              .to(buttterfly, 2.5, {opacity: 0, width: "5.231em" , repeat: 3, yoyo:true}, '-=20')
+              .to(buttterfly, 5, {bottom: "30em",width: "5.5em", opacity: 1}, '-=14')
+              .to(buttterfly, 2, {opacity: 0, repeat: 4, yoyo:true}, '-=13')
               .to(jewelry_behind, 25, {right: "-45em"}, '-=13')
               .to(jewelry_1, 15, {left: "7%"}, '-=15')
               .to(jewelry_2, 16, {left: "28%"}, '-=17')
               .to(tree_2, 21, {right: "-84em"}, '-=13')
-              .to(bg_foot, 11, {right: "45%"}, '-=12')
-			  .to(bg_light, 12, {right: "-36em"}, '-=12')
+			  .to(bg_light, 12, {right: "-37em"}, '-=14')
+			  .to(bg_foot, 8, {right: "45%"}, '-=9')
 			  .to(two_jewelry, 16, {right: "16%"}, '-=16')
-			  .to(buttterfly, 2, {opacity: 0.3,width: "6em", repeat: 5, yoyo:true }, '-=22')
-			  .to(buttterfly, 6, {opacity: 0,right: "35%"}, '-=20')
-			  .to(buttterfly, 6, {opacity: 1,width: "6em", right: "33em"}, '-=15')
+			  .to(buttterfly, 2, {opacity: 0.3,width: "6em", repeat: 4, yoyo:true }, '-=22')
+			  .to(buttterfly, 7, {opacity: 0, right: "40%"}, '-=20')
+			  .to(buttterfly, 15, {opacity: .6,width: "6em"}, '-=15')
+			  .to(buttterfly, 10, {opacity: 1, right: "33em"}, '-=16')
 			  .to(buttterfly, 1, {opacity: 1, onComplete:setAllowScroll})
 			  .to(buttterfly, 1, {opacity: 1}, "label_action_3")
 
@@ -5099,14 +5101,14 @@ var pageOjb = (function() {
 	function events()
 	{
 		
-		$('.page .nav_bar_home a.internal').hover(function(){
+		$('.page .nav_bar_home a.internal').click(function(){
 			var value=$(this).attr('value');
 			menuOjb.activeMenu(this);
 			if(flaginit==true)
 			{
 				setTimeout(function(){
 					animatePopup(value);
-				},400);
+				},100);
 				
 			}
 			else if(flaginit==false)
@@ -5114,30 +5116,21 @@ var pageOjb = (function() {
 				FadeinContent(value);
 			}
 			
-		},function(){
-			menuOjb.activeScroll();
 		});
-		$('.page nav ul.list_menu li a.goto').hover(function(){
+		
+		$('.page .bg_overlay').click(function(){
 			closeAll();
 			
-			$('.page .nav_bar_home a.internal').removeClass('active');
-			flaginit=true;
-		});
-		$('.page .bg_overlay').hover(function(){
-			closeAll();
-			
-			//$('.page nav ul.list_menu li a').removeClass('active');
+			$('.page nav ul.list_menu li a').removeClass('active');
 			flaginit=true;
 		});
 		
 	}
 	function animatePopup(value)
 	{
-		var he = 510;
+		var he = 500;
 		tl = new TimelineMax({onComplete:function(){flaginit=false; }});
-		if(value == 'popup-collections'){
-			he=465;
-		}
+		
 		tl.set ($('.page.'+value),{css:{'display':'block'}})
 		  .set( $('.page .bg_overlay'), { css:{display:'block' }} )
 		  .to( $('.page.'+value+' .bg_overlay'), 0.4, { css:{opacity:0.8 }} )
@@ -5146,9 +5139,7 @@ var pageOjb = (function() {
 	function FadeinContent(value)
 	{
 		var he = 500;
-		if(value == 'popup-collections'){
-			he=465;
-		}
+		
 		$('.page.detailPage').css('display','none')
 		$('.page.detailPage.'+value).css('display','block');
 		$('.page.detailPage.'+value+' .bg_overlay').css({'display':'block', opacity:0.8 });
@@ -5401,7 +5392,7 @@ var Loading = (function() {
 		"images/animation/small-tree.png",
 		"images/animation/tree-2.png",
 		"images/animation/tree-small.png",
-		"images/animation/two_small_jewelry.png",
+		"images/animation/two_small_jewelry.png"
 	);
 	
 	var imageList_Run = new Array(

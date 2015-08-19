@@ -12,14 +12,14 @@ var pageOjb = (function() {
 	function events()
 	{
 		
-		$('.page .nav_bar_home a.internal').hover(function(){
+		$('.page .nav_bar_home a.internal').click(function(){
 			var value=$(this).attr('value');
 			menuOjb.activeMenu(this);
 			if(flaginit==true)
 			{
 				setTimeout(function(){
 					animatePopup(value);
-				},400);
+				},100);
 				
 			}
 			else if(flaginit==false)
@@ -27,30 +27,21 @@ var pageOjb = (function() {
 				FadeinContent(value);
 			}
 			
-		},function(){
-			menuOjb.activeScroll();
 		});
-		$('.page nav ul.list_menu li a.goto').hover(function(){
+		
+		$('.page .bg_overlay').click(function(){
 			closeAll();
 			
-			$('.page .nav_bar_home a.internal').removeClass('active');
-			flaginit=true;
-		});
-		$('.page .bg_overlay').hover(function(){
-			closeAll();
-			
-			//$('.page nav ul.list_menu li a').removeClass('active');
+			$('.page nav ul.list_menu li a').removeClass('active');
 			flaginit=true;
 		});
 		
 	}
 	function animatePopup(value)
 	{
-		var he = 510;
+		var he = 500;
 		tl = new TimelineMax({onComplete:function(){flaginit=false; }});
-		if(value == 'popup-collections'){
-			he=465;
-		}
+		
 		tl.set ($('.page.'+value),{css:{'display':'block'}})
 		  .set( $('.page .bg_overlay'), { css:{display:'block' }} )
 		  .to( $('.page.'+value+' .bg_overlay'), 0.4, { css:{opacity:0.8 }} )
@@ -59,9 +50,7 @@ var pageOjb = (function() {
 	function FadeinContent(value)
 	{
 		var he = 500;
-		if(value == 'popup-collections'){
-			he=465;
-		}
+		
 		$('.page.detailPage').css('display','none')
 		$('.page.detailPage.'+value).css('display','block');
 		$('.page.detailPage.'+value+' .bg_overlay').css({'display':'block', opacity:0.8 });
