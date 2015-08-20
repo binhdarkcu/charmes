@@ -4710,13 +4710,14 @@ var animationPage = (function() {
               .to(jewelry_behind, 5, {right: "-10em"}, '-=16')
               
               .to(small_tree, 11, {right: "0em"},"-=14")
+             
               .to(eli_1, 7, {right: "51em"},"-=13")
               .to(eli_3, 9, {right: "25em"},"-=12")
               .to(eli_2, 8, {right: "30em"},"-=12")
               .to(eli_3, 3, {top: "-18em"},"-=12")
+              .to(fence, 8, {right: "-1em"},"-=12")
               
-              .to(fence, 18, {right: "-1em"},"-=16")
-              .to(buttterfly, 4, {css:{opacity: .5, bottom: "33em", marginRight: "-14.5em"}},'-=13')
+              .to(buttterfly, 3, {css:{opacity: .5, bottom: "33em", marginRight: "-14.5em"}},'-=13')
               //.to(buttterfly, 10, {opacity: .6,bottom:"12em", right: "29em"},"-=12")
               .to(bg_overlays, 5, {opacity: .2},"-=12")
               .to(buttterfly, 1, {opacity: 1})

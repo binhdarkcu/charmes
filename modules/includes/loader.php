@@ -1,5 +1,8 @@
 <div class="loader">Loading</div>
 <style>
+#loadingprocess{
+  background: #d3c8e3;
+}
 .loader {
       width: 150px;
     height: 150px;
