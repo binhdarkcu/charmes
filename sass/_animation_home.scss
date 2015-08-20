@@ -161,8 +161,8 @@
 		    height: 5.308em;
 		    top: auto;
 		    bottom: 17.692em;
-		    right: 52%;
-		    margin-left: -4.177em;
+		    right: 50%;
+		    margin-right: 3em;
 		    z-index: 10;
 		    opacity: 0;
 			img{
@@ -260,8 +260,9 @@
 				background-size: cover;
 				width: 146.462em;
 				height: 55.538em;
-				    right: -153em;//10em
+				    right:-85em;//10em
 				        top: -3em;
+				        opacity: 0;
 			}
 			.apple_box{
 				right: 60em;
