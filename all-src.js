@@ -4721,7 +4721,8 @@ var animationPage = (function() {
               //.to(buttterfly, 10, {opacity: .6,bottom:"12em", right: "29em"},"-=12")
               .to(bg_overlays, 5, {opacity: .2},"-=12")
               .to(buttterfly, 1, {opacity: 1})
-
+              .to(buttterfly, 2, {opacity: 0, repeat: 6, yoyo:true })
+              .to(buttterfly, 1, {opacity: 1})
 			  .to(tree_2, 1, {opacity: 1}, "label_action_4")
 				setting.running = true;
 				tl.tweenTo("label_action_2");
