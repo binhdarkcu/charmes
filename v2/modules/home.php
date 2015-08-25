@@ -16,20 +16,28 @@
 		</div>
 	</div>
 	<div id="slides">
-	    <div class="slides-container">
-	    	<div class="item-slide">
-	    		<img src="images/home/1.jpg" style="display: none;">
-<!-- 	    		<span class="mouse-event">Le Jardin</span>
- -->	    	</div>
-	    </div>
-	
-	    
 	    <div class="scense_container" id="scense_container">
-			<video id="example_video_1" class="video-js" controls="none" preload="none" width="100%" height="100%"
+			<video id="video_intro" class="video-js" controls="none" preload="none" width="100%" height="100%"
 			      
 			      data-setup="{}">
 			    <source src="LeJardinDemo.mp4" type='video/mp4' />
 			</video>
+
+            <div class="video_overplay"></div>
+
+            <!--intro-->
+            <div class="video_intro">
+                <div class="btn_intro_discover"></div>
+            </div>
+
+            <!--slide1-->
+            <div class="video_slide1">
+            </div>
+
+            <!--slide2-->
+
+            <!--slide3-->
+
 		</div>
 	</div>
    
