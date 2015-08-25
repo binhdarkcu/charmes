@@ -51,6 +51,10 @@ var animationPage = (function() {
                     }else {
                         this.pause();
                     }
+
+                    // clear mousewhell when finish the slide 5
+                    if(setting.prevslide == 'slide4' && setting.nextslide == '')
+                        clear_mouseWheel();
                 }
             });
 
@@ -97,6 +101,11 @@ var animationPage = (function() {
 
             return false;
         });
+    }
+
+    function clear_mouseWheel(){
+        $('#slides').unbind('mousewheel DOMMouseScroll');
+    
     }
 
     function gotoStep(){
