@@ -1,0 +1,146 @@
+.left_menu {
+	position: fixed;
+	right: -55px;
+	top: 50%;
+	height: 132px;
+  width: 53px;
+  margin-top: -85px;
+  background: #fff;
+ 
+  border-right: 0;
+	z-index: 1000;
+	
+	.inner {
+		clear: both;
+		span.line {
+			background: url(../images/lin-h.png) no-repeat;
+			width: 59px;
+			height: 5px;
+		  	display: block;
+		  	text-align: center;
+		  	margin-top: 16px;
+		  	margin-left: 4px;
+		}
+		div.social-icon {
+			display: block;
+			margin: 13px 0px 0px 10px;
+
+			&.face-icon {
+				width: 34px;
+				height: 31px;
+				background: url(../images/face-icon-2.png) no-repeat;	
+			}
+			&.twitter-icon {
+				width: 35px;
+				height: 32px;
+				background: url(../images/twiiter-icon.png) no-repeat;	
+			}
+			&.NO-icon {
+				width: 35px;
+				height: 35px;
+				background: url(../images/3-icon.png) no-repeat;	
+			}
+			&.connect-icon {
+			    width: 282px;
+			    background: url(../images/4-icon-2.png) no-repeat 7px 10px;
+			    border: 2px solid #c2c2c0;
+			    border-bottom: 1px solid #c2c2c0;
+			    margin: 0;
+		        -webkit-transition: all 18s;
+			    -moz-transition: all 1s;
+			    transition: all 1s;
+			    position: relative; 
+			    right: 0;
+			    span{
+			    	@include CabinSketchNormal (16px,1);
+			    	margin-top: 19px;
+				    display: inline-block;
+				    margin-left: 59px;
+				    padding-bottom: 10px;
+			    }
+			    &:hover{
+			    	right: 222px;
+			    	background: url(../images/4-icon-2.png) no-repeat 7px 10px  #d3c8e3;
+			    	.social-box{
+			    		display: block;
+			    	}
+			    }
+			    .social-box{
+					background: #fefdfd;
+				    margin-left: -2px;
+				        margin-top: 0;
+				    border: 2px solid #c2c2c0;
+				    padding-top: 13px;
+				    padding-left: 12px;
+				    padding-bottom: 4px;
+				    display: none;
+				    a{
+				    	margin-right: 7px;
+				    }
+				    a.fb:hover{
+				    	background: url(../images/face-icon-r.png) no-repeat;
+				    	background-size: contain;
+				    }
+			    }
+			}	
+			&.chat-icon {
+				width: 282px;
+				height: 65px;
+				background: url(../images/question.png) no-repeat 14px 15px;	
+				border:2px solid #c2c2c0;
+				    border-top: 1px solid #c2c2c0;
+				margin:0;
+				-webkit-transition: all 18s;
+			    -moz-transition: all 1s;
+			    transition: all 1s;
+			    position: relative; 
+			    cursor: pointer;
+			    right: 0;
+				span{
+			    	@include CabinSketchNormal (16px,1);
+			    	margin-top: 19px;
+				    display: inline-block;
+				    margin-left: 59px;
+				    padding-bottom: 10px;
+			    }
+			    
+			    .request_box{
+			    	border: 2px solid #c2c2c0;
+				    padding-top: 13px;
+				    padding-left: 12px;
+				    padding-bottom: 4px;
+				    display: none;
+				    margin-left: -2px;
+   					margin-top: 4px;
+   					background: #fff;
+			    	textarea{
+			    		@include HelveticaLight (13px);
+			    		width: 95%;
+					    height: 150px;
+					    resize: none;
+			    	}
+			    	input[type="text"]{
+			    		@include HelveticaLight (13px);
+			    		width: 93%;
+    					height: 30px;
+			    	}
+			    	input[type="submit"]{
+			    		@include HelveticaLight (13px);
+			    		font-weight: 700;
+			    		padding: 5px 15px;
+			    	}
+			    }
+			    &:hover{
+			    	right: 222px;
+			    	background: url(../images/question.png) no-repeat 14px 15px  #d3c8e3;
+			    	.request_box{
+			    		display: block;
+			    	}
+			    }
+			}	
+			&:hover {
+				@include setOpacity (1);	
+			}	
+		}	
+	}	
+}
