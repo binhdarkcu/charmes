@@ -158,6 +158,35 @@ var animationPage = (function() {
 
         }
 
+        else if(setting.nextslide == 'slide4') {
+            setting.loop = false;
+            setting.startLoop = 86;
+            setting.endLoop = 86;
+
+            setting.prevslide = 'slide3';
+            setting.nextslide = 'slide5';
+
+            setting.player.currentTime(56);
+            setting.player.play();
+
+            //css
+
+        }
+        else if(setting.nextslide == 'slide5') {
+            setting.loop = false;
+            setting.startLoop = 102;
+            setting.endLoop = 102;
+
+            setting.prevslide = 'slide4';
+            setting.nextslide = '';
+
+            setting.player.currentTime(86);
+            setting.player.play();
+
+            //css
+
+        }
+
 
     }
 
