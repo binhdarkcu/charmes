@@ -105,7 +105,7 @@ var animationPage = (function() {
 
     function clear_mouseWheel(){
         $('#slides').unbind('mousewheel DOMMouseScroll');
-    
+
     }
 
     function gotoStep(){
@@ -145,7 +145,6 @@ var animationPage = (function() {
             setting.prevslide = 'slide1';
             setting.nextslide = 'slide3';
 
-            setting.player.currentTime(22);
             setting.player.play();
 
             //css
@@ -160,7 +159,6 @@ var animationPage = (function() {
             setting.prevslide = 'slide2';
             setting.nextslide = 'slide4';
 
-            setting.player.currentTime(44);
             setting.player.play();
 
             //css
@@ -175,7 +173,6 @@ var animationPage = (function() {
             setting.prevslide = 'slide3';
             setting.nextslide = 'slide5';
 
-            setting.player.currentTime(56);
             setting.player.play();
 
             //css
@@ -189,7 +186,6 @@ var animationPage = (function() {
             setting.prevslide = 'slide4';
             setting.nextslide = '';
 
-            setting.player.currentTime(86);
             setting.player.play();
 
             //css

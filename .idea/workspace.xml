@@ -30,8 +30,8 @@
       <file leaf-file-name="class.animationPage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/v2/js/app/class.animationPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19151251" vertical-offset="2178" max-vertical-offset="4664">
-              <caret line="107" column="4" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.62241566" vertical-offset="3564" max-vertical-offset="4576">
+              <caret line="188" column="0" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -281,6 +281,26 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../BLISS/NIVEA/2015/Nivea_Men_Activation/sourcecode/BE" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -365,8 +385,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/v2/js/app/class.animationPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19151251" vertical-offset="2178" max-vertical-offset="4664">
-          <caret line="107" column="4" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.62241566" vertical-offset="3564" max-vertical-offset="4576">
+          <caret line="188" column="0" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
           <folding />
         </state>
       </provider>
