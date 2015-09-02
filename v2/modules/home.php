@@ -20,7 +20,7 @@
 			<video id="video_intro" class="video-js" controls="none" preload="none" width="100%" height="100%"
 			      
 			      data-setup="{}">
-			    <source src="LeJardinDemo.mp4" type='video/mp4' />
+			    <source src="scene/LeJardinDemo.mp4" type='video/mp4' />
 			</video>
 
             <div class="video_overplay"></div>

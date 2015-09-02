@@ -9,21 +9,21 @@ var Loading = (function() {
 		classRun	:	'runloading'
 	}
 	var imageList_Ready = new Array(
-		"images/home/1.jpg",
-		"images/home/2.jpg",
-		"images/home/3.jpg",
-		"images/animation/jewelry.png",
-		"images/animation/tree-right.png",
-		"images/animation/tree-left.png",
-		"images/animation/tall-tree.png",
-		"images/meticulous.png",
-		"images/warranty.png",
-		"images/engagement/img_view_1.png",
-		"images/wedding/ring.jpg",
-		"images/wedding/flower.jpg",
-		"images/wedding/img_view_2.png",
-		"images/img_view_4.png",
-		"images/img_view_3.png",
+		// "images/home/1.jpg",
+		// "images/home/2.jpg",
+		// "images/home/3.jpg",
+		// "images/animation/jewelry.png",
+		// "images/animation/tree-right.png",
+		// "images/animation/tree-left.png",
+		// "images/animation/tall-tree.png",
+		// "images/meticulous.png",
+		// "images/warranty.png",
+		// "images/engagement/img_view_1.png",
+		// "images/wedding/ring.jpg",
+		// "images/wedding/flower.jpg",
+		// "images/wedding/img_view_2.png",
+		 "images/img_view_4.png",
+		 "images/img_view_3.png",
 		"images/contact-house.png",
 		"images/social.png",
 		"images/search.png",
@@ -118,7 +118,7 @@ var Loading = (function() {
 		$(obj).removeClass(setting.classRun);
 		var totalLoading = $('#' + setting.divRun + ' img').length ;
 		var value_percent = Math.round((totalLoading - $('#' + setting.divRun + ' img.' + setting.classRun).length )*100/totalLoading);
-		
+		$('#loader_percent').html(value_percent + '%');
 		if(value_percent == 100){
 			display();
 			$('#container').show();

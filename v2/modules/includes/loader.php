@@ -1,4 +1,4 @@
-<div class="loader">Loading</div>
+<div class="loader" id="loader_percent"></div>
 <style>
 #loadingprocess{
   background: #d3c8e3;
