@@ -78,7 +78,7 @@ var animationPage = (function() {
               .to(green_circle, 20, {left:'-50%'}, '-=9')
               .to(tall_tree, 4, {left:-400}, '-=20')
               .to(cloud_02, 12, {right: "100%"},  '-=20')
-              .to(buttterfly, 4, {bottom: "25em" }, '-=20')
+              .to(buttterfly, 4, {bottom: "25em",onComplete: pathanimation }, '-=20')
               .to(buttterfly, 2.5, {opacity: 0, width: "5em" , repeat: 3, yoyo:true}, '-=20')
               .to(buttterfly, 5, {bottom: "30em",width: "5.5em", opacity: 1}, '-=14')
               .to(buttterfly, 2, {opacity: 0, repeat: 4, yoyo:true}, '-=13')
@@ -88,7 +88,7 @@ var animationPage = (function() {
               .to(tree_2, 20, {right: "-84em"}, '-=13')
 			  .to(bg_light, 13.5, {right: "-37em"}, '-=14')
 			  .to(bg_foot, 8, {right: "45%"}, '-=9')
-			  .to(two_jewelry, 16, {right: "16%"}, '-=16')
+			  .to(two_jewelry, 16, {right: "16%" }, '-=16')
 			  .to(buttterfly, 2, {opacity: 0.2,width: "6em", repeat: 4, yoyo:true }, '-=22')
 			  .to(buttterfly, 9, {css:{opacity: 0, marginRight: "-15em"}}, '-=20')
 			  .to(buttterfly, 15, {opacity: .6,width: "6em"}, '-=15')
@@ -140,7 +140,22 @@ var animationPage = (function() {
 		console.log('setAllowScroll');
 		setting.running = false;
 	}
-
+	function pathanimation()
+	{
+		/*var p = new Raphael(document.getElementById('scense_container'));
+		p.addGuides();
+	
+		var white = {stroke : "white"};
+		var path;
+		var image = p.image('images/animation/buttterfly.png', 0,0, 67, 73);
+		var path1 = p.path("M 34.285714,526.64786 C 76.779508,393.85814 260.12769,312.61171 376.72012,365.00791 493.31255,417.40412 569.04291,512.24941 780.47376,492.45203 991.90462,472.65465 1024.1222,298.93549 1170.4932,279.44669 1316.8642,259.95789 1380,429.505 1380,429.505").attr(white);
+		image.attr({guide : path1, along : 0})
+			.animate({along : 1}, 7000);*/
+		//TweenMax.fromTo($('svg'),0.5,{left: 517},{left: 40})
+		$('.scense_container .scense_one .buttterfly img').addClass('anima_butt');
+		alert(11);
+			
+	}
 	function action_scense_2(){
 		tl.tweenTo("label_action_3");
 	}

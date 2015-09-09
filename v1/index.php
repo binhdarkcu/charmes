@@ -21,6 +21,8 @@
 <?php
 	include('merge.php');
 ?>
+<script src="js/lib/raphael-min.js"></script>
+<script src="js/app/guide.js"></script>
 
 </head>
 <?php $lang = isset($_REQUEST['lang']) ? $_REQUEST['lang']: "nl";?>
