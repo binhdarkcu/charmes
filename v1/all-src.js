@@ -4603,8 +4603,10 @@ var animationPage = (function() {
 
 	var setting = {
 		running : false,
-		scroll_number : 0
+		scroll_number : 0,
+		buttterfly: '.buttterfly'
 	}
+	
 
 	function init(){
 		actionFirst();
@@ -4668,7 +4670,7 @@ var animationPage = (function() {
               .to(arrow_scroll, 1, {display: 'block'},'-=2')
               .to(handtext, 1, {opacity: 1, onComplete:setAllowScroll},'-=4')
              //action 3
-              .to(text_jardin_2, 1.2, {opacity:0}, "label_action_2")
+              .to(text_jardin_2, 1.2, {opacity:0 ,onComplete: pathanimation}, "label_action_2")
               .to(mouse_click, .5, {opacity:0}, "-=1.2")
               .to(hand_scroll, .5, {display: 'none'},'-=1.2')
               .to(arrow_scroll, 1, {display: 'none'},'-=1.2')
@@ -4677,7 +4679,7 @@ var animationPage = (function() {
               .to(green_circle, 20, {left:'-50%'}, '-=9')
               .to(tall_tree, 4, {left:-400}, '-=20')
               .to(cloud_02, 12, {right: "100%"},  '-=20')
-              .to(buttterfly, 4, {bottom: "25em",onComplete: pathanimation }, '-=20')
+              .to(buttterfly, 4, {bottom: "25em", onComplete: alertMess }, '-=20')
               .to(buttterfly, 2.5, {opacity: 0, width: "5em" , repeat: 3, yoyo:true}, '-=20')
               .to(buttterfly, 5, {bottom: "30em",width: "5.5em", opacity: 1}, '-=14')
               .to(buttterfly, 2, {opacity: 0, repeat: 4, yoyo:true}, '-=13')
@@ -4691,7 +4693,7 @@ var animationPage = (function() {
 			  .to(buttterfly, 2, {opacity: 0.2,width: "6em", repeat: 4, yoyo:true }, '-=22')
 			  .to(buttterfly, 9, {css:{opacity: 0, marginRight: "-15em"}}, '-=20')
 			  .to(buttterfly, 15, {opacity: .6,width: "6em"}, '-=15')
-			  .to(buttterfly, 10, {css:{opacity: 1, marginRight: "-29.5em"}}, '-=16')
+			  .to(buttterfly, 10, {css:{opacity: 1, bottom: "38em", marginRight: "-10.5em"}}, '-=16')
 			  .to(small_tree, 1, {opacity: 1})
 			  .to(buttterfly, 1, {opacity: 1, onComplete:setAllowScroll})
 			  .to(buttterfly, 1, {opacity: 1}, "label_action_3")
@@ -4751,9 +4753,13 @@ var animationPage = (function() {
 		image.attr({guide : path1, along : 0})
 			.animate({along : 1}, 7000);*/
 		//TweenMax.fromTo($('svg'),0.5,{left: 517},{left: 40})
+		
 		$('.scense_container .scense_one .buttterfly img').addClass('anima_butt');
-		alert(11);
 			
+	}
+	function alertMess()
+	{
+		alert(111);	
 	}
 	function action_scense_2(){
 		tl.tweenTo("label_action_3");
