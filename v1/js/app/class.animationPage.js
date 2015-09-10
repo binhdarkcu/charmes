@@ -68,7 +68,7 @@ var animationPage = (function() {
               .to(mouse_click, 1.2, {opacity:1}, '-=3')
               .to(hand_scroll, 2, {display: 'block'},'-=2')
               .to(buttterfly, 2, {css:{opacity:1, marginRight:'0em'}},'-=3')
-              .to(arrow_scroll, 1, {display: 'block', onComplete: alertMess},'-=2')
+              .to(arrow_scroll, 1, {display: 'block'},'-=2')
               .to(handtext, 1, {opacity: 1, onComplete:setAllowScroll},'-=4')
              //action 3
               .to(text_jardin_2, 1.2, {opacity:0 ,onComplete: pathanimation}, "label_action_2")
