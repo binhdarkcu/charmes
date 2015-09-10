@@ -91,10 +91,10 @@ var animationPage = (function() {
 			  .to(bg_light, 13.5, {right: "-37em"}, '-=14')
 			  .to(bg_foot, 8, {right: "45%"}, '-=9')
 			  .to(two_jewelry, 16, {right: "16%" }, '-=16')
-			  .to(buttterfly, 2, {opacity: 0.2,width: "6em", repeat: 4, yoyo:true }, '-=22')
+			  .to(buttterfly, 1, {opacity: 0.2,width: "6em", repeat: 4, yoyo:true }, '-=22')
 			  .to(buttterfly, 9, {css:{opacity: 0, marginRight: "-15em"}}, '-=20')
-			  .to(buttterfly, 15, {opacity: .6,width: "6em"}, '-=15')
-			  .to(buttterfly, 10, {css:{opacity: 1, bottom: "38em", marginRight: "-10.5em"}}, '-=16')
+			  .to(buttterfly, 15, {opacity: .6,width: "6em", bottom: "10em", marginRight: "19em"}, '-=15')
+			  .to(buttterfly, 10, {css:{opacity: 1, bottom: "38em", marginRight: "-10.5em"}})
 			  .to(small_tree, 1, {opacity: 1})
 			  .to(buttterfly, 1, {opacity: 1, onComplete:setAllowScroll})
 			  .to(buttterfly, 1, {opacity: 1}, "label_action_3")
@@ -160,7 +160,7 @@ var animationPage = (function() {
 	}
 	function alertMess()
 	{
-		alert(111);	
+		
 	}
 	function action_scense_2(){
 		tl.tweenTo("label_action_3");
