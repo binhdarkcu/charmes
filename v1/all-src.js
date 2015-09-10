@@ -4667,7 +4667,7 @@ var animationPage = (function() {
               .to(mouse_click, 1.2, {opacity:1}, '-=3')
               .to(hand_scroll, 2, {display: 'block'},'-=2')
               .to(buttterfly, 2, {css:{opacity:1, marginRight:'0em'}},'-=3')
-              .to(arrow_scroll, 1, {display: 'block'},'-=2')
+              .to(arrow_scroll, 1, {display: 'block', onComplete: alertMess},'-=2')
               .to(handtext, 1, {opacity: 1, onComplete:setAllowScroll},'-=4')
              //action 3
               .to(text_jardin_2, 1.2, {opacity:0 ,onComplete: pathanimation}, "label_action_2")
@@ -4679,7 +4679,7 @@ var animationPage = (function() {
               .to(green_circle, 20, {left:'-50%'}, '-=9')
               .to(tall_tree, 4, {left:-400}, '-=20')
               .to(cloud_02, 12, {right: "100%"},  '-=20')
-              .to(buttterfly, 4, {bottom: "25em", onComplete: alertMess }, '-=20')
+              .to(buttterfly, 4, {bottom: "25em" }, '-=20')
               .to(buttterfly, 2.5, {opacity: 0, width: "5em" , repeat: 3, yoyo:true}, '-=20')
               .to(buttterfly, 5, {bottom: "30em",width: "5.5em", opacity: 1}, '-=14')
               .to(buttterfly, 2, {opacity: 0, repeat: 4, yoyo:true}, '-=13')
@@ -4759,7 +4759,7 @@ var animationPage = (function() {
 	}
 	function alertMess()
 	{
-		
+		alert(11);
 	}
 	function action_scense_2(){
 		tl.tweenTo("label_action_3");
