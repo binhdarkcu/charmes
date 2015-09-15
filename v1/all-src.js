@@ -4678,41 +4678,43 @@ var animationPage = (function() {
               .to(cloud_01, 9, {left: "-25%"})
               .to(green_circle, 20, {left:'-50%'}, '-=9')
               .to(tall_tree, 4, {left:-400}, '-=20')
-              .to(cloud_02, 12, {right: "100%"},  '-=20')
-              .to(buttterfly, 4, {bottom: "25em" }, '-=20')
-              .to(buttterfly, 2.5, {opacity: 0, width: "5em" , repeat: 3, yoyo:true}, '-=20')
-              .to(buttterfly, 5, {bottom: "30em",width: "5.5em", opacity: 1}, '-=14')
-              .to(buttterfly, 2, {opacity: 0, repeat: 4, yoyo:true}, '-=13')
-              .to(jewelry_behind, 25, {css:{right: "-45em"}}, '-=13')
-              .to(jewelry_1, 15, {left: "7%"}, '-=15')
-              .to(jewelry_2, 16, {left: "28%"}, '-=17')
-              .to(tree_2, 20, {right: "-84em"}, '-=13')
-			  .to(bg_light, 13.5, {right: "-37em"}, '-=14')
-			  .to(bg_foot, 8, {right: "45%"}, '-=9')
-			  .to(two_jewelry, 16, {right: "16%" }, '-=16')
-			  .to(buttterfly, 1, {opacity: 0.2,width: "6em", repeat: 4, yoyo:true }, '-=22')
+              .to(cloud_02, 12, {right: "110%"},  '-=20')
+              .to(buttterfly, 7, {bottom: "25em" }, '-=20')
+              .to(buttterfly, 2.5, {opacity: 0 , repeat: 3, yoyo:true}, '-=20')
+              .to(buttterfly, 5, {bottom: "30em",width: "5.2em", opacity: 1}, '-=14')
+              .to(buttterfly, 2, {opacity: 0.3, repeat: 4, yoyo:true}, '-=13')
+
+              .to(jewelry_behind, 22, {css:{right: "-45em",top:"-7em"}}, '-=15')//-13
+              .to(jewelry_1, 14, {left: "7%"}, '-=17')//-14
+              .to(jewelry_2, 16, {left: "28%"}, '-=19')//-16
+              .to(tree_2, 12, {right: "-84em"}, '-=16')//-13
+              .to(two_jewelry, 10, {right: "16%" }, '-=15')
+			  .to(bg_light, 10, {right: "-37em"}, '-=15')
+			  .to(bg_foot, 9, {right: "65em"}, '-=13')
+			  .to(jewelry_behind, 1, {opacity:".2"}, '-=10')//-13
+			  .to(buttterfly, 1, {opacity: 0.5,width: "5.2em", repeat: 4, yoyo:true }, '-=23')
 			  .to(buttterfly, 9, {css:{opacity: 0, marginRight: "-15em"}}, '-=20')
-			  .to(buttterfly, 15, {opacity: .6,width: "6em", bottom: "10em", marginRight: "19em"}, '-=15')
-			  .to(buttterfly, 10, {css:{opacity: 1, bottom: "38em", marginRight: "-10.5em"}})
+			  .to(buttterfly, 13,{opacity: 1, bottom: "10em", marginRight: "18em"}, '-=17')
+			  .to(buttterfly, 5, {css:{opacity: 1,width: "6em", bottom: "38em", marginRight: "-10.5em"}})
 			  .to(small_tree, 1, {opacity: 1})
+			  .to(buttterfly, 4, {css:{opacity: 1,width: "6.3em",bottom: "32em", marginRight: "-28.5em"}})
 			  .to(buttterfly, 1, {opacity: 1, onComplete:setAllowScroll})
 			  .to(buttterfly, 1, {opacity: 1}, "label_action_3")
 
 			  //animation scense 3
 			  
 			  .to(tree_2, 14, {right: "26em"})
-			  .to(buttterfly, 2, {opacity: 0, repeat: 6, yoyo:true },'-=14')
-			  .to(buttterfly, 6, {css:{ bottom: "31em", marginRight: "-20.5em"}},'-=14')
+			  .to(buttterfly, 2, {opacity: 0.3, repeat: 6, yoyo:true },'-=14')
 			  .to(jewelry_1, 10, {left: "-40%"}, '-=14')
               .to(jewelry_2, 10, {left: "-25%"}, '-=14')
-              .to(two_jewelry, 10, {right: "100%"}, '-=14')
+              .to(two_jewelry, 10, {right: "140em"}, '-=14')
               .to(jewelry_behind, 5, {right: "-10em"}, '-=14')
-			  .to(bg_foot, 10, {right: "100%"},"-=14")
-			  .to(bg_light, 17, {right: "0em"}, '-=14')
-			  
+			  .to(bg_foot, 8, {right: "170em"},"-=14")
+			  .to(bg_light, 10, {right: "1em"}, '-=14')
+			  .to(buttterfly, 17, {css:{ bottom: "31em", marginRight: "-20.5em"}},'-=13')
               
               
-              .to(small_tree, 11, {right: "0em"},"-=14")
+              .to(small_tree, 10, {right: "0em"},"-=14")
              
               .to(eli_1, 7, {right: "51em"},"-=13")
               .to(eli_3, 9, {right: "25em"},"-=12")
@@ -4720,7 +4722,7 @@ var animationPage = (function() {
               .to(eli_3, 3, {top: "-18em"},"-=12")
               .to(fence, 8, {right: "-1em"},"-=12")
               
-              .to(buttterfly, 3, {css:{opacity: .5, bottom: "33em", marginRight: "-14.5em"}},'-=13')
+              .to(buttterfly, 12, {css:{opacity: .7, bottom: "34em", marginRight: "-16.5em"}},'-=12')
               //.to(buttterfly, 10, {opacity: .6,bottom:"12em", right: "29em"},"-=12")
               .to(bg_overlays, 5, {opacity: .2},"-=12")
               .to(buttterfly, 1, {opacity: 1})
@@ -5499,7 +5501,7 @@ var Loading = (function() {
 		$(obj).removeClass(setting.classRun);
 		var totalLoading = $('#' + setting.divRun + ' img').length ;
 		var value_percent = Math.round((totalLoading - $('#' + setting.divRun + ' img.' + setting.classRun).length )*100/totalLoading);
-		
+		$('#loader_percent').html(value_percent + '%');
 		if(value_percent == 100){
 			display();
 			$('#container').show();

@@ -118,7 +118,7 @@ var Loading = (function() {
 		$(obj).removeClass(setting.classRun);
 		var totalLoading = $('#' + setting.divRun + ' img').length ;
 		var value_percent = Math.round((totalLoading - $('#' + setting.divRun + ' img.' + setting.classRun).length )*100/totalLoading);
-		
+		$('#loader_percent').html(value_percent + '%');
 		if(value_percent == 100){
 			display();
 			$('#container').show();
